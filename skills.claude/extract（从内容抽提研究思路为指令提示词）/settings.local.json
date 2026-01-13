@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__metaso__metaso_search"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Extract"
+  short_description: "从深度研究文档中反向提取可复用的研究方法论框架和 Agent Prompt 模板"
+  default_prompt: "使用 $extract 分析指定的研究文档，提取六维度方法论框架并生成可复用模板。"

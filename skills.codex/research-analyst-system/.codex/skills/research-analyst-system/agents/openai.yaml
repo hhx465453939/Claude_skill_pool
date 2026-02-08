@@ -1,0 +1,4 @@
+interface:
+  display_name: "Research Analyst System"
+  short_description: "多层级投资研究团队：首席分析师 + 6 大研究小组并行深度调研，输出结构化报告"
+  default_prompt: "使用 $research-analyst-system 对指定研究主题进行多小组并行分析，生成综合研究报告。"

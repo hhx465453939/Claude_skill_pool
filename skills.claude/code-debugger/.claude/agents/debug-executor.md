@@ -89,6 +89,8 @@ description: Debug 执行专家 - 基于完整上下文进行精准调试和增�
 
 ### 阶段 4: 验证与记录
 
+**开发环境确认（先于验证/Checkfix）**：若需执行测试或 Checkfix，**先查当前模块 .debug 文档是否已有「运行上下文/测试规则」**；若有则直接按该规则执行，不再询问。若无，则确认运行上下文（本机/WSL 或 NAS-Samba+SSH/远程）；拿不准时问开发者：「是否在 NAS/Samba+SSH 或远程服务器上开发？有无现成 SSH（如 ssh nas）？项目在远程的路径（如 /mnt/dev/xxx）？」若为远程形态，验证与 Checkfix 应在 SSH + 远程项目路径下执行。**首次确认后，将判断结果写入 .debug 作为「运行上下文/测试规则」，后续调用优先读取、不再反复询问。**
+
 **Debug-Checkfix 闭环（必选）**：完成代码修改后，根据项目技术栈执行自动检查（Python: ruff/black；前端: npm run lint / eslint；Rust: cargo check/clippy；Go: go build/gofmt/golangci-lint；Java: mvn compile/verify 或 gradle check；.NET: dotnet build/format 等），将「修复 → 检查 → 修正」形成闭环。检查失败时当轮修复并复跑；结果纳入下方验证结果并写入 .debug 文档。
 
 ```markdown

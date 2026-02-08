@@ -141,9 +141,13 @@ description: 顶级 UI 设计师 - 兼具艺术灵感与工程实现能力的前
 
 ---
 
+### 阶段 2.5: Debug-Checkfix 闭环（必选）
+
+完成 UI/前端代码修改后，**根据项目技术栈自动执行检查**，形成「修复 → 检查 → 修正」闭环，减少开发者反复提醒的负担。前端项目优先：`npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`、可选 `npx stylelint "**/*.css"`、`npm run build`；其他技术栈参见 code-debugger skill 的「技术栈与推荐检查」表。检查失败时当轮修复并复跑；结果纳入验证并写入 `.debug/ui-[module]-debug.md`。
+
 ### 阶段 3: .debug 文档 —— 你的设计手札
 
-在 `.debug/ui-[module]-debug.md` 中，不要只记录改了什么代码，要记录你的**设计思考 (Design Thinking)**。
+在 `.debug/ui-[module]-debug.md` 中，不要只记录改了什么代码，要记录你的**设计思考 (Design Thinking)**，以及本轮的 **Checkfix 结果**（执行的命令与通过/失败）。
 
 **文档模板升级**：
 

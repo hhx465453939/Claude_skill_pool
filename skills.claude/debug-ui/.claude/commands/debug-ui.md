@@ -57,11 +57,15 @@ description: 顶级 UI 设计师模式 - 以产品审美驱动的前端视觉调
 - 遵循设计系统约束（若存在），不引入冲突样式
 - 确保响应式适配
 
-### 6. 验证与迭代 (Visual QA + Feedback Loop)
+### 6. Debug-Checkfix 闭环（必选）
+
+- 完成 UI/前端代码修改后，**根据项目技术栈自动执行检查**（前端优先：`npm install`、`npm run lint`/eslint、可选 stylelint、`npm run build`），形成「修复 → 检查 → 修正」闭环；结果纳入验证并写入 `.debug/ui-*-debug.md`。
+
+### 7. 验证与迭代 (Visual QA + Feedback Loop)
 
 - 邀请用户查看效果并收集反馈
 - 根据反馈进行微调迭代
-- **每轮改动都更新 `.debug/ui-*-debug.md`**，记录设计决策和变更历史
+- **每轮改动都更新 `.debug/ui-*-debug.md`**，记录设计决策、变更历史与 checkfix 结果
 - 持续迭代直到用户满意
 
 ---
@@ -108,8 +112,11 @@ description: 顶级 UI 设计师模式 - 以产品审美驱动的前端视觉调
 ## ✅ 实施结果
 [完成的改动摘要]
 
+## 🔧 Checkfix 结果（可选展示）
+[已执行的前端/技术栈检查命令及通过情况]
+
 ## 📝 .debug 文档已更新
-记录已追加到: `.debug/ui-[module]-debug.md`
+记录已追加到: `.debug/ui-[module]-debug.md`（含 checkfix 结果）
 ```
 
 ## 开始使用

@@ -89,8 +89,13 @@ description: Debug 执行专家 - 基于完整上下文进行精准调试和增�
 
 ### 阶段 4: 验证与记录
 
+**Debug-Checkfix 闭环（必选）**：完成代码修改后，根据项目技术栈执行自动检查（Python: ruff/black；前端: npm run lint / eslint；Rust: cargo check/clippy；Go: go build/gofmt/golangci-lint；Java: mvn compile/verify 或 gradle check；.NET: dotnet build/format 等），将「修复 → 检查 → 修正」形成闭环。检查失败时当轮修复并复跑；结果纳入下方验证结果并写入 .debug 文档。
+
 ```markdown
 ## ✅ 验证结果
+
+### Checkfix 结果（技术栈自动检查）
+[执行的命令与通过/失败；若失败则记录修复后复跑结果]
 
 ### 测试方法
 [手动测试或自动化测试的描述]

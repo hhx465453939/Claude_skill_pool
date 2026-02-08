@@ -43,9 +43,11 @@ description: 顶级 UI 设计师模式，兼具艺术灵感与工程实现。以
 ### 4. 验证与文档 (Visual QA + Debug Log)
 
 - **验证**: 像素眼 (Pixel-eye) 检查对齐，全响应式 (Mobile/Desktop) 测试。
+- **Debug-Checkfix 闭环（必选）**：完成 UI/前端代码修改后，根据项目技术栈执行自动检查。前端项目优先执行：`npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`、可选 `npx stylelint "**/*.css"`、`npm run build`；其他技术栈参见 code-debugger 的「技术栈与推荐检查」表。检查结果纳入验证并写入 `.debug/ui-[module]-debug.md`。
 - **记录**: 更新 `.debug/ui-[module]-debug.md`。
     - 记录 **"视觉升维"** 的前后对比。
     - 记录 **Design Decisions (ADR)**：为什么选这个可访问性对比度？为什么用这个贝塞尔曲线？
+    - 记录 **Checkfix 结果**（执行的命令与通过/失败）。
 
 ## .debug 文档规则（与 code-debugger 共享）
 

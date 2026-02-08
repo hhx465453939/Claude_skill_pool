@@ -121,10 +121,27 @@ description: 智能代码调试与增量开发系统 - 基于深度上下文理�
 
 4. **验证与记录**
    - 验证修改效果
+   - **Debug-Checkfix 闭环（必选）**：根据项目技术栈执行自动检查（见下方「技术栈与推荐检查」），将「修复 → 检查 → 修正」形成闭环；检查结果纳入验证并写入 .debug 文档。
    - 更新 .debug 文档
-   - 记录测试结果
+   - 记录测试结果（含 checkfix 结果）
 
 **输出**：修复后的代码 + 更新的 .debug 文档
+
+**技术栈与推荐检查（Checkfix 闭环）**  
+读取本 skill 的编程工具应在 debug 完成后**自动考虑**执行下列检查，减少开发者反复提醒的负担：
+
+| 技术栈/类型 | 推荐检查 | 说明 |
+|-------------|----------|------|
+| Python | `ruff check .`、`ruff format --check .` 或 `black --check .` | 先 lint 再 format；失败则修复后复跑 |
+| 前端 (Node/npm) | `npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`，可选 `npm run build` | 依赖与静态检查，优先用 package.json scripts |
+| Rust | `cargo check` 或 `cargo clippy` | 编译与 Clippy |
+| Go | `go build ./...`、`gofmt -l .` 或 `golangci-lint run` | 编译与格式/静态检查 |
+| Java/Kotlin (Maven) | `mvn compile` 或 `mvn verify` | 编译与测试 |
+| Java/Kotlin (Gradle) | `./gradlew compileJava` 或 `./gradlew check` | 同上 |
+| C# / .NET | `dotnet build`、`dotnet format --verify-no-changes` | 编译与格式 |
+| 通用 | 项目内已配置的 lint/format/check 脚本（如 `make check`、`invoke lint`） | 优先执行项目既有脚本 |
+
+**执行原则**：识别技术栈后，至少执行一类检查（lint/format/build）；若检查失败，当轮内修复并复跑直至通过或记录为技术债；结果写入验证与 .debug 记录。
 
 ---
 

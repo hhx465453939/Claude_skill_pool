@@ -26,6 +26,20 @@ description: 将自然语言需求转换为生产级技术规范与 AI 执行指
 ### 4. AI 执行指令
 - 输出可直接交给编码工具的分阶段任务清单（初始化 → 核心模型 → 业务逻辑 → 接口层 → 测试/文档）。
 - 指令必须可执行、避免含糊措辞。
+- **Checkfix 闭环（必选）**：生成的执行指令中必须包含「每阶段/每次代码变更后按技术栈执行自动检查」的步骤（见下方「技术栈与推荐检查」），形成基础开发工作流：实现 → 检查 → 修正 → 再验收。
+
+### 技术栈与推荐检查（须写入生成的 AI 指令）
+
+| 技术栈/类型 | 推荐检查 | 说明 |
+|-------------|----------|------|
+| Python | `ruff check .`、`ruff format --check .` 或 `black --check .` | 先 lint 再 format；失败则修复后复跑 |
+| 前端 (Node/npm) | `npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`，可选 `npm run build` | 优先用 package.json scripts |
+| Rust | `cargo check` 或 `cargo clippy` | 编译与 Clippy |
+| Go | `go build ./...`、`gofmt -l .` 或 `golangci-lint run` | 编译与格式/静态检查 |
+| Java/Kotlin (Maven) | `mvn compile` 或 `mvn verify` | 编译与测试 |
+| Java/Kotlin (Gradle) | `./gradlew compileJava` 或 `./gradlew check` | 同上 |
+| C# / .NET | `dotnet build`、`dotnet format --verify-no-changes` | 编译与格式 |
+| 通用 | 项目内已配置的 lint/format/check 脚本 | 优先执行项目既有脚本 |
 
 ## Output Format (required)
 
@@ -44,3 +58,4 @@ description: 将自然语言需求转换为生产级技术规范与 AI 执行指
 - 技术栈中立，除非用户已指定。
 - 明确安全红线（输入验证、敏感数据、依赖安全）。
 - 输出必须达到生产级（Production-Ready）标准。
+- **生成的 AI 执行指令中必须包含 Checkfix 闭环**：按技术栈在每阶段或每次代码变更后执行自动检查，作为最基础的代码开发工作流，不可省略。

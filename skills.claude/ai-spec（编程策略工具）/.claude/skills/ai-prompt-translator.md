@@ -102,6 +102,7 @@
 - Linting 配置（ESLint, Clippy, Black）
 - Code Formatting（Prettier, rustfmt）
 - 文档注释（关键函数和复杂逻辑）
+- **Checkfix 闭环（必选）**：每阶段/每次代码变更后按技术栈执行自动检查（见 Phase 5.5 或 code-debugger 的「技术栈与推荐检查」），结果纳入验收，作为最基础的开发工作流。
 
 ### 阶段 4: 生成"神级"指令 (The "God Prompt")
 
@@ -173,6 +174,17 @@
 - [ ] 编写 README.md（包含安装、使用、开发指南）
 - [ ] 添加 API 文档（如果适用）
 
+### Phase 5.5: Checkfix 闭环（必选，每阶段收尾均需执行）
+- [ ] 根据项目技术栈在**每完成一个 Phase 或每次代码变更后**执行自动检查，形成「实现 → 检查 → 修正」闭环：
+  - **Python**: `ruff check .`、`ruff format --check .` 或 `black --check .`
+  - **前端 (Node)**: `npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`，可选 `npm run build`
+  - **Rust**: `cargo check` 或 `cargo clippy`
+  - **Go**: `go build ./...`、`gofmt -l .` 或 `golangci-lint run`
+  - **Java/Kotlin**: Maven `mvn compile`/`verify` 或 Gradle `./gradlew check`
+  - **C# / .NET**: `dotnet build`、`dotnet format --verify-no-changes`
+  - **通用**: 优先执行项目已有脚本（如 `make check`、`invoke lint`）
+- [ ] 检查失败时当轮修复并复跑，直至通过或明确记录为技术债；结果纳入阶段验收。
+
 ## 质量标准（强制要求）
 
 ### 代码质量
@@ -213,6 +225,7 @@
 **关键原则**:
 - 优先实现核心功能，后续可扩展
 - 每个实现步骤都保持代码可编译/可运行状态
+- **每完成一个 Phase 或每次代码变更后，必须执行技术栈对应的 lint/format/check（Checkfix 闭环）**，直至通过，这是最基础的代码开发工作流，不可省略
 - 遇到技术选择歧义时，选择最简单、最可维护的方案
 - 保持代码整洁，持续重构优化
 ```
@@ -270,6 +283,7 @@ interface Example { ... }
 3. **可执行性**: 生成的指令必须足够详细，AI 可以直接执行而不需要额外澄清
 4. **生产级标准**: 所有建议和规范必须达到生产环境的质量标准
 5. **完整覆盖**: 从项目初始化到测试部署的完整流程
+6. **Checkfix 闭环不可省**: 生成的「给 AI 编程工具的执行指令」中必须包含每阶段/每次代码变更后的技术栈自动检查（Phase 5.5 或等价表述），这是最基础的代码开发工作流
 
 ---
 

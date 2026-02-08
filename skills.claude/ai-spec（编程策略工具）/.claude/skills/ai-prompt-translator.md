@@ -28,6 +28,8 @@
 
 ### 阶段 2: 最优架构搜索 (Best-of-N Architecture Search)
 
+**API-First 模块化优先**：当项目涉及前后端分离或全栈开发时，**默认采用 API-First 模块化架构**——后端每个功能封装为独立 API 包（开发 → Checkfix → 封装 → API → API文档），前端仅负责页面与 API 调用，全栈层只处理跨 API 包的编排逻辑。生成的 AI 执行指令中，Phase 流程应体现此分层：Phase 2 后端 API 包 → Phase 3 API 文档 → Phase 4 前端/中间层。若项目已包含 `api-first-modular` skill，应参考其「跨层任务分解协议」进行子任务拆分。
+
 **内部思考过程**（必须显式展示）：
 - 对比 2-3 种技术实现路径（例如：Python FastAPI vs Go Gin vs Node NestJS vs Rust Actix）
 - 评估维度：性能要求、开发效率、生态成熟度、团队技能、维护成本
@@ -160,11 +162,12 @@
     - 单元测试
 - [ ] 实现 [Service 2]：...
 
-### Phase 4: 接口层
-- [ ] 实现 API Endpoints（如果适用）：
+### Phase 4: 接口层（遵循 API-First 原则）
+- [ ] 实现后端 API Endpoints（如果适用）：
     - [Endpoint 1]: [方法] [路径] - [功能描述]
     - [Endpoint 2]: ...
-- [ ] 实现 UI Components（如果适用）：
+- [ ] 为每个 API 包生成 API 文档（端点、参数、响应格式、错误码、调用示例）
+- [ ] 实现 UI Components（如果适用，严格基于 API 文档调用后端）：
     - [Component 1]: [功能描述]
     - [Component 2]: ...
 

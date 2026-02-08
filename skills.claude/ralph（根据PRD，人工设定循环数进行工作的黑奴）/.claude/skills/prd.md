@@ -94,10 +94,13 @@ This is CRITICAL for Ralph to work properly. If stories are too big, the AI will
 - Update a server action with new logic
 - Add a filter dropdown to a list
 
+**API 包粒度原则（API-First）**：后端功能拆分时，每个独立业务功能应作为一个 API 包来设计。一个 User Story 可以是"开发某 API 包 + 生成其 API 文档"，后续前端 Story 只需"依据 API 文档实现页面调用"。Story 应标注所属层级（`[后端]`/`[前端]`/`[中间层]`/`[文档]`/`[集成]`），确保跨层任务的解耦和按序执行。
+
 **Too big (split these):**
 - "Build the entire dashboard"
 - "Add authentication"
 - "Refactor the API"
+- "Add SSE streaming" → 应拆为: `[后端]` SSE端点API包, `[文档]` SSE接口文档, `[前端]` EventSource消费+渲染, `[集成]` 端到端验证
 
 ### 4. Functional Requirements
 Numbered list of specific functionalities:
@@ -145,15 +148,18 @@ The PRD will be read by Claude Code (Ralph). Therefore:
 
 Stories execute in priority order. Earlier stories must NOT depend on later ones.
 
-**Correct order:**
+**Correct order (API-First 原则):**
 1. Schema/database changes (migrations)
-2. Server actions / backend logic
-3. UI components that use the backend
-4. Dashboard/summary views that aggregate data
+2. Server actions / backend logic → 封装为独立 API 包
+3. API 文档生成（端点、参数、响应、错误码、示例）
+4. UI components that consume the API (依据 API 文档开发)
+5. Integration layer / BFF (多 API 编排，如需要)
+6. Dashboard/summary views that aggregate data
 
 **Wrong order:**
 1. UI component (depends on schema that does not exist yet)
 2. Schema change
+3. Frontend calling API that has no documentation yet
 
 ---
 

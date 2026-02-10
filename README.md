@@ -21,6 +21,7 @@
 │   ├── debug-ui/                # [UI设计] 顶级 UI 设计师模式
 │   ├── dr-midas/                # [科研] 科研炼金术士，图表分析与叙事
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
+│   ├── paper-submission-manager/ # [投稿管理] 论文投稿全流程管理与材料打包
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
 │   ├── ref-pubmd-linker/        # [文献] PubMed 引用链接查询与更新
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
@@ -161,6 +162,7 @@ skills.codex/[skill-name]/
 | :--- | :---: | :---: | :--- |
 | **Dr. Midas (dr-midas)** | `/midas` | `$dr-midas` | 科研炼金术士，分析科研图表并结合 PubMed 文献生成深度科研叙事 |
 | **PubMed Linker** | `/update-pubmed-links` | `$pubmed-linker` | 自动查询并更新参考文献的 PubMed 链接、PMID、DOI |
+| **Paper Submission Manager** | `/paper-submission-manager` | - | 论文投稿全流程管理：清单、QA、材料打包与提交追踪 |
 
 ### 研究与分析
 

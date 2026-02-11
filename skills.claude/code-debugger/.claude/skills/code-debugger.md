@@ -134,6 +134,7 @@ description: 智能代码调试与增量开发系统 - 基于深度上下文理�
    - **Debug-Checkfix 闭环（必选）**：根据项目技术栈执行自动检查（见下方「技术栈与推荐检查」），将「修复 → 检查 → 修正」形成闭环；检查结果纳入验证并写入 .debug 文档。
    - 更新 .debug 文档
    - 记录测试结果（含 checkfix 结果）
+   - 记录文档变更（本轮更新的 `docs/*.md` 与对应影响）
 
 **输出**：修复后的代码 + 更新的 .debug 文档
 
@@ -142,8 +143,9 @@ description: 智能代码调试与增量开发系统 - 基于深度上下文理�
 
 | 技术栈/类型 | 推荐检查 | 说明 |
 |-------------|----------|------|
-| Python | `ruff check .`、`ruff format --check .` 或 `black --check .` | 先 lint 再 format；失败则修复后复跑 |
+| Python | 优先 `uv venv` + `uv sync`（或 `uv pip install -r requirements.txt`），并执行 `ruff check .`、`ruff format --check .` 或 `black --check .` | 部署优先级：`uv`（非 `uvicorn`）> 直接部署 > `conda` |
 | 前端 (Node/npm) | `npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`，可选 `npm run build` | 依赖与静态检查，优先用 package.json scripts |
+| PyTorch (GPU) | `uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`（按目标 CUDA 版本调整） | 有 NVIDIA GPU 时优先 CUDA 包，并补充 CPU 回退命令 |
 | Rust | `cargo check` 或 `cargo clippy` | 编译与 Clippy |
 | Go | `go build ./...`、`gofmt -l .` 或 `golangci-lint run` | 编译与格式/静态检查 |
 | Java/Kotlin (Maven) | `mvn compile` 或 `mvn verify` | 编译与测试 |
@@ -152,6 +154,13 @@ description: 智能代码调试与增量开发系统 - 基于深度上下文理�
 | 通用 | 项目内已配置的 lint/format/check 脚本（如 `make check`、`invoke lint`） | 优先执行项目既有脚本 |
 
 **执行原则**：识别技术栈后，至少执行一类检查（lint/format/build）；若检查失败，当轮内修复并复跑直至通过或记录为技术债；结果写入验证与 .debug 记录。
+
+### 阶段 2.5: 文档同步与部署约束（必选）
+
+- 前端功能更新（新增/修改交互、页面流程、配置项）必须同步更新 `docs/` 用户说明书，默认按零基础用户可执行标准编写。
+- 后端/API/环境迭代必须同步更新开发与部署文档，写清命令顺序、预期输出、故障排查、回滚方式。
+- 每次功能或环境变更后，必须检查既有部署指导是否需要联动更新（如 `docs/DEPLOYMENT.md`、`docs/README.md`）。
+- Python 部署优先级固定为：`uv`（注意是 `uv`，不是 `uvicorn`）> 直接部署 > `conda`。
 
 ---
 
@@ -206,6 +215,8 @@ description: 智能代码调试与增量开发系统 - 基于深度上下文理�
 | **相关文件** | [文件路径列表] |
 | **依赖模块** | [其他 Debug 文档] |
 | **API文档路径** | （后端API包时填写）docs/api/xxx.md |
+| **用户说明书路径** | （前端功能更新时填写）docs/xxx.md |
+| **开发/部署文档路径** | （后端/环境更新时填写）docs/DEPLOYMENT.md 等 |
 
 ## 运行上下文与测试规则（首次确认后填写，后续优先读取此处，不再反复询问）
 
@@ -279,6 +290,11 @@ description: 智能代码调试与增量开发系统 - 基于深度上下文理�
 |------|----------|----------|
 | `file1.ts` | 修改 | 修改了 xx 函数的逻辑 |
 | `file2.ts` | 新增 | 新增了 xx 功能 |
+
+**文档变更**:
+| 文档 | 变更类型 | 关键更新点 |
+|------|----------|------------|
+| `docs/xxx.md` | 修改/新增 | [面向用户或开发者的变更说明] |
 
 **验证结果**:
 - **测试状态**: ✅ 通过 / ❌ 失败 / ⚠️ 部分通过

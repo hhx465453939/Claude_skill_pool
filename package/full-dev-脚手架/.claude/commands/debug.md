@@ -32,10 +32,20 @@ description: 智能代码调试与增量开发助手 - 在充分理解项目上�
 - 完成代码修改后，**根据项目技术栈自动执行检查**（如 Python: ruff/black；前端: npm run lint；Rust: cargo check；Go: go build/gofmt；Java: mvn compile 或 gradle check；.NET: dotnet build 等），形成「修复 → 检查 → 修正」闭环。
 - 检查失败时当轮修复并复跑，结果纳入验证并写入 .debug 文档，减少开发者反复提醒代码检查的负担。
 
-### 5. 记录更新
+### 5. 文档同步（必选）
+- 前端功能更新（新增/修改交互、页面流程、配置项）必须同步更新 `docs/` 用户说明书，默认按零基础用户可执行标准编写。
+- 后端/API/环境迭代必须同步更新开发与部署文档，写清命令顺序、预期输出、故障排查、回滚方式。
+- 每次功能或环境变更后，必须检查既有部署指导是否需要联动更新（如 `docs/DEPLOYMENT.md`）。
+
+### 6. 记录更新
 - 将调试过程、变量关系、解决方案、checkfix 结果记录到 `.debug` 文档
 - 根据用户测试反馈或自动测试结果，持续更新文档
 - 保持 Debug 记录的完整性和可追溯性
+
+## Python 部署优先级（强约束）
+
+- 固定优先级：`uv`（注意是 `uv`，不是 `uvicorn`）> 直接部署 > `conda`。
+- 涉及 PyTorch 且目标环境有 NVIDIA GPU 时，优先给出 CUDA 版本安装命令，例如：`uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`（按目标 CUDA 版本调整），并附 CPU 回退命令。
 
 ## 使用场景
 
@@ -67,6 +77,11 @@ description: 智能代码调试与增量开发助手 - 在充分理解项目上�
 - [ ] 新建 .debug 文档
 - [ ] 加载现有上下文
 - [ ] 模块隔离检查
+
+## 📘 Docs 更新
+- [ ] 已更新用户说明书（docs/*.md）
+- [ ] 已更新开发/部署文档（如 docs/DEPLOYMENT.md）
+- [ ] 已检查历史部署文档是否需联动修订
 
 ## 🛠️ 执行方案
 [具体的调试/开发方案]

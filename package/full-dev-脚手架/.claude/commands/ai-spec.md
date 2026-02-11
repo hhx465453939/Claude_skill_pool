@@ -17,6 +17,10 @@ description: 将自然语言需求转换为生产级技术规范和 AI 执行指
 - 包含完整的实现约束（错误处理、测试、安全、性能）
 - 生成的指令应足够详细，AI 可直接执行无需额外澄清
 - **生成的 AI 执行指令中必须包含 Checkfix 闭环**：每阶段/每次代码变更后按技术栈执行自动检查（如 Python: ruff/black；前端: npm run lint；Rust: cargo check 等），作为最基础的代码开发工作流，不可省略
+- **前端功能更新必须包含 docs 说明书任务**：用户文档默认按零基础可执行标准编写（目标、前置条件、步骤、预期结果、常见问题、回滚）。
+- **后端/API/环境迭代必须包含文档任务**：开发与部署文档要写到新开发者可直接照做；每次功能/环境变更都要检查是否需要更新既有部署指导（如 `docs/DEPLOYMENT.md`）。
+- **Python 部署优先级固定**：`uv`（注意是 `uv`，不是 `uvicorn`）> 直接部署 > `conda`。
+- **涉及 PyTorch 且目标有 NVIDIA GPU 时**：优先输出 CUDA 版本安装命令（如 `uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`），并附 CPU 回退命令。
 
 **请用户描述他们的开发需求**，我将按照以下流程进行：
 

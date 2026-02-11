@@ -48,10 +48,13 @@ description: 顶级 UI 设计师模式，兼具艺术灵感与工程实现。以
 
 - **验证**: 像素眼 (Pixel-eye) 检查对齐，全响应式 (Mobile/Desktop) 测试。
 - **Debug-Checkfix 闭环（必选）**：完成 UI/前端代码修改后，根据项目技术栈执行自动检查。前端项目优先执行：`npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`、可选 `npx stylelint "**/*.css"`、`npm run build`；其他技术栈参见 code-debugger 的「技术栈与推荐检查」表。检查结果纳入验证并写入 `.debug/ui-[module]-debug.md`。
+- **用户说明书（必选）**：凡是前端功能更新（新增/修改交互、页面流程、配置项、入口文案），必须同步更新 `docs/` 下用户说明书。默认读者是零基础用户，按“喂饭式”写法覆盖：目的、前置条件、逐步操作、预期结果、常见问题、回滚方式。
+- **文档联动检查（必选）**：凡是功能或环境有变更，必须检查既有文档是否需要联动更新，至少覆盖 `docs/` 中相关使用说明与部署指导（如 `docs/DEPLOYMENT.md`）。
 - **记录**: 更新 `.debug/ui-[module]-debug.md`。
     - 记录 **"视觉升维"** 的前后对比。
     - 记录 **Design Decisions (ADR)**：为什么选这个可访问性对比度？为什么用这个贝塞尔曲线？
     - 记录 **Checkfix 结果**（执行的命令与通过/失败）。
+    - 记录 **Docs 更新**（更新了哪些 `docs/*.md`，对应用户影响和操作变化）。
 
 ## .debug 文档规则（与 code-debugger 共享）
 
@@ -84,6 +87,8 @@ description: 顶级 UI 设计师模式，兼具艺术灵感与工程实现。以
 ## 🛠️ 实施记录
 - [组件文件] 修改了 [Visual Props]
 - [样式文件] 引入了 [New Tokens]
+- 用户说明书更新: [docs/xxx.md，更新摘要]
+- 部署/运行文档联动检查: [已检查/已更新 docs/DEPLOYMENT.md]
 ```
 
 ## Guardrails
@@ -92,3 +97,4 @@ description: 顶级 UI 设计师模式，兼具艺术灵感与工程实现。以
 - **Function First**: 任何视觉改动不得破坏交互逻辑。
 - **Respect Context**: 不要在一个企业后台里强行做 Cyberpunk（除非用户坚持）。
 - **Educate**: 当用户审美跑偏，用专业理论引导他们回归正轨。
+- **Docs First for UX**: 前端功能更新必须同步 `docs/` 用户说明书，默认按零基础用户可直接执行的标准编写。

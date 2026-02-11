@@ -40,14 +40,20 @@ description: 基于深度上下文理解的代码调试与增量开发流程。�
 - 更新 `.debug/` 记录：问题、根因、变更、验证（含 checkfix 结果）、影响评估。
 - 根据反馈迭代修复与文档。
 
+### 4. 文档同步与部署约束（必选）
+- 前端功能变更：必须同步更新 `docs/` 用户说明书，默认面向零基础用户，步骤写到可直接照做。
+- 后端/API/环境变更：必须同步更新开发与部署文档，明确命令、执行顺序、预期输出、失败排查与回滚。
+- 每次功能或环境更新后，必须检查既有部署指导是否需要联动修改（如 `docs/DEPLOYMENT.md`、`docs/README.md`）。
+
 ### 技术栈与推荐检查（Checkfix 闭环）
 
 读取本 skill 的编程工具应在 debug 完成后**自动考虑**执行下列检查，减少开发者反复提醒的负担：
 
 | 技术栈/类型 | 推荐检查 | 说明 |
 |-------------|----------|------|
-| Python | `ruff check .`、`ruff format --check .` 或 `black --check .` | 先 lint 再 format；失败则修复后复跑 |
+| Python | 优先 `uv venv` + `uv sync`（或 `uv pip install -r requirements.txt`），并执行 `ruff check .`、`ruff format --check .` 或 `black --check .` | 部署优先级：`uv`（非 `uvicorn`）> 直接部署 > `conda` |
 | 前端 (Node/npm) | `npm install`（依赖变更时）、`npm run lint` 或 `npx eslint .`，可选 `npm run build` | 依赖与静态检查，优先用 package.json scripts |
+| PyTorch (GPU) | `uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124`（按目标 CUDA 版本调整） | 有 NVIDIA GPU 时优先 CUDA 包，并补充 CPU 回退命令 |
 | Rust | `cargo check` 或 `cargo clippy` | 编译与 Clippy |
 | Go | `go build ./...`、`gofmt -l .` 或 `golangci-lint run` | 编译与格式/静态检查 |
 | Java/Kotlin (Maven) | `mvn compile` 或 `mvn verify` | 编译与测试 |
@@ -56,6 +62,11 @@ description: 基于深度上下文理解的代码调试与增量开发流程。�
 | 通用 | 项目内已配置的 lint/format/check 脚本（如 `make check`、`invoke lint`） | 优先执行项目既有脚本 |
 
 **执行原则**：识别技术栈后，至少执行一类检查（lint/format/build）；若检查失败，当轮内修复并复跑直至通过或记录为技术债；结果写入验证与 .debug 记录。
+
+### 文档写作标准（后端/部署）
+- 读者假设：默认读者为首次接手该项目的开发者，不依赖口头传递。
+- 必写要素：前置条件、环境准备、逐步命令、验证方式、常见错误处理、回滚方案。
+- 文档目标：开发者仅靠文档即可完成开发、部署、验证与故障定位。
 
 ## .debug 文档规则
 
@@ -79,6 +90,8 @@ description: 基于深度上下文理解的代码调试与增量开发流程。�
 - 最后更新:
 - 相关文件:
 - 依赖模块:
+- 用户说明书路径（涉及前端功能时）:
+- 开发/部署文档路径（涉及后端或环境时）:
 
 ## 运行上下文与测试规则（首次确认后填写，后续优先读取此处，不再反复询问）
 - 运行环境: [本机 Windows / WSL / NAS-Samba+SSH 或远程]
@@ -100,6 +113,7 @@ description: 基于深度上下文理解的代码调试与增量开发流程。�
 - 代码变更（文件/函数）
 - 验证结果
 - 影响评估
+- 文档更新（新增/修改的 docs 文件与更新点）
 
 ## 待追踪问题
 ## 技术债务记录

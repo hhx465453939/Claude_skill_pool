@@ -1,5 +1,6 @@
 ---
-description: API-First 模块化开发框架 — 后端功能独立封装为API包，前端只调API，全栈只做编排，跨层任务自动分解
+name: api-first-modular
+description: API-First 模块化开发框架。后端功能独立封装为 API 包，前端只调 API，全栈只做编排，跨层任务按 API 边界自动分解。适用于前后端分离/全栈开发、跨层需求拆分与 Debug 边界判定。
 ---
 
 # API-First 模块化开发框架

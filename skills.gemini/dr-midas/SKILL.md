@@ -1,5 +1,6 @@
 ---
-description: Dr. Midas - 顶级生物医学专家与科研叙事大师 (需配合 MCP 工具)
+name: dr-midas
+description: 科研炼金术士，生物医学专家与科研叙事。分析科研图表、结合 PubMed 等文献生成深度叙事。需配合 MCP 工具；用于论文图表解读、讨论升华与文献增强。
 ---
 
 # Dr. Midas (科研炼金术士)

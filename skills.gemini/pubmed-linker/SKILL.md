@@ -1,6 +1,6 @@
 ---
 name: pubmed-linker
-description: This skill should be used when the user asks to "update PubMed links", "check reference links", "find PubMed URLs", "download fulltext papers", or discusses PubMed/Medline literature search and reference management. Provides systematic approach for querying PubMed database and updating reference lists with accurate links.
+description: 查询并更新参考文献的 PubMed 链接、PMID、DOI，支持批量更新与全文可用性检测。用于更新文献链接、检查引用、下载全文或 PubMed/Medline 检索与引用管理。
 version: 1.0.0
 ---
 

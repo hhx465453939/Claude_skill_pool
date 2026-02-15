@@ -23,9 +23,10 @@
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
-│   ├── ref-pubmd-linker/        # [文献] PubMed 引用链接查询与更新
+│   ├── ref-pubmed-linker/       # [文献] PubMed 引用链接查询与更新（参考实现）
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
-│   └── update-pubmed-links/     # [文献] PubMed 链接批量更新（变体）
+│   ├── sam-dev-cc-init/         # [工作流] PDCA 项目初始化（/sam-init）
+│   └── update-pubmed-links/     # [文献] PubMed 链接批量更新（命令变体）
 │
 ├── skills.codex/                # OpenAI Codex 技能池（单技能独立部署）
 │   ├── ai-spec/                 # [编程策略] 将需求转为技术规范
@@ -196,6 +197,24 @@ skills.gemini/[skill-name]/
 ```
 
 部署时复制到目标项目的 `.gemini/skills/[skill-name]/SKILL.md`。
+
+### Skill 元数据规范（SKILL.md frontmatter）
+
+所有平台的 `SKILL.md` 统一使用 YAML frontmatter，便于发现与索引：
+
+- **name**（必填）：小写字母与连字符，与目录名一致，如 `api-first-modular`、`code-debugger`。
+- **description**（必填）：第三人称、一句话说明「做什么 + 何时使用」；可含触发场景关键词，便于 Agent 匹配。
+
+示例：
+
+```yaml
+---
+name: code-debugger
+description: 基于深度上下文的智能代码调试与增量开发。用于 Bug 定位与修复、增量功能开发、技术栈 Checkfix 闭环及 .debug 文档维护。
+---
+```
+
+目录命名与技能池保持一致：`skills.claude/`、`skills.codex/`、`skills.gemini/` 下均使用**英文小写+连字符**（如 `research-analyst-system`），避免中文或空格。
 
 ### Cursor 规则结构
 

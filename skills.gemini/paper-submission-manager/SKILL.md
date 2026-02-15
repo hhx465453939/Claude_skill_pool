@@ -1,5 +1,6 @@
 ---
-description: 学术论文投稿流程管理（从终稿到投稿包与追踪），确保资料齐全、格式一致、合规提交。
+name: paper-submission-manager
+description: 学术论文投稿全流程管理，从终稿到投稿包与追踪。用于投稿准备、材料打包、期刊清单与 QA、提交追踪。
 ---
 
 # Paper Submission Manager

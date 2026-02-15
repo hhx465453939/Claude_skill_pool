@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/logo.png" alt="AI Skills Pool" width="128">
+</div>
+
 # AI Skills Pool
 
 这是一个个人 AI 编程工具技能（Skills）和配置的集合仓库。旨在模块化管理不同的 AI 辅助能力，方便按需部署到不同的开发项目中。

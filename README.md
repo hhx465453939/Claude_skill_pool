@@ -142,11 +142,22 @@
    ```
 
 3. 打开项目后：
-   - **第一步**：执行 `/sam-init` 初始化项目 PDCA 工作流（生成 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt）
-   - **Claude Code**：输入 `/` 查看所有可用命令
-   - **Codex**：自动根据任务触发对应技能，或使用 `$skill-name` 手动触发
-   - **Gemini CLI**：描述意图即可自动匹配技能
-   - **Cursor**：规则自动生效，无需手动操作
+    - **第一步**：执行 `/sam-init` 初始化项目 PDCA 工作流（生成 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt）
+    - **Claude Code**：输入 `/` 查看所有可用命令
+    - **Codex**：自动根据任务触发对应技能，或使用 `$skill-name` 手动触发
+    - **Gemini CLI**：描述意图即可自动匹配技能
+    - **Cursor**：规则自动生效，无需手动操作
+
+**⚠️ 注意**：在本仓库（Claude_skill_pool）中测试 Inspector CLI：
+```bash
+# 方式1: 相对路径 (在项目根目录)
+bash skills.claude/sam-dev-cc-init/.claude/scripts/inspector-cli.sh dashboard
+
+# 方式2: 部署到实际项目后
+# 先将 package/full-dev-脚手架/ 或 skills.claude/sam-dev-cc-init/.claude/ 复制到目标项目根目录
+# 然后在目标项目中运行:
+./.claude/scripts/inspector-cli.sh dashboard
+```
 
 ---
 

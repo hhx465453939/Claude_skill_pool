@@ -1,0 +1,341 @@
+{
+  "version": "1.0",
+  "description": "Inspector Agent 配置 - 可根据团队实际情况调整",
+  
+  "token_budget_presets": {
+    "description": "预设的 Token 预算模板，选择一个或自定义",
+    
+    "conservative": {
+      "name": "保守型 (小规模项目)",
+      "strict": 2000,
+      "standard": 5000,
+      "generous": 10000,
+      "trust": null,
+      "notes": "适合简单任务、学习型项目"
+    },
+    
+    "standard": {
+      "name": "标准型 (中等复杂度)",
+      "strict": 3000,
+      "standard": 8000,
+      "generous": 15000,
+      "trust": null,
+      "notes": "适合常规开发、分析任务"
+    },
+    
+    "aggressive": {
+      "name": "激进型 (复杂项目)",
+      "strict": 5000,
+      "standard": 15000,
+      "generous": 30000,
+      "trust": null,
+      "notes": "适合大型重构、深度分析、复杂设计"
+    },
+    
+    "unlimited": {
+      "name": "不限型 (自主型团队)",
+      "strict": 10000,
+      "standard": null,
+      "generous": null,
+      "trust": null,
+      "notes": "Trust Agent 无上限，仅记录实际消耗用于趋势分析"
+    },
+    
+    "custom": {
+      "name": "自定义型",
+      "strict": 4000,
+      "standard": 10000,
+      "generous": 20000,
+      "trust": null,
+      "notes": "按你的需求修改上面的数字"
+    }
+  },
+  
+  "current_preset": "standard",
+  "comment_preset": "修改为: conservative / standard / aggressive / unlimited / custom",
+  
+  "token_budget_rules": {
+    "description": "Token 预算的升降规则",
+    
+    "upgrade_requirements": {
+      "standard_to_generous": {
+        "condition": "连续 N 次 A 级",
+        "default": 3,
+        "configurable": true,
+        "comment": "改为 2 加速升级，改为 5 降速升级"
+      },
+      "generous_to_trust": {
+        "condition": "连续 N 次 A 级 (从 generous 开始计数)",
+        "default": 5,
+        "configurable": true,
+        "comment": "改为 3 加速升级，改为 7 降速升级"
+      }
+    },
+    
+    "downgrade_triggers": {
+      "any_to_strict": {
+        "condition": "1 次 D 级或连续 3 次 C 级",
+        "configurable": true
+      },
+      "any_to_standard": {
+        "condition": "1 次 C 级",
+        "configurable": true
+      }
+    },
+    
+    "cooldown_period": {
+      "after_downgrade": 3,
+      "unit": "tasks",
+      "configurable": true,
+      "comment": "降级后 N 次任务内不能申请升级"
+    }
+  },
+  
+  "agent_type_adjustments": {
+    "description": "不同类型 Agent 的预算调整系数 (乘数)",
+    "comment": "例如：Programming Agent 的 standard = 8000 * 1.0，Analysis Agent = 8000 * 1.2",
+    
+    "programming": {
+      "multiplier": 1.0,
+      "notes": "Frontend/Backend/Tester - 标准系数"
+    },
+    
+    "analysis": {
+      "multiplier": 1.2,
+      "notes": "Researcher/Analyst - 需要更多 Token 用于分析"
+    },
+    
+    "design": {
+      "multiplier": 1.1,
+      "notes": "UX/Architect - 比编程略高"
+    },
+    
+    "research": {
+      "multiplier": 1.3,
+      "notes": "深度研究 - 需要显著更多 Token"
+    }
+  },
+  
+  "dynamic_adjustment": {
+    "description": "基于实际使用的动态调整建议",
+    "enabled": true,
+    "comment": "系统会根据实际 Token 消耗提示是否应该调整预算",
+    
+    "trigger_threshold": 0.85,
+    "comment": "当平均使用率 > 85% 时，提议增加预算"
+  },
+  
+  "review_schedule": {
+    "description": "复盘频率 - 根据 Agent 经验等级自动调整",
+    "comment": "不同等级的 Agent 有不同的复盘周期",
+    
+    "beginner": {
+      "criteria": "首次任务 或 积分 <= 30 或 连续 A 级数 = 0",
+      "review_frequency": "2days",
+      "review_depth": "detailed",
+      "notes": "新手 Agent 需要频繁反馈，帮助快速成长"
+    },
+    
+    "intermediate": {
+      "criteria": "积分 31-80 或 连续 A 级数 1-2 或 完成 5-10 个任务",
+      "review_frequency": "3days",
+      "review_depth": "standard",
+      "notes": "中等 Agent 逐步建立自信，减少干预"
+    },
+    
+    "advanced": {
+      "criteria": "积分 81-150 或 连续 A 级数 3+ 或 完成 11-20 个任务",
+      "review_frequency": "5days",
+      "review_depth": "summary",
+      "notes": "高级 Agent 自驱力强，复盘变为顾问式"
+    },
+    
+    "expert": {
+      "criteria": "积分 151+ 或 连续 A 级数 5+ 或 完成 20+ 个任务 或 预算等级 = Trust",
+      "review_frequency": "weekly",
+      "review_depth": "highlight_only",
+      "notes": "专家级 Agent 基本自主，仅高亮关键指标"
+    }
+  },
+  
+  "review_depth_details": {
+    "detailed": {
+      "description": "详细复盘（新手）",
+      "includes": [
+        "complete_metrics",
+        "detailed_feedback",
+        "specific_improvements",
+        "1_on_1_suggestions",
+        "historical_patterns",
+        "next_task_recommendations"
+      ],
+      "estimated_time": "30-45 min"
+    },
+    
+    "standard": {
+      "description": "标准复盘（中等）",
+      "includes": [
+        "key_metrics",
+        "trend_analysis",
+        "improvement_areas",
+        "optimization_suggestions"
+      ],
+      "estimated_time": "15-20 min"
+    },
+    
+    "summary": {
+      "description": "总结复盘（高级）",
+      "includes": [
+        "performance_score",
+        "trend_direction",
+        "anomalies_only",
+        "resource_optimization"
+      ],
+      "estimated_time": "5-10 min"
+    },
+    
+    "highlight_only": {
+      "description": "要点复盘（专家）",
+      "includes": [
+        "key_alerts_only",
+        "exceptional_metrics",
+        "team_impact"
+      ],
+      "estimated_time": "2-3 min"
+    }
+  },
+  
+  "auto_level_determination": {
+    "description": "自动判断 Agent 等级的规则（选择其中一个满足即可）",
+    "comment": "系统会定期评估 Agent 等级，自动调整复盘频率",
+    
+    "evaluation_triggers": [
+      "新任务开始时（判断初始等级）",
+      "每次任务完成后（检查是否升级）",
+      "每周一次（检查长期趋势）"
+    ]
+  },
+  
+  "approval_workflow": {
+    "description": "超预算处理流程",
+    
+    "exceed_soft_limit": {
+      "limit_percentage": 0.9,
+      "action": "warning",
+      "message": "接近预算上限（90%），请准备结束",
+      "example": "实际消耗 7.2k / 8k"
+    },
+    
+    "exceed_hard_limit": {
+      "limit_percentage": 1.0,
+      "action": "stop_and_report",
+      "message": "Token 预算已耗尽，必须汇报完成状态",
+      "example": "实际消耗 8k / 8k，立即停止"
+    },
+    
+    "request_additional": {
+      "enabled": true,
+      "approval_required": false,
+      "comment": "Agent 可以申请追加预算，不需要人工批准（Trust level 除外）",
+      "additional_budget": "auto",
+      "additional_amount_percent": 0.5,
+      "additional_max_count": 2,
+      "comment_additional": "一次最多追加 50% 的初始预算，一个任务最多追加 2 次"
+    }
+  },
+  
+  "points_system": {
+    "description": "积分系统配置",
+    
+    "rewards": {
+      "A_grade": 15,
+      "B_grade": 7,
+      "token_estimation_accurate": 5,
+      "self_opt_entry": 3,
+      "checkfix_first_pass": 10,
+      "comment": "可根据重视程度调整各项权重"
+    },
+    
+    "penalties": {
+      "C_grade": -20,
+      "D_grade": -50,
+      "skip_checkfix": -50,
+      "token_estimation_severe": -10,
+      "production_bug": -30,
+      "comment": "惩罚的严厉程度可根据团队文化调整"
+    },
+    
+    "point_levels": {
+      "red": { "min": 0, "max": 50 },
+      "yellow": { "min": 51, "max": 100 },
+      "green": { "min": 101, "max": 150 },
+      "gold": { "min": 151, "max": null },
+      "comment": "修改阈值调整级别划分"
+    }
+  },
+  
+  "quality_checkpoints": {
+    "description": "质量检查点，不同角色可以有不同的检查项",
+    
+    "programming": [
+      "code_style",
+      "type_checking",
+      "security",
+      "performance",
+      "dependencies",
+      "documentation",
+      "logging",
+      "error_handling"
+    ],
+    
+    "analysis": [
+      "data_accuracy",
+      "methodology",
+      "source_verification",
+      "conclusion_validity",
+      "documentation",
+      "reproducibility"
+    ],
+    
+    "design": [
+      "consistency",
+      "accessibility",
+      "usability",
+      "visual_hierarchy",
+      "performance",
+      "documentation"
+    ],
+    
+    "comment": "CHECKFIX 检查项数量和内容可自定义"
+  },
+  
+  "feedback_customization": {
+    "enabled": true,
+    "comment": "是否启用自定义反馈风格（严格/友好/激励等）",
+    
+    "tone": "neutral",
+    "options": ["strict", "neutral", "encouraging"],
+    "comment_tone": "改为 strict 更严肃，encouraging 更鼓励"
+  },
+  
+  "reporting": {
+    "enabled": true,
+    "frequency": "weekly",
+    "include_metrics": [
+      "agent_grades",
+      "token_efficiency",
+      "quality_trends",
+      "risk_alerts",
+      "team_averages",
+      "individual_comparisons"
+    ]
+  },
+  
+  "notes": {
+    "general": "这个配置文件定义了 Inspector Agent 的所有参数。你可以根据团队的实际情况调整。",
+    "token_budgets": "如果你的任务通常比较复杂，建议使用 'aggressive' 预设或自定义更高的值。",
+    "dynamic_adjustment": "启用动态调整后，系统会根据实际 Token 消耗自动建议是否增加预算。",
+    "approval": "默认 Agent 可以自己申请追加预算（不需人工批准），这样不会因为预算卡住。",
+    "custom_checkpoints": "根据 Agent 类型定制 CHECKFIX 检查项，避免编程检查项应用到分析任务。"
+  }
+}

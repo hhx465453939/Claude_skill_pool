@@ -1,5 +1,6 @@
 ---
-description: 研究方法论反向提取器 - 从已有的深度研究文档中抽象出可复用的研究框架模板
+name: extract
+description: 从深度研究文档中反向提取可复用的研究方法论框架与 Prompt 模板。用于研究思路模板化、知识沉淀与跨场景复用。
 ---
 
 # 技能名称: extract-research-framework

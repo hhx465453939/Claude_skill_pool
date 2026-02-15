@@ -1,0 +1,226 @@
+# CLAUDE.md
+<!--
+  WHAT: 这是AI助手的上下文指南，让Claude快速理解项目结构和开发规范
+  WHY: 减少重复解释，保持开发一致性，实现高效的PDCA循环
+  WHEN: 新项目初始化时创建，随着项目演进更新
+-->
+
+This file provides guidance to Claude Code when working with code in this repository.
+
+## 快速开始
+
+- 工作目录：`/app`
+- 常用命令：
+  - 测试：`pytest tests/ -v`
+  - 运行：`python -m app.main`
+
+## PDCA 开发循环
+
+<!--
+  PDCA = Plan-Do-Check-Act
+  核心理念：Context Window = RAM (易失，有限), Filesystem = Disk (持久，无限)
+  重要信息必须写入文件！
+-->
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    PDCA 开发循环                             │
+├─────────────────────────────────────────────────────────────┤
+│  1. PLAN  → 读取 tasks/TASKS.md，查看并领取任务              │
+│  2. DO    → 开发实现 + 编写单元测试                          │
+│  3. CHECK → pytest 验证 + 端到端验证                         │
+│  4. ACT   → 更新 PROGRESS-LOG.md（倒序追加）+ 更新任务状态   │
+│  5. OPT   → 新错误模式写入 self.opt 经验沉淀                 │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### 文件对应关系
+
+| 阶段 | 文件 | 用途 | 更新方式 |
+|------|------|------|----------|
+| PLAN | `tasks/TASKS.md` | 任务列表与状态管理 | 手动编辑 |
+| DO | 代码目录 | 实现与测试 | 编码 |
+| CHECK | `pytest` / `curl` | 验证测试 | 运行命令 |
+| ACT | `PROGRESS-LOG.md` | 进度日志（**倒序追加**） | 手动编辑 |
+| OPT | `self.opt` | 经验沉淀（错误模式、法则） | 手动编辑 |
+
+## 每日启动流程
+
+```bash
+# 1. 查看今日任务
+cat tasks/TASKS.md | grep -A 10 "当前 Sprint"
+
+# 2. 回顾昨日进度
+cat PROGRESS-LOG.md | head -40
+
+# 3. 查看经验总结（避免重复踩坑）
+cat self.opt | grep -A 5 "$(date +%Y-%m-%d)" || echo "继续积累..."
+
+# 4. 运行5问重启测试（检查上下文是否完整）
+# 见下方 "5-Question Reboot Test"
+```
+
+## 5-Question Reboot Test
+
+<!--
+  如果都能回答，说明上下文管理是稳固的
+  在长时间会话或恢复后继续工作时使用
+-->
+
+| 问题 | 答案来源 |
+|------|----------|
+| Where am I? | 当前阶段在 `tasks/TASKS.md` |
+| Where am I going? | 剩余任务列表 |
+| What's the goal? | `tasks/TASKS.md` 中的项目目标 |
+| What have I learned? | `self.opt` 中的经验沉淀 |
+| What have I done? | `PROGRESS-LOG.md` 中的记录 |
+
+## 开发循环详细流程
+
+### PLAN 阶段
+
+1. **读取任务列表**
+   ```bash
+   cat tasks/TASKS.md | grep -A 20 "当前 Sprint"
+   ```
+
+2. **选择任务**
+   - 选择优先级最高的 `TODO` 任务
+   - 评估依赖关系（是否需要先完成其他任务）
+   - 更新状态为 `IN_PROGRESS`
+
+3. **制定计划**
+   - 预估完成时间
+   - 识别潜在风险
+   - 确定验证方式
+
+### DO 阶段
+
+1. **实现代码**
+   - 遵循项目代码规范
+   - 保持原子提交（一个任务一个 commit）
+
+2. **编写测试**
+   - 单元测试覆盖核心逻辑
+   - 集成测试验证端到端流程
+
+3. **遇到错误时**
+   - 记录到 `self.opt`（错误模式）
+   - 应用 "3-Strike Error Protocol"
+
+### CHECK 阶段
+
+1. **运行测试**
+   ```bash
+   pytest tests/ -v
+   ```
+
+2. **端到端验证**
+   ```bash
+   # API测试示例
+   curl http://localhost:8000/health
+   ```
+
+3. **代码质量检查**（可选）
+   ```bash
+   black app/ && mypy app/ && flake8 app/
+   ```
+
+### ACT 阶段
+
+1. **更新进度日志**（**倒序追加**到 `PROGRESS-LOG.md` 顶部）
+   - 今日完成事项
+   - 遇到的问题及解决
+   - 下一步计划
+
+2. **更新任务状态**
+   - 状态改为 `DONE`
+   - 填写实际耗时
+   - 移动任务到「已完成」
+
+3. **经验沉淀**
+   - 新错误模式 → `self.opt`
+   - 最佳实践 → `self.opt`
+
+## 任务完成 Checklist
+
+- [ ] 代码实现完成
+- [ ] 单元测试通过 (`pytest`)
+- [ ] 集成测试通过（如有）
+- [ ] `PROGRESS-LOG.md` 已更新（**倒序追加**）
+- [ ] `tasks/TASKS.md` 状态已更新为 `DONE`
+- [ ] 如有新错误模式，已写入 `self.opt`
+
+## 关键规则
+
+### 1. 倒序追加原则
+<!-- Context Window 有限，新内容永远写上面 -->
+`PROGRESS-LOG.md` 永远在最上面写新内容，旧内容自动下沉。
+
+### 2. 2-Action Rule
+<!-- 防止视觉/多模态信息丢失 -->
+> 每进行2个 view/browser/search 操作后，**立即**将关键发现写入文本文件。
+
+### 3. Read Before Decide
+<!-- 保持目标在注意力窗口中 -->
+做重大决策前，重新阅读 `tasks/TASKS.md` 和 `PROGRESS-LOG.md`。
+
+### 4. Log ALL Errors
+<!-- 记录错误防止重复踩坑 -->
+每个错误都要记录到 `self.opt` 和 `PROGRESS-LOG.md`。
+
+```markdown
+## 错误模式
+| 错误 | 尝试次数 | 解决方案 |
+|------|----------|----------|
+| FileNotFoundError | 1 | 创建默认配置 |
+```
+
+### 5. Never Repeat Failures
+```
+if action_failed:
+    next_action != same_action
+```
+记录尝试，改变方法。
+
+## 3-Strike Error Protocol
+
+```
+ATTEMPT 1: 诊断与修复
+  → 仔细阅读错误
+  → 识别根本原因
+  → 应用针对性修复
+
+ATTEMPT 2: 替代方法
+  → 同样错误？尝试不同方法
+  → 换工具？换库？
+  → 绝不重复相同的失败操作
+
+ATTEMPT 3: 重新思考
+  → 质疑假设
+  → 搜索解决方案
+  → 考虑更新计划
+
+AFTER 3 FAILURES: 升级给用户
+  → 解释尝试过的方法
+  → 分享具体错误
+  → 请求指导
+```
+
+## Read vs Write 决策矩阵
+
+| 场景 | 行动 | 原因 |
+|------|------|------|
+| 刚写入文件 | 不读 | 内容仍在上下文中 |
+| 查看图像/PDF | 立即写发现 | 多模态→文本，防止丢失 |
+| 浏览器返回数据 | 写入文件 | 截图不会持久化 |
+| 开始新阶段 | 读计划/发现 | 重新定位，防止上下文陈旧 |
+| 发生错误 | 读相关文件 | 需要当前状态来修复 |
+| 恢复后继续 | 读所有计划文件 | 恢复状态 |
+
+## 提示
+
+- 所有重要决策记录在 `PROGRESS-LOG.md`
+- 遇到重复错误时先查 `self.opt`
+- 保持简洁，倒序追加
+- `CLAUDE.md` 是给AI看的，写清楚上下文

@@ -1,3 +1,8 @@
+---
+name: research-analyst-system
+description: 多层级金融分析师 Agent 系统，首席分析师协调 6 大研究小组进行深度调研。用于宏观/股票/大宗/加密货币等投资研究与结构化报告生成。
+---
+
 # 技能名称: research-analyst-system
 
 **描述**: 宏观投资研究的多层级分析师Agent系统 - 首席分析师协调6大研究小组，每小组可调用无限研究员进行深度调研

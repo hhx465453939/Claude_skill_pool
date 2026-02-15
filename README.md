@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="assets/logo.png" alt="AI Skills Pool" width="128">
+</div>
+
 # AI Skills Pool
 
 这是一个个人 AI 编程工具技能（Skills）和配置的集合仓库。旨在模块化管理不同的 AI 辅助能力，方便按需部署到不同的开发项目中。
@@ -13,6 +17,11 @@
 ├── LICENSE
 ├── README.md
 ├── CLAUDE.md                    # Claude Code 开发规范元文档（本仓库自身）
+├── docs/                         # 参考文档（不参与脚手架执行）
+│   └── inspector/                # Inspector 设计与场景说明
+│       ├── INSPECTOR-CROSS-PLATFORM.md
+│       ├── INSPECTOR-SCENARIO-WALKTHROUGH.md
+│       └── README.md
 │
 ├── skills.claude/               # Claude Code 技能池（单技能独立部署）
 │   ├── ai-spec/                 # [编程策略] 将需求转为技术规范
@@ -23,9 +32,10 @@
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
-│   ├── ref-pubmd-linker/        # [文献] PubMed 引用链接查询与更新
+│   ├── ref-pubmed-linker/       # [文献] PubMed 引用链接查询与更新（参考实现）
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
-│   └── update-pubmed-links/     # [文献] PubMed 链接批量更新（变体）
+│   ├── sam-dev-cc-init/         # [工作流] PDCA 项目初始化（/sam-init）
+│   └── update-pubmed-links/     # [文献] PubMed 链接批量更新（命令变体）
 │
 ├── skills.codex/                # OpenAI Codex 技能池（单技能独立部署）
 │   ├── ai-spec/                 # [编程策略] 将需求转为技术规范
@@ -58,7 +68,7 @@
 │       ├── CLAUDE.md            # Claude Code 初始化引导
 │       ├── AGENTS.md            # Codex 初始化引导
 │       ├── GEMINI.md            # Gemini CLI 初始化引导
-│       ├── .claude/             # Claude Code 完整配置（7 commands + 7 skills + 3 agents）
+│       ├── .claude/             # Claude Code 完整配置（8 commands + 8 skills + 3 agents）
 │       ├── .codex/              # Codex 技能包（5 skills）
 │       ├── .gemini/             # Gemini CLI 技能包（7 skills）
 │       └── .cursor/             # Cursor 规则（2 rules）
@@ -68,6 +78,14 @@
         ├── api-first-development.mdc
         └── project-structure.mdc
 ```
+
+---
+
+## 📖 参考文档
+
+以下文档仅作**阅读与理解**用，不参与脚手架或脚本执行：
+
+- **[docs/inspector/](docs/inspector/)** — Inspector Agent 跨平台架构与场景演示（从入职到专家的完整周期）。部署了 sam-dev-cc-init 或使用 Inspector CLI 时，可在此查阅设计与用法说明。
 
 ---
 
@@ -102,15 +120,29 @@
 
 适合需要完整 AI 辅助开发环境的全栈项目，一次部署即可让 Claude Code、Codex、Gemini CLI、Cursor 四个工具同时获得全套开发能力。
 
-1. 将 `package/full-dev-脚手架/` 目录下的 **所有内容** 复制到目标项目根目录：
+1. 将 `package/full-dev-脚手架/` 目录下的内容复制到目标项目根目录：
 
    ```bash
-   # 复制脚手架内容到项目（不复制脚手架目录本身）
+   # 方法一：完全替换（推荐新项目）
    cp -r package/full-dev-脚手架/* /path/to/your-project/
-   cp -r package/full-dev-脚手架/.claude /path/to/your-project/
-   cp -r package/full-dev-脚手架/.codex /path/to/your-project/
-   cp -r package/full-dev-脚手架/.gemini /path/to/your-project/
-   cp -r package/full-dev-脚手架/.cursor /path/to/your-project/
+   cp -r package/full-dev-脚手架/.[a-z]* /path/to/your-project/
+   
+   # 方法二：增量合并（推荐有存量代码的项目）
+   # 复制文档
+   cp package/full-dev-脚手架/{CLAUDE,AGENTS,GEMINI}.md /path/to/your-project/
+   
+   # 创建并复制配置目录内容
+   mkdir -p /path/to/your-project/.claude
+   cp -r package/full-dev-脚手架/.claude/* /path/to/your-project/.claude/
+   
+   mkdir -p /path/to/your-project/.codex
+   cp -r package/full-dev-脚手架/.codex/* /path/to/your-project/.codex/
+   
+   mkdir -p /path/to/your-project/.gemini
+   cp -r package/full-dev-脚手架/.gemini/* /path/to/your-project/.gemini/
+   
+   mkdir -p /path/to/your-project/.cursor
+   cp -r package/full-dev-脚手架/.cursor/* /path/to/your-project/.cursor/
    ```
 
 2. 部署后目标项目的结构：
@@ -120,7 +152,7 @@
    ├── CLAUDE.md        ← Claude Code 读取，显示可用 commands 和核心规范
    ├── AGENTS.md        ← Codex 读取，显示可用 skills 和核心约束
    ├── GEMINI.md        ← Gemini CLI 读取，显示可用 skills 和使用方式
-   ├── .claude/         ← Claude Code：/ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo
+   ├── .claude/         ← Claude Code：/sam-init, /ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo
    ├── .codex/          ← Codex：$ai-spec, $api-first-modular, $code-debugger, $debug-ui, $ralph
    ├── .gemini/         ← Gemini CLI：ai-spec, api-first-modular, code-debugger, debug-ui, prd, ralph, ralph-yolo
    ├── .cursor/         ← Cursor：API-First 开发规则自动生效
@@ -128,10 +160,22 @@
    ```
 
 3. 打开项目后：
-   - **Claude Code**：输入 `/` 查看所有可用命令
-   - **Codex**：自动根据任务触发对应技能，或使用 `$skill-name` 手动触发
-   - **Gemini CLI**：描述意图即可自动匹配技能
-   - **Cursor**：规则自动生效，无需手动操作
+    - **第一步**：执行 `/sam-init` 初始化项目 PDCA 工作流（生成 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt）
+    - **Claude Code**：输入 `/` 查看所有可用命令
+    - **Codex**：自动根据任务触发对应技能，或使用 `$skill-name` 手动触发
+    - **Gemini CLI**：描述意图即可自动匹配技能
+    - **Cursor**：规则自动生效，无需手动操作
+
+**⚠️ 注意**：在本仓库（Claude_skill_pool）中测试 Inspector CLI：
+```bash
+# 方式1: 相对路径 (在项目根目录)
+bash skills.claude/sam-dev-cc-init/.claude/scripts/inspector-cli.sh dashboard
+
+# 方式2: 部署到实际项目后
+# 先将 package/full-dev-脚手架/ 或 skills.claude/sam-dev-cc-init/.claude/ 复制到目标项目根目录
+# 然后在目标项目中运行:
+./.claude/scripts/inspector-cli.sh dashboard
+```
 
 ---
 
@@ -171,6 +215,24 @@ skills.gemini/[skill-name]/
 
 部署时复制到目标项目的 `.gemini/skills/[skill-name]/SKILL.md`。
 
+### Skill 元数据规范（SKILL.md frontmatter）
+
+所有平台的 `SKILL.md` 统一使用 YAML frontmatter，便于发现与索引：
+
+- **name**（必填）：小写字母与连字符，与目录名一致，如 `api-first-modular`、`code-debugger`。
+- **description**（必填）：第三人称、一句话说明「做什么 + 何时使用」；可含触发场景关键词，便于 Agent 匹配。
+
+示例：
+
+```yaml
+---
+name: code-debugger
+description: 基于深度上下文的智能代码调试与增量开发。用于 Bug 定位与修复、增量功能开发、技术栈 Checkfix 闭环及 .debug 文档维护。
+---
+```
+
+目录命名与技能池保持一致：`skills.claude/`、`skills.codex/`、`skills.gemini/` 下均使用**英文小写+连字符**（如 `research-analyst-system`），避免中文或空格。
+
 ### Cursor 规则结构
 
 ```text
@@ -187,6 +249,7 @@ skills.gemini/[skill-name]/
 
 | 技能名称 | Claude | Codex | Gemini | 描述 |
 | :--- | :---: | :---: | :---: | :--- |
+| **PDCA 工作流初始化 (sam-dev-cc-init)** | `/sam-init` | — | — | 为项目一键初始化 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt（项目级自优化） |
 | **编程策略工具 (ai-spec)** | `/ai-spec` | `$ai-spec` | ✓ | 全栈架构师模式，将自然语言需求转化为生产级技术规范和 AI 执行指令 |
 | **API-First 模块化 (api-first-modular)** | `/api-first` | `$api-first-modular` | ✓ | 后端功能封装为独立 API 包，前端只调 API，跨层任务按 API 边界自动分解 |
 | **智能调试助手 (code-debugger)** | `/debug` | `$code-debugger` | ✓ | 基于深度上下文理解的精准调试与增量开发，模块隔离防止连锁错误 |
@@ -215,3 +278,11 @@ skills.gemini/[skill-name]/
 | 名称 | 包含工具 | 描述 |
 | :--- | :---: | :--- |
 | **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 一键部署完整 AI 辅助全栈开发环境，含 7 个 Claude commands + 5 个 Codex skills + 7 个 Gemini skills + 2 条 Cursor rules |
+
+---
+
+## 致谢
+
+Inspector 相关设计与能力来源于 [@samqin123](https://github.com/samqin123) 的贡献，特此感谢。
+
+[![@samqin123](https://github.com/samqin123.png?size=64)](https://github.com/samqin123)

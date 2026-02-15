@@ -64,14 +64,22 @@
 │   └── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │
 ├── package/                     # 预打包的脚手架（多技能一体化部署）
-│   └── full-dev-脚手架/         # 全栈开发环境脚手架
-│       ├── CLAUDE.md            # Claude Code 初始化引导
-│       ├── AGENTS.md            # Codex 初始化引导
-│       ├── GEMINI.md            # Gemini CLI 初始化引导
-│       ├── .claude/             # Claude Code 完整配置（8 commands + 8 skills + 3 agents）
-│       ├── .codex/              # Codex 技能包（5 skills）
-│       ├── .gemini/             # Gemini CLI 技能包（7 skills）
-│       └── .cursor/             # Cursor 规则（2 rules）
+│   ├── full-dev-脚手架/         # 全栈开发环境（仅开发技能，无 PDCA/Inspector）
+│   │   ├── CLAUDE.md            # Claude Code 初始化引导
+│   │   ├── AGENTS.md            # Codex 初始化引导
+│   │   ├── GEMINI.md            # Gemini CLI 初始化引导
+│   │   ├── .claude/             # Claude Code（7 commands + 7 skills + 3 agents）
+│   │   ├── .codex/              # Codex 技能包（5 skills）
+│   │   ├── .gemini/             # Gemini CLI 技能包（7 skills）
+│   │   └── .cursor/             # Cursor 规则（2 rules）
+│   └── full-dev-脚手架-inspector/ # 全栈开发 + PDCA/Inspector（含 /sam-init 与入职看板）
+│       ├── CLAUDE.md
+│       ├── AGENTS.md
+│       ├── GEMINI.md
+│       ├── .claude/             # 在 full-dev 基础上增加 sam-init、sam-dev-cc-init 及 PDCA 模板
+│       ├── .codex/
+│       ├── .gemini/
+│       └── .cursor/
 │
 └── .cursor/                     # 本仓库自身的 Cursor 规则
     └── rules/
@@ -120,7 +128,14 @@
 
 适合需要完整 AI 辅助开发环境的全栈项目，一次部署即可让 Claude Code、Codex、Gemini CLI、Cursor 四个工具同时获得全套开发能力。
 
-1. 将 `package/full-dev-脚手架/` 目录下的内容复制到目标项目根目录：
+**两种脚手架如何选：**
+
+| 脚手架 | 适用场景 | 区别摘要 |
+|--------|----------|----------|
+| **full-dev-脚手架** | 只要「需求→规范→开发→调试」全流程，不需要项目级 PDCA 与看板 | 仅开发技能：ai-spec、api-first、debug、debug-ui、prd、ralph 等，无 `/sam-init` |
+| **full-dev-脚手架-inspector** | 需要 PDCA 循环、任务看板、进度日志与 Inspector 入职/专家周期管理 | 在 full-dev 基础上增加 `/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt 等，可与 [docs/inspector/](docs/inspector/) 配合使用 |
+
+1. 将所选脚手架目录下的内容复制到目标项目根目录（下例以 `full-dev-脚手架` 为例，若选 inspector 则替换为 `full-dev-脚手架-inspector`）：
 
    ```bash
    # 方法一：完全替换（推荐新项目）
@@ -145,14 +160,14 @@
    cp -r package/full-dev-脚手架/.cursor/* /path/to/your-project/.cursor/
    ```
 
-2. 部署后目标项目的结构：
+2. 部署后目标项目的结构（若使用 **full-dev-脚手架-inspector** 还会多出 `/sam-init` 及 PDCA 相关能力）：
 
    ```text
    your-project/
    ├── CLAUDE.md        ← Claude Code 读取，显示可用 commands 和核心规范
    ├── AGENTS.md        ← Codex 读取，显示可用 skills 和核心约束
    ├── GEMINI.md        ← Gemini CLI 读取，显示可用 skills 和使用方式
-   ├── .claude/         ← Claude Code：/sam-init, /ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo
+   ├── .claude/         ← Claude Code：/ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo（inspector 版另有 /sam-init）
    ├── .codex/          ← Codex：$ai-spec, $api-first-modular, $code-debugger, $debug-ui, $ralph
    ├── .gemini/         ← Gemini CLI：ai-spec, api-first-modular, code-debugger, debug-ui, prd, ralph, ralph-yolo
    ├── .cursor/         ← Cursor：API-First 开发规则自动生效
@@ -160,19 +175,19 @@
    ```
 
 3. 打开项目后：
-    - **第一步**：执行 `/sam-init` 初始化项目 PDCA 工作流（生成 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt）
+    - **若使用 full-dev-脚手架-inspector**：第一步执行 `/sam-init` 初始化 PDCA 工作流（生成/更新 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt）。
     - **Claude Code**：输入 `/` 查看所有可用命令
     - **Codex**：自动根据任务触发对应技能，或使用 `$skill-name` 手动触发
     - **Gemini CLI**：描述意图即可自动匹配技能
     - **Cursor**：规则自动生效，无需手动操作
 
-**⚠️ 注意**：在本仓库（Claude_skill_pool）中测试 Inspector CLI：
+**⚠️ Inspector CLI**（仅 **full-dev-脚手架-inspector** 或单独部署 sam-dev-cc-init 时可用）。在本仓库（Claude_skill_pool）中测试：
 ```bash
 # 方式1: 相对路径 (在项目根目录)
 bash skills.claude/sam-dev-cc-init/.claude/scripts/inspector-cli.sh dashboard
 
 # 方式2: 部署到实际项目后
-# 先将 package/full-dev-脚手架/ 或 skills.claude/sam-dev-cc-init/.claude/ 复制到目标项目根目录
+# 先将 package/full-dev-脚手架-inspector/ 或 skills.claude/sam-dev-cc-init/.claude/ 复制到目标项目根目录
 # 然后在目标项目中运行:
 ./.claude/scripts/inspector-cli.sh dashboard
 ```
@@ -277,7 +292,8 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 
 | 名称 | 包含工具 | 描述 |
 | :--- | :---: | :--- |
-| **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 一键部署完整 AI 辅助全栈开发环境，含 7 个 Claude commands + 5 个 Codex skills + 7 个 Gemini skills + 2 条 Cursor rules |
+| **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 仅开发能力：一键部署 ai-spec、api-first、debug、debug-ui、prd、ralph、ralph-yolo 等，7 commands + 5 Codex + 7 Gemini + 2 Cursor rules，**无** PDCA/Inspector |
+| **全栈开发 + Inspector 脚手架 (full-dev-inspector)** | Claude + Codex + Gemini + Cursor | 在 full-dev 基础上增加 **PDCA 工作流**：`/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt；适合需要入职看板与专家周期管理的项目，详见 [docs/inspector/](docs/inspector/) |
 
 ---
 

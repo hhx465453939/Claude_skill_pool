@@ -45,19 +45,66 @@ This file provides guidance to Claude Code when working with code in this reposi
 | CHECK | `.checkfix/` + `pytest` | **验证 CHECKFIX** + 测试 | 命令 |
 | OPT | `PROGRESS-LOG.md` + `self.opt` | 进度日志 + 经验沉淀 | 手动编辑 |
 
+## 三方同步系统（Worker-Inspector-Human）
+
+### CLI 仪表盘查看反馈
+
+所有 Inspector Agent 的反馈都可通过 CLI 显示，实现三方实时同步：
+
+```bash
+# 1. 查看当前 Agent 状态
+.claude/scripts/inspector-cli.sh status
+
+# 2. 查看最新反馈
+.claude/scripts/inspector-cli.sh feedback excellent
+.claude/scripts/inspector-cli.sh feedback alert
+.claude/scripts/inspector-cli.sh feedback warning
+
+# 3. 查看完整仪表盘
+.claude/scripts/inspector-cli.sh dashboard
+
+# 4. 查看三方同步状态
+.claude/scripts/inspector-cli.sh sync all
+
+# 5. 查看检查日志
+.claude/scripts/inspector-cli.sh log
+
+# 6. 查看绩效对比
+.claude/scripts/inspector-cli.sh compare
+```
+
+### 三方角色
+
+| 角色 | 职责 | 交互方式 |
+|------|------|---------|
+| **Worker Agent** | 执行任务、写代码、运行CHECKFIX | 接收 Inspector 反馈，自动调整 |
+| **Inspector Agent** | 评估质量、生成反馈、追踪趋势 | 输出结构化评估到 CLI |
+| **Human** | 监督、决策、干预 | 通过 CLI 仪表盘实时监测 |
+
+---
+
 ## 每日启动流程
 
 ```bash
-# 1. 查看今日任务
+# 1. 查看 Agent 当前状态和预算
+.claude/scripts/inspector-cli.sh status
+
+# 2. 查看完整仪表盘（performance snapshot）
+.claude/scripts/inspector-cli.sh dashboard
+
+# 3. 查看今日任务
 cat tasks/TASKS.md | grep -A 10 "当前 Sprint"
 
-# 2. 回顾昨日进度
+# 4. 回顾昨日进度
 cat PROGRESS-LOG.md | head -40
 
-# 3. 查看经验总结（避免重复踩坑）
+# 5. 查看经验总结（避免重复踩坑）
 cat self.opt | grep -A 5 "$(date +%Y-%m-%d)" || echo "继续积累..."
 
-# 4. 运行5问重启测试（检查上下文是否完整）
+# 6. 查看最新 Inspector 反馈
+.claude/scripts/inspector-cli.sh log | head -20
+
+# 7. 运行5问重启测试（检查上下文是否完整）
 # 见下方 "5-Question Reboot Test"
 ```
 
@@ -309,17 +356,81 @@ cat self.opt | grep -A 5 "$(date +%Y-%m-%d)" || echo "继续积累..."
 
 ---
 
+## Agent 智能体系架构（三层顶级设计）
+
+本项目采用 **三层 Agent 架构**，其中 Inspector Agent 是全局监管者，对所有 Skills 下的 Agent 进行统一评估和管理。
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    L0: Inspector Agent                      │
+│              (全局监管者 - PDCO 质量门卫)                    │
+├─────────────────────────────────────────────────────────────┤
+│ • 多 Agent 评估                                             │
+│ • 全局趋势分析                                              │
+│ • 资源动态调度                                              │
+│ • 质量门控                                                  │
+└─────────────────────────────────────────────────────────────┘
+                           │
+        ┌──────────────────┼──────────────────┐
+        │                  │                  │
+  ┌─────▼────┐      ┌─────▼────┐      ┌─────▼────┐
+  │  编程     │      │  分析    │      │  设计    │
+  │  Agents  │      │  Agents  │      │  Agents  │
+  ├──────────┤      ├──────────┤      ├──────────┤
+  │ Frontend │      │Researcher│      │UX Designer
+  │ Backend  │      │Analyst   │      │Engineer  │
+  │ Tester   │      │Debugger  │      │Architect │
+  └──────────┘      └──────────┘      └──────────┘
+        │                  │                  │
+        └──────────────────┼──────────────────┘
+                           │
+        ┌──────────────────▼──────────────────┐
+        │     CLI 三方同步仪表盘               │
+        │  (Worker-Inspector-Human)           │
+        └─────────────────────────────────────┘
+```
+
+### 三层架构说明
+
+**L0 - Inspector Agent（顶级监管）**
+- 统一的评估标准（CHECKFIX、质量等级、Token 效率）
+- 跨 Agent 对比分析
+- 自动 Token 预算调整
+- 全局知识库管理（team self.opt）
+
+**L1 - Skill Agents（具体执行）**
+- 各 Skill 下的 Agent（编程、分析、设计等）
+- 遵循相同的 PDCO 工作流
+- 接受 Inspector 的评估和反馈
+- 维护个人 self.opt（错误库和经验）
+
+**L2 - 同步层（三方信息流）**
+- Worker Agent 执行任务，输出到日志
+- Inspector Agent 评估，生成结构化反馈
+- Human 通过 CLI 仪表盘监督，做出决策
+
+---
+
 ## AI 反馈与指导系统（Inspector Agent）
 
-本项目部署了一个 **Inspector Agent（质量检查官）**，专门负责评估你的表现、提供反馈、给予鼓励或警告。
+本项目部署了一个 **Inspector Agent（顶级监管者）**，专门负责对所有 Skills 下的 Agent 进行评估、反馈、追踪和自动调整。
 
-### Inspector Agent 的职责
+### Inspector Agent 的职责（三个层级）
 
-- 📊 **任务评估**：根据交付质量、Token 效率、CHECKFIX 结果评分
-- 📈 **动态追踪**：跟踪长期表现趋势，识别问题模式
-- 💬 **分级反馈**：鼓励（表现好）→ 提醒（有问题）→ 警告（很差）→ 最后通牒（严重）
-- ⚡ **实时指导**：在 PLAN/DO/CHECK/OPT 各阶段提供动态提示
-- 🎯 **自动调整**：根据表现自动调整 Token 预算和积分
+**全局层**：
+- 📊 **多 Agent 评估**：统一标准评分所有 Agent
+- 📈 **全局趋势分析**：跨 Agent 绩效对比、团队生产力
+- 💡 **资源调度**：动态调整 Token 预算和任务优先级
+
+**单 Agent 层**：
+- 📋 **任务评估**：根据质量等级、Token 效率、检查点评分
+- 🔍 **动态追踪**：跟踪表现趋势，识别问题模式
+- 💬 **分级反馈**：鼓励 → 提醒 → 警告 → 最后通牒
+
+**系统层**：
+- ⚡ **自动调整**：Token 预算、积分、冷静期自动升降
+- 🔗 **模式识别**：跨 Agent 错误模式，识别系统性问题
+- 📚 **知识聚合**：个人 self.opt 聚合为 team self.opt
 
 ### 鼓励机制（表现好时）
 

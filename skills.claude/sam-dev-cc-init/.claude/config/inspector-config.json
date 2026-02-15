@@ -121,10 +121,99 @@
     "enabled": true,
     "comment": "系统会根据实际 Token 消耗提示是否应该调整预算",
     
-    "analyze_period": "weekly",
-    "unit": "tasks",
     "trigger_threshold": 0.85,
     "comment": "当平均使用率 > 85% 时，提议增加预算"
+  },
+  
+  "review_schedule": {
+    "description": "复盘频率 - 根据 Agent 经验等级自动调整",
+    "comment": "不同等级的 Agent 有不同的复盘周期",
+    
+    "beginner": {
+      "criteria": "首次任务 或 积分 <= 30 或 连续 A 级数 = 0",
+      "review_frequency": "2days",
+      "review_depth": "detailed",
+      "notes": "新手 Agent 需要频繁反馈，帮助快速成长"
+    },
+    
+    "intermediate": {
+      "criteria": "积分 31-80 或 连续 A 级数 1-2 或 完成 5-10 个任务",
+      "review_frequency": "3days",
+      "review_depth": "standard",
+      "notes": "中等 Agent 逐步建立自信，减少干预"
+    },
+    
+    "advanced": {
+      "criteria": "积分 81-150 或 连续 A 级数 3+ 或 完成 11-20 个任务",
+      "review_frequency": "5days",
+      "review_depth": "summary",
+      "notes": "高级 Agent 自驱力强，复盘变为顾问式"
+    },
+    
+    "expert": {
+      "criteria": "积分 151+ 或 连续 A 级数 5+ 或 完成 20+ 个任务 或 预算等级 = Trust",
+      "review_frequency": "weekly",
+      "review_depth": "highlight_only",
+      "notes": "专家级 Agent 基本自主，仅高亮关键指标"
+    }
+  },
+  
+  "review_depth_details": {
+    "detailed": {
+      "description": "详细复盘（新手）",
+      "includes": [
+        "complete_metrics",
+        "detailed_feedback",
+        "specific_improvements",
+        "1_on_1_suggestions",
+        "historical_patterns",
+        "next_task_recommendations"
+      ],
+      "estimated_time": "30-45 min"
+    },
+    
+    "standard": {
+      "description": "标准复盘（中等）",
+      "includes": [
+        "key_metrics",
+        "trend_analysis",
+        "improvement_areas",
+        "optimization_suggestions"
+      ],
+      "estimated_time": "15-20 min"
+    },
+    
+    "summary": {
+      "description": "总结复盘（高级）",
+      "includes": [
+        "performance_score",
+        "trend_direction",
+        "anomalies_only",
+        "resource_optimization"
+      ],
+      "estimated_time": "5-10 min"
+    },
+    
+    "highlight_only": {
+      "description": "要点复盘（专家）",
+      "includes": [
+        "key_alerts_only",
+        "exceptional_metrics",
+        "team_impact"
+      ],
+      "estimated_time": "2-3 min"
+    }
+  },
+  
+  "auto_level_determination": {
+    "description": "自动判断 Agent 等级的规则（选择其中一个满足即可）",
+    "comment": "系统会定期评估 Agent 等级，自动调整复盘频率",
+    
+    "evaluation_triggers": [
+      "新任务开始时（判断初始等级）",
+      "每次任务完成后（检查是否升级）",
+      "每周一次（检查长期趋势）"
+    ]
   },
   
   "approval_workflow": {

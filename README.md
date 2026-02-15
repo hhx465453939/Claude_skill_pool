@@ -58,7 +58,7 @@
 │       ├── CLAUDE.md            # Claude Code 初始化引导
 │       ├── AGENTS.md            # Codex 初始化引导
 │       ├── GEMINI.md            # Gemini CLI 初始化引导
-│       ├── .claude/             # Claude Code 完整配置（7 commands + 7 skills + 3 agents）
+│       ├── .claude/             # Claude Code 完整配置（8 commands + 8 skills + 3 agents）
 │       ├── .codex/              # Codex 技能包（5 skills）
 │       ├── .gemini/             # Gemini CLI 技能包（7 skills）
 │       └── .cursor/             # Cursor 规则（2 rules）
@@ -102,15 +102,29 @@
 
 适合需要完整 AI 辅助开发环境的全栈项目，一次部署即可让 Claude Code、Codex、Gemini CLI、Cursor 四个工具同时获得全套开发能力。
 
-1. 将 `package/full-dev-脚手架/` 目录下的 **所有内容** 复制到目标项目根目录：
+1. 将 `package/full-dev-脚手架/` 目录下的内容复制到目标项目根目录：
 
    ```bash
-   # 复制脚手架内容到项目（不复制脚手架目录本身）
+   # 方法一：完全替换（推荐新项目）
    cp -r package/full-dev-脚手架/* /path/to/your-project/
-   cp -r package/full-dev-脚手架/.claude /path/to/your-project/
-   cp -r package/full-dev-脚手架/.codex /path/to/your-project/
-   cp -r package/full-dev-脚手架/.gemini /path/to/your-project/
-   cp -r package/full-dev-脚手架/.cursor /path/to/your-project/
+   cp -r package/full-dev-脚手架/.[a-z]* /path/to/your-project/
+   
+   # 方法二：增量合并（推荐有存量代码的项目）
+   # 复制文档
+   cp package/full-dev-脚手架/{CLAUDE,AGENTS,GEMINI}.md /path/to/your-project/
+   
+   # 创建并复制配置目录内容
+   mkdir -p /path/to/your-project/.claude
+   cp -r package/full-dev-脚手架/.claude/* /path/to/your-project/.claude/
+   
+   mkdir -p /path/to/your-project/.codex
+   cp -r package/full-dev-脚手架/.codex/* /path/to/your-project/.codex/
+   
+   mkdir -p /path/to/your-project/.gemini
+   cp -r package/full-dev-脚手架/.gemini/* /path/to/your-project/.gemini/
+   
+   mkdir -p /path/to/your-project/.cursor
+   cp -r package/full-dev-脚手架/.cursor/* /path/to/your-project/.cursor/
    ```
 
 2. 部署后目标项目的结构：
@@ -120,7 +134,7 @@
    ├── CLAUDE.md        ← Claude Code 读取，显示可用 commands 和核心规范
    ├── AGENTS.md        ← Codex 读取，显示可用 skills 和核心约束
    ├── GEMINI.md        ← Gemini CLI 读取，显示可用 skills 和使用方式
-   ├── .claude/         ← Claude Code：/ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo
+   ├── .claude/         ← Claude Code：/sam-init, /ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo
    ├── .codex/          ← Codex：$ai-spec, $api-first-modular, $code-debugger, $debug-ui, $ralph
    ├── .gemini/         ← Gemini CLI：ai-spec, api-first-modular, code-debugger, debug-ui, prd, ralph, ralph-yolo
    ├── .cursor/         ← Cursor：API-First 开发规则自动生效
@@ -128,6 +142,7 @@
    ```
 
 3. 打开项目后：
+   - **第一步**：执行 `/sam-init` 初始化项目 PDCA 工作流（生成 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt）
    - **Claude Code**：输入 `/` 查看所有可用命令
    - **Codex**：自动根据任务触发对应技能，或使用 `$skill-name` 手动触发
    - **Gemini CLI**：描述意图即可自动匹配技能
@@ -187,6 +202,7 @@ skills.gemini/[skill-name]/
 
 | 技能名称 | Claude | Codex | Gemini | 描述 |
 | :--- | :---: | :---: | :---: | :--- |
+| **PDCA 工作流初始化 (sam-dev-cc-init)** | `/sam-init` | — | — | 为项目一键初始化 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt（项目级自优化） |
 | **编程策略工具 (ai-spec)** | `/ai-spec` | `$ai-spec` | ✓ | 全栈架构师模式，将自然语言需求转化为生产级技术规范和 AI 执行指令 |
 | **API-First 模块化 (api-first-modular)** | `/api-first` | `$api-first-modular` | ✓ | 后端功能封装为独立 API 包，前端只调 API，跨层任务按 API 边界自动分解 |
 | **智能调试助手 (code-debugger)** | `/debug` | `$code-debugger` | ✓ | 基于深度上下文理解的精准调试与增量开发，模块隔离防止连锁错误 |

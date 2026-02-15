@@ -294,7 +294,7 @@ Inspector 自动生成首个 self-opt 条目：
 **自动提示**：系统建议 Agent 审阅并补充更多内容
 
 ```
-Suggested Topics for self-opt:
+Suggested Topics for self.opt:
 □ Token estimation strategy - What made you estimate 5k? How accurate?
 □ CHECKFIX process - How did you achieve 8/8 first time?
 □ Code design decisions - Why modular approach? Cost-benefit?
@@ -318,7 +318,7 @@ Current Status:
 
 Task: Implement user profile update endpoint
 
-Risk Assessment (from self-opt):
+Risk Assessment (from self.opt):
 ✅ Similar auth patterns from Task 1 (reuse strategy)
 ✓ Slightly more complex (multiple fields validation)
 ? First time with bulk field updates
@@ -651,7 +651,7 @@ Timeline: 3-4 more weeks
 ```
 ┌─────────────────────────────────────────────────────────┐
 │       Token 消耗 → 质量控制 → 奖惩驱动 → self-opt        │
-└─────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────┘
 
 Step 1: Token Budget 限制 (质量约束)
   Agent: "我有 8k tokens"
@@ -671,7 +671,7 @@ Step 4: 奖惩驱动 (质量激励)
   Effect: Agent 主动优化
 
 Step 5: 自动 self-opt (知识积累)
-  系统提议: "这个 pattern 可重用，加到 self-opt"
+  系统提议: "这个 pattern 可重用，加到 self.opt"
   Agent 确认: "学到了，下次应用"
   Effect: 经验累积，避免重复
 

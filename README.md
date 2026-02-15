@@ -13,6 +13,11 @@
 ├── LICENSE
 ├── README.md
 ├── CLAUDE.md                    # Claude Code 开发规范元文档（本仓库自身）
+├── docs/                         # 参考文档（不参与脚手架执行）
+│   └── inspector/                # Inspector 设计与场景说明
+│       ├── INSPECTOR-CROSS-PLATFORM.md
+│       ├── INSPECTOR-SCENARIO-WALKTHROUGH.md
+│       └── README.md
 │
 ├── skills.claude/               # Claude Code 技能池（单技能独立部署）
 │   ├── ai-spec/                 # [编程策略] 将需求转为技术规范
@@ -69,6 +74,14 @@
         ├── api-first-development.mdc
         └── project-structure.mdc
 ```
+
+---
+
+## 📖 参考文档
+
+以下文档仅作**阅读与理解**用，不参与脚手架或脚本执行：
+
+- **[docs/inspector/](docs/inspector/)** — Inspector Agent 跨平台架构与场景演示（从入职到专家的完整周期）。部署了 sam-dev-cc-init 或使用 Inspector CLI 时，可在此查阅设计与用法说明。
 
 ---
 

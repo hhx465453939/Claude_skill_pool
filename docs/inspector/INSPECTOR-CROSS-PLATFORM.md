@@ -196,7 +196,7 @@ Inspector Agent CLI 提供统一的三方同步界面：
 ```
 ┌─────────────────────────────────────────────────────────┐
 │         PDCO Inspector Agent - Global Dashboard         │
-└─────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────┘
 
 [AGENT STATUS SUMMARY]
 ├─ Frontend Agent: ✨ A | 145 pts | Generous (15k)
@@ -365,8 +365,11 @@ gemini "Which agents need improvement?"
 
 ## 相关文档
 
-- [CLAUDE.md](./skills.claude/sam-dev-cc-init/.claude/assets/CLAUDE.md.template) - Claude Code 规范
-- [Inspector Agent](./skills.claude/sam-dev-cc-init/.claude/agents/inspector-agent.md) - 详细说明
-- [Inspector CLI](./skills.claude/sam-dev-cc-init/.claude/scripts/inspector-cli.sh) - 仪表盘工具
-- [Codex Inspector](./skills.codex/inspector/.codex/skills/inspector/SKILL.md) - Codex 版本
-- [Gemini Inspector](./skills.gemini/inspector/SKILL.md) - Gemini 版本
+（以下路径相对于仓库根目录）
+
+- [CLAUDE.md 模板](../../skills.claude/sam-dev-cc-init/.claude/assets/CLAUDE.md.template) - Claude Code 规范
+- [Inspector Agent](../../skills.claude/sam-dev-cc-init/.claude/agents/inspector-agent.md) - 详细说明
+- [Inspector CLI](../../skills.claude/sam-dev-cc-init/.claude/scripts/inspector-cli.sh) - 仪表盘工具
+- [场景演示](./INSPECTOR-SCENARIO-WALKTHROUGH.md) - 从入职到专家的完整周期
+- [Codex Inspector](../../skills.codex/inspector/.codex/skills/inspector/SKILL.md) - Codex 版本
+- [Gemini Inspector](../../skills.gemini/inspector/SKILL.md) - Gemini 版本

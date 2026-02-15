@@ -14,23 +14,25 @@ This file provides guidance to Claude Code when working with code in this reposi
   - 测试：`pytest tests/ -v`
   - 运行：`python -m app.main`
 
-## PDCA 开发循环
+## PDCO 开发循环（CHECKFIX 零错误部署）
 
 <!--
-  PDCA = Plan-Do-Check-Act
+  PDCO = Plan-Do-Check-Optimize
   核心理念：Context Window = RAM (易失，有限), Filesystem = Disk (持久，无限)
+  关键改进：Do 阶段必须执行 CHECKFIX，Check 阶段验证 CHECKFIX 全部通过
   重要信息必须写入文件！
 -->
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    PDCA 开发循环                             │
+│             PDCO 开发循环（CHECKFIX 零错误）                 │
 ├─────────────────────────────────────────────────────────────┤
-│  1. PLAN  → 读取 tasks/TASKS.md，查看并领取任务              │
-│  2. DO    → 开发实现 + 编写单元测试                          │
-│  3. CHECK → pytest 验证 + 端到端验证                         │
-│  4. ACT   → 更新 PROGRESS-LOG.md（倒序追加）+ 更新任务状态   │
-│  5. OPT   → 新错误模式写入 self.opt 经验沉淀                 │
+│  1. PLAN → 读取 tasks/TASKS.md，查看并领取任务              │
+│  2. DO   → 代码修改 + 执行 CHECKFIX 检查清单                │
+│  3. CHECK→ 验证 CHECKFIX 全部通过 + pytest/集成验证         │
+│  4. OPT  → 更新 PROGRESS-LOG.md + 更新任务 + self.opt 沉淀   │
+│                                                              │
+│  🔴 核心原则：所有代码修改必须 CHECKFIX 零错误提交/部署      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -39,10 +41,9 @@ This file provides guidance to Claude Code when working with code in this reposi
 | 阶段 | 文件 | 用途 | 更新方式 |
 |------|------|------|----------|
 | PLAN | `tasks/TASKS.md` | 任务列表与状态管理 | 手动编辑 |
-| DO | 代码目录 | 实现与测试 | 编码 |
-| CHECK | `pytest` / `curl` | 验证测试 | 运行命令 |
-| ACT | `PROGRESS-LOG.md` | 进度日志（**倒序追加**） | 手动编辑 |
-| OPT | `self.opt` | 经验沉淀（错误模式、法则） | 手动编辑 |
+| DO | 代码目录 | 实现 + **CHECKFIX 检查** | 编码 |
+| CHECK | `.checkfix/` + `pytest` | **验证 CHECKFIX** + 测试 | 命令 |
+| OPT | `PROGRESS-LOG.md` + `self.opt` | 进度日志 + 经验沉淀 | 手动编辑 |
 
 ## 每日启动流程
 
@@ -94,7 +95,7 @@ cat self.opt | grep -A 5 "$(date +%Y-%m-%d)" || echo "继续积累..."
    - 识别潜在风险
    - 确定验证方式
 
-### DO 阶段
+### DO 阶段（代码修改 + CHECKFIX）
 
 1. **实现代码**
    - 遵循项目代码规范
@@ -104,32 +105,58 @@ cat self.opt | grep -A 5 "$(date +%Y-%m-%d)" || echo "继续积累..."
    - 单元测试覆盖核心逻辑
    - 集成测试验证端到端流程
 
-3. **遇到错误时**
+3. **执行 CHECKFIX 检查清单**（**必须**）
+   - [ ] 代码风格检查（格式化、linting）
+   - [ ] 类型检查（mypy / TypeScript）
+   - [ ] 安全检查（无硬编码密钥、SQL注入防护）
+   - [ ] 性能检查（无明显 N+1 查询、内存泄漏）
+   - [ ] 依赖检查（版本兼容性、安全漏洞）
+   - [ ] 文档检查（必要的注释、API 文档）
+   - [ ] 日志检查（适当的日志级别）
+   - [ ] 错误处理（异常捕获、重试逻辑）
+
+4. **遇到错误时**
    - 记录到 `self.opt`（错误模式）
    - 应用 "3-Strike Error Protocol"
 
-### CHECK 阶段
+### CHECK 阶段（验证 CHECKFIX + 自动化测试）
 
-1. **运行测试**
+1. **验证 CHECKFIX 全部通过**（**零错误要求**）
    ```bash
-   pytest tests/ -v
+   # 代码风格
+   black --check app/ && flake8 app/
+   
+   # 类型检查
+   mypy app/
+   
+   # 安全扫描
+   bandit -r app/
+   
+   # 依赖检查
+   pip check
    ```
 
-2. **端到端验证**
+2. **运行测试套件**
+   ```bash
+   pytest tests/ -v --cov=app
+   ```
+
+3. **端到端验证**
    ```bash
    # API测试示例
    curl http://localhost:8000/health
    ```
 
-3. **代码质量检查**（可选）
-   ```bash
-   black app/ && mypy app/ && flake8 app/
-   ```
+4. **❌ 不通过时的处理**
+   - **立即返回 DO 阶段**
+   - 修复所有 CHECKFIX 失败项
+   - **不允许跳过任何 CHECKFIX**（后果：500-1000+ tokens 修复成本）
 
-### ACT 阶段
+### OPT 阶段（优化与沉淀）
 
 1. **更新进度日志**（**倒序追加**到 `PROGRESS-LOG.md` 顶部）
    - 今日完成事项
+   - CHECKFIX 执行情况
    - 遇到的问题及解决
    - 下一步计划
 
@@ -140,18 +167,58 @@ cat self.opt | grep -A 5 "$(date +%Y-%m-%d)" || echo "继续积累..."
 
 3. **经验沉淀**
    - 新错误模式 → `self.opt`
+   - CHECKFIX 发现的问题 → `self.opt`
    - 最佳实践 → `self.opt`
 
-## 任务完成 Checklist
+## 任务完成 Checklist（CHECKFIX 零错误标准）
 
+### DO 阶段
 - [ ] 代码实现完成
+- [ ] 单元测试编写完成
+- [ ] **CHECKFIX 检查清单全部通过**
+  - [ ] 代码风格检查
+  - [ ] 类型检查
+  - [ ] 安全检查
+  - [ ] 性能检查
+  - [ ] 依赖检查
+  - [ ] 文档检查
+  - [ ] 日志检查
+  - [ ] 错误处理
+
+### CHECK 阶段
 - [ ] 单元测试通过 (`pytest`)
 - [ ] 集成测试通过（如有）
+- [ ] **CHECKFIX 验证通过（零失败）**
+
+### OPT 阶段
 - [ ] `PROGRESS-LOG.md` 已更新（**倒序追加**）
 - [ ] `tasks/TASKS.md` 状态已更新为 `DONE`
-- [ ] 如有新错误模式，已写入 `self.opt`
+- [ ] 如有新错误模式或 CHECKFIX 发现，已写入 `self.opt`
 
 ## 关键规则
+
+### 🔴 核心规则：CHECKFIX 零错误提交
+
+**所有代码修改必须通过 CHECKFIX 检查才能提交/部署。** 不允许跳过任何项目（后果严重）。
+
+```
+修复重新 CHECKFIX 
+    ↓
+CHECKFIX 全部通过
+    ↓
+执行集成测试
+    ↓
+零错误提交
+```
+
+### 无效消耗清单（风险识别）
+
+| 行为 | 风险 | 成本 |
+|------|------|------|
+| ✅ 执行 CHECKFIX | 质量保证 | 10-30 min |
+| ❌ **跳过 CHECKFIX** | 生产 bug、性能问题、安全漏洞 | **500-1000+ tokens** 修复成本 |
+| ❌ 不记录错误到 self.opt | 反复踩坑 | 重复工作浪费 |
+| ❌ 不读 PROGRESS-LOG.md | 迷失上下文 | 完整重新理解成本 |
 
 ### 1. 倒序追加原则
 <!-- Context Window 有限，新内容永远写上面 -->
@@ -182,6 +249,9 @@ if action_failed:
     next_action != same_action
 ```
 记录尝试，改变方法。
+
+### 6. CHECKFIX 非协商
+不存在"小改动跳过 CHECKFIX"的说法。即使 1 行代码也要过 CHECKFIX。
 
 ## 3-Strike Error Protocol
 

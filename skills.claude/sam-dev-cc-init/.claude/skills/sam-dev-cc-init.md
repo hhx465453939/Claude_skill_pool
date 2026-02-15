@@ -1,14 +1,15 @@
 ---
 name: sam-dev-cc-init
-description: PDCA循环开发工作流初始化工具。当用户输入 sam-init、pdca、init-pdca、pdca-init 或需要建立项目开发规范时使用。为AI辅助编程项目快速建立CLAUDE.md、PROGRESS-LOG.md、任务管理和经验沉淀机制。适合任何需要系统化开发流程的项目。
+description: PDCO循环开发工作流初始化工具。当用户输入 sam-init、pdco、init-pdco 或需要建立项目开发规范时使用。为AI辅助编程项目快速建立CLAUDE.md、PROGRESS-LOG.md、任务管理、经验沉淀机制和智能评估系统。适合任何需要系统化开发流程、质量管理和激励机制的项目。
 triggers:
   - sam-init
-  - pdca
-  - init-pdca
-  - pdca-init
-  - 初始化pdca
+  - pdco
+  - init-pdco
+  - 初始化pdco
   - 建立开发规范
-  - pdca workflow
+  - pdco workflow
+agents:
+  - inspector-agent
 ---
 
 # Sam Dev CC Init - PDCA 开发工作流

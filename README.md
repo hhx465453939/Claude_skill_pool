@@ -274,3 +274,11 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 | 名称 | 包含工具 | 描述 |
 | :--- | :---: | :--- |
 | **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 一键部署完整 AI 辅助全栈开发环境，含 7 个 Claude commands + 5 个 Codex skills + 7 个 Gemini skills + 2 条 Cursor rules |
+
+---
+
+## 致谢
+
+Inspector 相关设计与能力来源于 [@samqin123](https://github.com/samqin123) 的贡献，特此感谢。
+
+[![@samqin123](https://github.com/samqin123.png?size=64)](https://github.com/samqin123)

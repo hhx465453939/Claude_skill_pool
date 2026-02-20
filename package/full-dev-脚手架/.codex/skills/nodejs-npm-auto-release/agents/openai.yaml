@@ -1,0 +1,4 @@
+interface:
+  display_name: "Node.js NPM Auto Release"
+  short_description: "Standard workflow for npm version+publish with GitHub Actions"
+  default_prompt: "Use this skill to set up and run the Node.js npm auto version+publish workflow with local checks before push."

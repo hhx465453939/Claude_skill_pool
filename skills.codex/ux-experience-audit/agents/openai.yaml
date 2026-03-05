@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX Experience Audit"
+  short_description: "从用户体验视角执行问题扫描、优先级判定与完整修复闭环"
+  default_prompt: "Use $ux-experience-audit to audit UX issues, run command-based checks, and deliver prioritized fixes with verification."

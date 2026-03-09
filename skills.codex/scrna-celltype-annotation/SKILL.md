@@ -220,6 +220,13 @@ colon$celltype_minor <- recode(colon$seurat_clusters,
 ...（逐 cluster 给出 marker + 文献信息 + 证据位置）
 ```
 
+在执行环境支持文件写入时，应优先将**完整 Markdown 报告直接写入当前项目根目录**（例如 `./scrna_celltype_annotation_report.md` 或用户指定的文件名），在 chat 界面仅给出：
+
+- 报告文件的相对路径/文件名
+- 报告结构与主要结论的简短摘要
+
+后续与用户的微调与修改，应**围绕该报告文件进行增量更新**（视为“注释结果的单一事实来源”），避免每次在对话中重复输出整篇长报告。
+
 同时在对话中补充简要的执行摘要，包括：
 
 - 总共注释了多少个 cluster

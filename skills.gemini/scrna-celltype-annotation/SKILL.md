@@ -187,6 +187,13 @@ object$celltype_minor <- recode(object$seurat_clusters,
 ...（逐 cluster 说明 marker 与文献证据）
 ```
 
+在执行环境支持文件写入的情况下，Gemini 模型应当**优先将完整 Markdown 报告直接写入当前项目根目录**（例如保存为 `./scrna_celltype_annotation_report.md`，或根据用户指定的文件名保存），而不是在对话中输出整篇长文。聊天回复中只需：
+
+- 指明报告文件的保存路径/文件名
+- 提供简短的结构说明和主要结论摘要。
+
+后续若用户需要微调注释结果，应以该报告文件为核心，通过对该文件内容的增量修改来完成，而不是重复生成新的完整报告。
+
 2. 简短执行摘要：
    - 注释的 cluster 数量
    - major 类型数量与列表

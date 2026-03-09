@@ -1,0 +1,5 @@
+interface:
+  display_name: "scRNA cell type annotation (with literature report)"
+  short_description: "基于 Seurat FindAllMarkers 结果与文献 MCP 工具，为每个单细胞 cluster 生成 major/minor 注释及带 R recode 代码和文献依据的 Markdown 报告。"
+  default_prompt: "Use $scrna-celltype-annotation to read the Seurat FindAllMarkers DGE CSV, infer marker genes per cluster, call literature MCP tools (PubMed/OpenAlex) to annotate each subcluster with major/minor cell types, and output an R recode snippet plus a detailed Markdown report explaining the evidence for each annotation."
+

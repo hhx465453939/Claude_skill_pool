@@ -80,7 +80,11 @@ version: 1.0.0
    - cluster 列名
    - gene 列名
    - 效应量 & 显著性列名
-2. 按 cluster 分组，过滤显著差异基因（如 `p_val_adj < 0.05` 且 `avg_log2FC > 0`），取每个 cluster 的 top N marker（默认 N≈20）。
+2. 按 cluster 分组，构建每个 cluster 的 marker 列表，并**保证每个 cluster 至少有 30 个 log2FC 较高的上调基因被纳入后续分析**：
+   - 第一步：按显著性过滤上调基因（如 `p_val_adj < 0.05` 且 `avg_log2FC > 0`），按 `avg_log2FC` 从高到低排序。
+   - 若显著上调基因数量 **≥ 30**：在这些基因中选取 top N（例如 30–100 个，默认 N≈50，可根据上下文调整）。
+   - 若显著上调基因数量 **< 30**：在保留全部显著基因的前提下，继续按 `avg_log2FC` 从高到低补充分子，即便其 `p_val_adj` 不显著，直到该 cluster 至少包含 30 个上调基因。
+   - 后续解释时，应明确标注这部分“仅 log2FC 高但显著性不足的 marker”为探索性 marker，而非高置信度差异基因。
 
 ### 2. Initial Major Classification by Marker Rules
 

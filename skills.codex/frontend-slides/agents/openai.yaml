@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend Slides"
+  short_description: "Create or convert to single-file HTML presentations with style previews and viewport-fit rules"
+  default_prompt: "Use $frontend-slides to create a new HTML presentation, convert a PPT/PPTX to web slides, or enhance an existing HTML deck. Follow viewport-fitting and content-density rules; use visual style previews for discovery."

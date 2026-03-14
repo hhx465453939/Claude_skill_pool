@@ -17,6 +17,7 @@
 ├── LICENSE
 ├── README.md
 ├── CLAUDE.md                    # Claude Code 开发规范元文档（本仓库自身）
+│   └── superpowers/              # Superpowers v2.0 泛用框架草稿
 ├── docs/                         # 参考文档（不参与脚手架执行）
 │   └── inspector/                # Inspector 设计与场景说明
 │       ├── INSPECTOR-CROSS-PLATFORM.md
@@ -31,6 +32,7 @@
 │   ├── drawio-xml-roadmap/      # [设计] draw.io 路线图/流程图 XML 生成
 │   ├── dr-midas/                # [科研] 科研炼金术士，图表分析与叙事
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
+│   ├── frontend-slides/         # [前端演示] 单文件 HTML 演示文稿生成与 PPT 转换
 │   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版与 GitHub Actions
 │   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
@@ -39,6 +41,7 @@
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │   ├── sam-dev-cc-init/         # [工作流] PDCA 项目初始化（/sam-init）
 │   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   ├── superpowers/             # [方法论] 泛用式 AI 任务处理框架（TDD + 系统化工作流）
 │   ├── update-pubmed-links/     # [文献] PubMed 链接批量更新（命令变体）
 │   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
@@ -50,6 +53,7 @@
 │   ├── drawio-xml-roadmap/      # [设计] draw.io 路线图/流程图 XML 生成
 │   ├── dr-midas/                # [科研] 科研炼金术士，图表分析与叙事
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
+│   ├── frontend-slides/         # [前端演示] 单文件 HTML 演示文稿生成与 PPT 转换
 │   ├── inspector/               # [监管] PDCO 全局监管（Codex 版）
 │   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版
 │   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
@@ -58,6 +62,7 @@
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   ├── superpowers/             # [方法论] 泛用式 AI 任务处理框架（TDD + 系统化工作流）
 │   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
 ├── skills.gemini/               # Gemini CLI 技能池（单技能独立部署）
@@ -68,6 +73,7 @@
 │   ├── drawio-xml-roadmap/      # [设计] draw.io 路线图/流程图 XML 生成
 │   ├── dr-midas/                # [科研] 科研炼金术士，图表分析与叙事
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
+│   ├── frontend-slides/         # [前端演示] 单文件 HTML 演示文稿生成与 PPT 转换
 │   ├── inspector/               # [监管] PDCO 全局监管（Gemini 版）
 │   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版
 │   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
@@ -78,6 +84,7 @@
 │   ├── ralph-yolo/              # [迭代开发] Ralph 全自动模式
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   ├── superpowers/             # [方法论] 泛用式 AI 任务处理框架（TDD + 系统化工作流）
 │   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
 ├── package/                     # 预打包的脚手架（多技能一体化部署）
@@ -85,7 +92,7 @@
 │   │   ├── CLAUDE.md            # Claude Code 初始化引导
 │   │   ├── AGENTS.md            # Codex 初始化引导
 │   │   ├── GEMINI.md            # Gemini CLI 初始化引导
-│   │   ├── .claude/             # Claude Code（8 commands + 9 skills + 3 agents）
+│   │   ├── .claude/             # Claude Code（8 commands + 9 skills）
 │   │   ├── .codex/              # Codex 技能包（7 skills）
 │   │   ├── .gemini/             # Gemini CLI 技能包（9 skills）
 │   │   └── .cursor/             # Cursor 规则（2 rules）
@@ -93,7 +100,7 @@
 │       ├── CLAUDE.md
 │       ├── AGENTS.md
 │       ├── GEMINI.md
-│       ├── .claude/             # 在 full-dev 基础上增加 sam-init、sam-dev-cc-init 及 PDCA 模板
+│       ├── .claude/             # 在 full-dev 基础上增加 sam-init、sam-dev-cc-init 及 PDCA 模板（9 commands + 10 skills）
 │       ├── .codex/
 │       ├── .gemini/
 │       └── .cursor/
@@ -130,15 +137,13 @@
 #### OpenAI Codex
 
 1. 在 `skills.codex/` 中找到需要的技能目录，例如 `skills.codex/code-debugger/`。
-2. 将目录下的 `.codex/` 文件夹完整复制到目标项目根目录。
-   - 若项目已有 `.codex/` 目录，合并 `skills/` 子目录。
+2. 将目录下的 `SKILL.md`（及 `agents/`、`scripts/`、`references/`、`templates/` 等子目录）复制到目标项目的 `.codex/skills/[skill-name]/` 下。
 3. 在 Codex 中使用 `$skill-name`（如 `$code-debugger`）激活。
 
 #### Gemini CLI
 
 1. 在 `skills.gemini/` 中找到需要的技能目录，例如 `skills.gemini/code-debugger/`。
-2. 将目录下的 `SKILL.md` 文件复制到目标项目的 `.gemini/skills/[skill-name]/` 目录。
-   - 若目录不存在，创建 `.gemini/skills/[skill-name]/` 后再复制。
+2. 将目录内容复制到目标项目的 `.gemini/skills/[skill-name]/` 目录（含 `SKILL.md` 及各子目录）。
 3. Gemini CLI 会根据任务描述自动匹配并触发对应技能。
 
 ### 方式二：脚手架一键部署（推荐全栈项目使用）
@@ -221,7 +226,11 @@ bash skills.claude/sam-dev-cc-init/.claude/scripts/inspector-cli.sh dashboard
 skills.claude/[SkillName]/
 └── .claude/
     ├── commands/[command].md    # Slash Command 定义
-    ├── skills/[skill].md        # 核心 Prompt 和处理逻辑
+    ├── skills/[skill]/          # 核心 SKILL.md + 支撑文件
+    │   ├── SKILL.md
+    │   ├── scripts/             # (可选) 脚本工具
+    │   ├── references/          # (可选) 参考资料
+    │   └── templates/           # (可选) 文档模板
     ├── agents/[agent].md        # (可选) 多角色 Agent
     └── settings.local.json      # (可选) 局部配置
 ```
@@ -230,22 +239,25 @@ skills.claude/[SkillName]/
 
 ```text
 skills.codex/[skill-name]/
-└── .codex/
-    └── skills/
-        └── [skill-name]/
-            ├── SKILL.md              # 核心 Skill 定义（含 YAML frontmatter）
-            └── agents/
-                └── openai.yaml       # 接口配置（display_name / short_description / default_prompt）
+├── SKILL.md                      # 核心 Skill 定义（含 YAML frontmatter）
+├── agents/
+│   └── openai.yaml               # 接口配置（display_name / short_description / default_prompt）
+├── scripts/                      # (可选) 脚本工具
+├── references/                   # (可选) 参考资料
+└── templates/                    # (可选) 文档模板
 ```
 
 ### Gemini CLI 技能结构
 
 ```text
 skills.gemini/[skill-name]/
-└── SKILL.md                          # 核心 Skill 定义（含 YAML frontmatter）
+├── SKILL.md                      # 核心 Skill 定义（含 YAML frontmatter）
+├── scripts/                      # (可选) 脚本工具
+├── references/                   # (可选) 参考资料
+└── templates/                    # (可选) 文档模板
 ```
 
-部署时复制到目标项目的 `.gemini/skills/[skill-name]/SKILL.md`。
+部署时将整个技能目录复制到目标项目的 `.gemini/skills/[skill-name]/`。
 
 ### Skill 元数据规范（SKILL.md frontmatter）
 
@@ -281,11 +293,13 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 
 | 技能名称 | Claude | Codex | Gemini | 描述 |
 | :--- | :---: | :---: | :---: | :--- |
+| **Superpowers (superpowers)** | `/superpowers` | `$superpowers` | ✓ | 泛用式 AI 任务处理框架；自动评估任务复杂度，按场景分流至 TDD 开发链、通用头脑风暴、任务拆解、信息收集或方案设计工作流，并内置 token 效率优化策略 |
 | **PDCA 工作流初始化 (sam-dev-cc-init)** | `/sam-init` | — | — | 为项目一键初始化 CLAUDE.md、PROGRESS-LOG.md、tasks/TASKS.md、self.opt（项目级自优化） |
 | **编程策略工具 (ai-spec)** | `/ai-spec` | `$ai-spec` | ✓ | 全栈架构师模式，将自然语言需求转化为生产级技术规范和 AI 执行指令 |
 | **API-First 模块化 (api-first-modular)** | `/api-first` | `$api-first-modular` | ✓ | 后端功能封装为独立 API 包，前端只调 API，跨层任务按 API 边界自动分解 |
 | **智能调试助手 (code-debugger)** | `/debug` | `$code-debugger` | ✓ | 基于深度上下文理解的精准调试与增量开发，模块隔离防止连锁错误 |
 | **UI 设计师 (debug-ui)** | `/debug-ui` | `$debug-ui` | ✓ | 顶级 UI 设计师模式，六维视觉诊断 + 像素级代码实施，与 debug 共享 `.debug/` 文档 |
+| **前端演示文稿 (frontend-slides)** | `/frontend-slides` | `$frontend-slides` | ✓ | 将内容或 PPT/PPTX 转换为高品质单文件 HTML 演示文稿；视口自适应、风格预设与交互动画，支持 extract-pptx.py 一键提取 |
 | **PRD 生成器 (prd)** | `/prd` | — | ✓ | 交互式生成结构化产品需求文档 |
 | **Ralph 工作流 (ralph)** | `/ralph` | `$ralph` | ✓ | 基于 PRD 的自主 Agent 循环，逐个实现 User Story 并自动提交 |
 | **Ralph YOLO (ralph-yolo)** | `/ralph-yolo` | — | ✓ | Ralph 全自动模式，无人值守 |
@@ -313,10 +327,10 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 
 ### 脚手架
 
-| 名称 | 包含工具 | 描述 |
-| :--- | :---: | :--- |
-| **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 仅开发能力：一键部署 ai-spec、api-first、debug、debug-ui、prd、ralph、ralph-yolo、ux-experience-audit、nodejs-npm-auto-release 等，8 commands + 7 Codex + 9 Gemini + 2 Cursor rules，**无** PDCA/Inspector |
-| **全栈开发 + Inspector 脚手架 (full-dev-inspector)** | Claude + Codex + Gemini + Cursor | 在 full-dev 基础上增加 **PDCA 工作流**：`/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt；适合需要入职看板与专家周期管理的项目，详见 [docs/inspector/](docs/inspector/) |
+| 名称 | 包含工具 | Claude | Codex | Gemini | 描述 |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 8 commands<br>9 skills | 7 skills | 9 skills | 仅开发能力：一键部署 ai-spec、api-first、debug、debug-ui、prd、ralph、ralph-yolo、ux-experience-audit、nodejs-npm-auto-release，**无** PDCA/Inspector |
+| **全栈开发 + Inspector 脚手架 (full-dev-inspector)** | Claude + Codex + Gemini + Cursor | 9 commands<br>10 skills | 7 skills | 9 skills | 在 full-dev 基础上增加 **PDCA 工作流**：`/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt；适合需要入职看板与专家周期管理的项目，详见 [docs/inspector/](docs/inspector/) |
 
 ---
 

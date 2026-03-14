@@ -28,49 +28,66 @@
 │   ├── api-first-modular/       # [架构框架] API-First 模块化开发
 │   ├── code-debugger/           # [调试开发] 上下文优先的精准调试与增量开发
 │   ├── debug-ui/                # [UI设计] 顶级 UI 设计师模式
+│   ├── drawio-xml-roadmap/      # [设计] draw.io 路线图/流程图 XML 生成
 │   ├── dr-midas/                # [科研] 科研炼金术士，图表分析与叙事
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
+│   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版与 GitHub Actions
+│   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
 │   ├── ref-pubmed-linker/       # [文献] PubMed 引用链接查询与更新（参考实现）
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │   ├── sam-dev-cc-init/         # [工作流] PDCA 项目初始化（/sam-init）
-│   └── update-pubmed-links/     # [文献] PubMed 链接批量更新（命令变体）
+│   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   ├── update-pubmed-links/     # [文献] PubMed 链接批量更新（命令变体）
+│   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
 ├── skills.codex/                # OpenAI Codex 技能池（单技能独立部署）
 │   ├── ai-spec/                 # [编程策略] 将需求转为技术规范
 │   ├── api-first-modular/       # [架构框架] API-First 模块化开发
 │   ├── code-debugger/           # [调试开发] 上下文优先的精准调试与增量开发
 │   ├── debug-ui/                # [UI设计] 顶级 UI 设计师模式
+│   ├── drawio-xml-roadmap/      # [设计] draw.io 路线图/流程图 XML 生成
 │   ├── dr-midas/                # [科研] 科研炼金术士，图表分析与叙事
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
+│   ├── inspector/               # [监管] PDCO 全局监管（Codex 版）
+│   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版
+│   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
 │   ├── pubmed-linker/           # [文献] PubMed 引用链接查询与更新
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
-│   └── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
+│   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
+│   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
 ├── skills.gemini/               # Gemini CLI 技能池（单技能独立部署）
 │   ├── ai-spec/                 # [编程策略] 将需求转为技术规范
 │   ├── api-first-modular/       # [架构框架] API-First 模块化开发
 │   ├── code-debugger/           # [调试开发] 上下文优先的精准调试与增量开发
 │   ├── debug-ui/                # [UI设计] 顶级 UI 设计师模式
+│   ├── drawio-xml-roadmap/      # [设计] draw.io 路线图/流程图 XML 生成
 │   ├── dr-midas/                # [科研] 科研炼金术士，图表分析与叙事
 │   ├── extract/                 # [知识提取] 从内容抽提研究方法论框架
+│   ├── inspector/               # [监管] PDCO 全局监管（Gemini 版）
+│   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版
+│   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
 │   ├── prd/                     # [需求文档] 结构化 PRD 生成
 │   ├── pubmed-linker/           # [文献] PubMed 引用链接查询与更新
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
 │   ├── ralph-yolo/              # [迭代开发] Ralph 全自动模式
-│   └── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
+│   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
+│   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
 ├── package/                     # 预打包的脚手架（多技能一体化部署）
 │   ├── full-dev-脚手架/         # 全栈开发环境（仅开发技能，无 PDCA/Inspector）
 │   │   ├── CLAUDE.md            # Claude Code 初始化引导
 │   │   ├── AGENTS.md            # Codex 初始化引导
 │   │   ├── GEMINI.md            # Gemini CLI 初始化引导
-│   │   ├── .claude/             # Claude Code（7 commands + 7 skills + 3 agents）
-│   │   ├── .codex/              # Codex 技能包（5 skills）
-│   │   ├── .gemini/             # Gemini CLI 技能包（7 skills）
+│   │   ├── .claude/             # Claude Code（8 commands + 9 skills + 3 agents）
+│   │   ├── .codex/              # Codex 技能包（7 skills）
+│   │   ├── .gemini/             # Gemini CLI 技能包（9 skills）
 │   │   └── .cursor/             # Cursor 规则（2 rules）
 │   └── full-dev-脚手架-inspector/ # 全栈开发 + PDCA/Inspector（含 /sam-init 与入职看板）
 │       ├── CLAUDE.md
@@ -167,7 +184,7 @@
    ├── CLAUDE.md        ← Claude Code 读取，显示可用 commands 和核心规范
    ├── AGENTS.md        ← Codex 读取，显示可用 skills 和核心约束
    ├── GEMINI.md        ← Gemini CLI 读取，显示可用 skills 和使用方式
-   ├── .claude/         ← Claude Code：/ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo（inspector 版另有 /sam-init）
+   ├── .claude/         ← Claude Code：/ai-spec, /api-first, /debug, /debug-ui, /prd, /ralph, /ralph-yolo, /ux-experience-audit（inspector 版另有 /sam-init）
    ├── .codex/          ← Codex：$ai-spec, $api-first-modular, $code-debugger, $debug-ui, $ralph
    ├── .gemini/         ← Gemini CLI：ai-spec, api-first-modular, code-debugger, debug-ui, prd, ralph, ralph-yolo
    ├── .cursor/         ← Cursor：API-First 开发规则自动生效
@@ -272,6 +289,11 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 | **PRD 生成器 (prd)** | `/prd` | — | ✓ | 交互式生成结构化产品需求文档 |
 | **Ralph 工作流 (ralph)** | `/ralph` | `$ralph` | ✓ | 基于 PRD 的自主 Agent 循环，逐个实现 User Story 并自动提交 |
 | **Ralph YOLO (ralph-yolo)** | `/ralph-yolo` | — | ✓ | Ralph 全自动模式，无人值守 |
+| **Draw.io 路线图 (drawio-xml-roadmap)** | `/drawio-xml-roadmap` | `$drawio-xml-roadmap` | ✓ | 基于 draw.io XML 生成可导入的路线图/流程图，遵循 mxfile/mxCell 规范 |
+| **Inspector (PDCO 监管)** | — | `$inspector` | ✓ | 评估与管理所有 Agent 的质量、效率与成长（Codex/Gemini 版） |
+| **Node.js npm 自动发版 (nodejs-npm-auto-release)** | ✓ | ✓ | ✓ | 标准化 npm 发版：自动版本号、GitHub Actions 发布与本地预检 |
+| **Office 文档 (office-docs)** | `/office-docs` | `$office-docs` | ✓ | PPTX/DOCX/XLSX 读取、编辑、创建与校验，支持解包/打包 XML 与 PptxGenJS |
+| **UX 体验审计 (ux-experience-audit)** | `/ux-experience-audit` | `$ux-experience-audit` | ✓ | 从用户体验角度做问题扫描、优先级判定与修复闭环，解决「功能可用但体验不通」 |
 
 ### 科研与文献
 
@@ -280,6 +302,7 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 | **Dr. Midas (dr-midas)** | `/midas` | `$dr-midas` | ✓ | 科研炼金术士，分析科研图表并结合 PubMed 文献生成深度科研叙事 |
 | **PubMed Linker** | `/update-pubmed-links` | `$pubmed-linker` | ✓ | 自动查询并更新参考文献的 PubMed 链接、PMID、DOI |
 | **论文投稿管理 (paper-submission-manager)** | `/paper-submission-manager` | `$paper-submission-manager` | ✓ | 论文投稿全流程管理：清单、QA、材料打包与提交追踪 |
+| **单细胞细胞类型注释 (scrna-celltype-annotation)** | `/scrna-celltype-annotation` | `$scrna-celltype-annotation` | ✓ | 基于 Seurat 差异表达与文献 MCP 对单细胞亚群做 major/minor 注释并生成报告 |
 
 ### 研究与分析
 
@@ -292,7 +315,7 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 
 | 名称 | 包含工具 | 描述 |
 | :--- | :---: | :--- |
-| **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 仅开发能力：一键部署 ai-spec、api-first、debug、debug-ui、prd、ralph、ralph-yolo 等，7 commands + 5 Codex + 7 Gemini + 2 Cursor rules，**无** PDCA/Inspector |
+| **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 仅开发能力：一键部署 ai-spec、api-first、debug、debug-ui、prd、ralph、ralph-yolo、ux-experience-audit、nodejs-npm-auto-release 等，8 commands + 7 Codex + 9 Gemini + 2 Cursor rules，**无** PDCA/Inspector |
 | **全栈开发 + Inspector 脚手架 (full-dev-inspector)** | Claude + Codex + Gemini + Cursor | 在 full-dev 基础上增加 **PDCA 工作流**：`/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt；适合需要入职看板与专家周期管理的项目，详见 [docs/inspector/](docs/inspector/) |
 
 ---

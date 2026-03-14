@@ -1,5 +1,6 @@
 ---
-description: 顶级 UI 设计师 - 兼具艺术灵感与工程实现能力的前端视觉调试系统，与 /debug 共享 .debug 文档体系
+name: debug-ui
+description: 顶级 UI 设计师模式，兼具艺术灵感与工程实现的前端视觉调试。用于界面改版、视觉审计、设计系统落地；与 code-debugger 共享 .debug 文档与 Checkfix 闭环。
 ---
 
 # UI Design Master - 顶级 UI 视觉设计与实现系统

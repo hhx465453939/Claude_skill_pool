@@ -41,6 +41,7 @@
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │   ├── sam-dev-cc-init/         # [工作流] PDCA 项目初始化（/sam-init）
 │   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   ├── shidianguji-fetcher/     # [古籍采集] 识典古籍批量下载与 Markdown 整理
 │   ├── superpowers/             # [方法论] 泛用式 AI 任务处理框架（TDD + 系统化工作流）
 │   ├── update-pubmed-links/     # [文献] PubMed 链接批量更新（命令变体）
 │   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
@@ -62,6 +63,7 @@
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   ├── shidianguji-fetcher/     # [古籍采集] 识典古籍批量下载与 Markdown 整理
 │   ├── superpowers/             # [方法论] 泛用式 AI 任务处理框架（TDD + 系统化工作流）
 │   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
@@ -84,6 +86,7 @@
 │   ├── ralph-yolo/              # [迭代开发] Ralph 全自动模式
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
 │   ├── scrna-celltype-annotation/# [生信] 单细胞亚群细胞类型注释与报告
+│   ├── shidianguji-fetcher/     # [古籍采集] 识典古籍批量下载与 Markdown 整理
 │   ├── superpowers/             # [方法论] 泛用式 AI 任务处理框架（TDD + 系统化工作流）
 │   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
@@ -317,6 +320,7 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 | **PubMed Linker** | `/update-pubmed-links` | `$pubmed-linker` | ✓ | 自动查询并更新参考文献的 PubMed 链接、PMID、DOI |
 | **论文投稿管理 (paper-submission-manager)** | `/paper-submission-manager` | `$paper-submission-manager` | ✓ | 论文投稿全流程管理：清单、QA、材料打包与提交追踪 |
 | **单细胞细胞类型注释 (scrna-celltype-annotation)** | `/scrna-celltype-annotation` | `$scrna-celltype-annotation` | ✓ | 基于 Seurat 差异表达与文献 MCP 对单细胞亚群做 major/minor 注释并生成报告 |
+| **识典古籍采集 (shidianguji-fetcher)** | `/shidianguji-fetcher` | `$shidianguji-fetcher` | ✓ | 从识典古籍 (shidianguji.com) 批量下载古籍文本，清洗后整理为结构化 Markdown 文件 |
 
 ### 研究与分析
 

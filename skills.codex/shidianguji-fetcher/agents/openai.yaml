@@ -1,0 +1,4 @@
+interface:
+  display_name: "识典古籍采集助手"
+  short_description: "从识典古籍网站 (shidianguji.com) 搜索、批量下载古籍并整理为本地 Markdown 文件，用于古籍数字化、文本研究与语料整理"
+  default_prompt: "Use $shidianguji-fetcher to help the user search for ancient Chinese texts on shidianguji.com, configure the fetch script, download book chapters, and organize the content into structured Markdown files for offline research."

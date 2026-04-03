@@ -1,0 +1,7 @@
+interface:
+  display_name: "ComfyUI Workflow Designer"
+  short_description: "设计并生成可直接导入 ComfyUI 的工作流 JSON，支持 FLUX/SDXL/SD3.5 等最新架构，自动推荐最优模型组合"
+  default_prompt: "帮我设计一个 ComfyUI 工作流。请描述你的图像生成需求：想要什么风格/主题？是否需要 LoRA、ControlNet、img2img？有没有指定模型或架构偏好？"
+
+policy:
+  allow_implicit_invocation: true

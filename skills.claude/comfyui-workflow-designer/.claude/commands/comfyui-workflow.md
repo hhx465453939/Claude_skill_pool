@@ -1,5 +1,5 @@
 ---
-description: 设计并生成 ComfyUI 工作流 JSON 文件，支持 FLUX/SDXL/SD1.5/SD3.5 等架构，自动推荐最新模型，输出可直接导入 ComfyUI 的完整 JSON。
+description: 设计并生成 ComfyUI 工作流 JSON，支持 FLUX.2/FLUX.1、SD3.5、Qwen-Image、Z-Image、SDXL、SD1.5 及 Wan 等视频管线；按 2026 生态场景化选型并检索最新权重，输出可导入的完整 JSON。
 ---
 
 # /comfyui-workflow — ComfyUI 工作流设计
@@ -55,7 +55,7 @@ description: 设计并生成 ComfyUI 工作流 JSON 文件，支持 FLUX/SDXL/SD
 1. **JSON 必须完整** —— 不能输出半截或"省略其余节点"
 2. **link 引用必须正确** —— inputs[n].link 值必须对应 links 数组中存在的 id
 3. **last_node_id / last_link_id 必须正确** —— 等于各自数组中的最大值
-4. **优先最新架构** —— 若无特殊限制，优先 FLUX > SDXL/NoobXL > SD1.5
+4. **场景化选最新** —— 静图：在 VRAM/节点允许时倾向 FLUX.2 / Qwen-Image / SD3.5，再以 FLUX.1 为成熟默认；二次元用 SDXL 系；视频用 Wan 等单独管线；勿用单一线性排序替代判断
 5. **LoRA 文件名格式** —— 必须是 `.safetensors` 扩展名
 
 ---

@@ -310,7 +310,7 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 | **Ralph 工作流 (ralph)** | `/ralph` | `$ralph` | ✓ | 基于 PRD 的自主 Agent 循环，逐个实现 User Story 并自动提交 |
 | **Ralph YOLO (ralph-yolo)** | `/ralph-yolo` | — | ✓ | Ralph 全自动模式，无人值守 |
 | **Draw.io 路线图 (drawio-xml-roadmap)** | `/drawio-xml-roadmap` | `$drawio-xml-roadmap` | ✓ | 基于 draw.io XML 生成可导入的路线图/流程图，遵循 mxfile/mxCell 规范 |
-| **ComfyUI 工作流 (comfyui-workflow-designer)** | `/comfyui-workflow` | `$comfyui-workflow-designer` | ✓ | 设计可导入 ComfyUI 的工作流 JSON（FLUX / SDXL / SD1.5 等），节点与连线规范自检，并可结合 CivitAI / HuggingFace 推荐最新模型与 LoRA |
+| **ComfyUI 工作流 (comfyui-workflow-designer)** | `/comfyui-workflow` | `$comfyui-workflow-designer` | ✓ | 设计可导入 ComfyUI 的工作流 JSON（静图：FLUX.2/FLUX.1、SD3.5、Qwen-Image、Z-Image、SDXL 等；视频：Wan 等）；场景化架构选型、节点自检，CivitAI / HuggingFace / 官方示例检索 |
 | **Inspector (PDCO 监管)** | — | `$inspector` | ✓ | 评估与管理所有 Agent 的质量、效率与成长（Codex/Gemini 版） |
 | **Node.js npm 自动发版 (nodejs-npm-auto-release)** | ✓ | ✓ | ✓ | 标准化 npm 发版：自动版本号、GitHub Actions 发布与本地预检 |
 | **Office 文档 (office-docs)** | `/office-docs` | `$office-docs` | ✓ | PPTX/DOCX/XLSX 读取、编辑、创建与校验，支持解包/打包 XML 与 PptxGenJS |

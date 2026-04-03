@@ -4,30 +4,45 @@
 
 ---
 
-## 架构选型决策树
+## 架构选型决策树（约 2025–2026，ComfyUI 生态）
+
+> 排序是**场景化倾向**，不是绝对天梯；具体以用户 VRAM、许可、已装节点与当时模型评测为准。
 
 ```
 用户需求
 │
-├─► 动漫/二次元 高质量？
-│   ├─► 是 → Illustrious XL 或 NoobAI XL（SDXL-based）
-│   └─► 否 →
-│
-├─► 写实/电影感 高质量？
-│   ├─► 是 → FLUX.1-dev（最佳质量）或 CinematicXL/RealVisXL
-│   └─► 否 →
-│
-├─► 低 VRAM（< 8GB）？
-│   ├─► 是 → FLUX.1-schnell（fp8 量化）或 SD 1.5
-│   └─► 否 →
-│
 ├─► 视频生成？
-│   ├─► 是 → Wan 2.1 / CogVideoX / AnimateDiff
-│   └─► 否 →
+│   └─► 是 → Wan 2.1 / CogVideoX / AnimateDiff（与静图工作流分开设计）
 │
-└─► 通用/快速原型？
-    └─► SDXL + DreamShaper XL 或 FLUX.1-schnell
+├─► 动漫/二次元专精？
+│   └─► 是 → NoobAI XL / Illustrious XL / AniShadow（SDXL 生态仍最丰富）
+│
+├─► 画面内文字 / 多语 / 强 prompt 遵循（且显存够）？
+│   └─► 是 → 检索当时评测：Qwen-Image、SD3.5、FLUX.2 等谁更占优
+│
+├─► 极致写实 / 商业级静图（高 VRAM、可取得权重）？
+│   └─► 是 → FLUX.2（开放权重 Dev 等）、SD3.5 Large、Qwen-Image（择一并查 ComfyUI 示例）
+│
+├─► 要低 VRAM 或极快出图？
+│   └─► 是 → Z-Image 等轻量 DiT · SD3.5 Turbo · FLUX.1-schnell（fp8/GGUF）· SD 1.5
+│
+├─► 要最多现成模板、最少踩坑？
+│   └─► 是 → FLUX.1-dev (fp8) 或 SD3.5（ComfyUI_examples 有官方范例）
+│
+└─► 通用 XL 兜底？
+    └─► DreamShaper XL / RealVisXL / CinematicXL
 ```
+
+### 2026 年前后补充架构速览（与 FLUX.1 并列认知）
+
+| 架构 | 要点 | ComfyUI 注意 |
+|------|------|----------------|
+| **FLUX.2** | BFL 新一代，开放权重 Dev 等；rectified flow / 大参数量 | 节点与量化格式随版本更新，生成前对照官方/社区最新 workflow |
+| **SD3.5** | MMDiT，多编码器（CLIP-L/G + T5）；Large / Turbo 等变体 | 参考 [ComfyUI SD3 官方示例](https://comfyanonymous.github.io/ComfyUI_examples/sd3/) |
+| **Qwen-Image** | 多模态 DiT，图文与多语场景强；全精度显存高 | 优先查 HuggingFace + 是否有 GGUF/量化与对应 custom nodes |
+| **Z-Image** | 单流 DiT，参数量相对小，适合效率向部署 | 节点名以用户环境为准，勿假设与 SDXL 同图 |
+
+**权重格式**：GGUF、FP8、NVFP4（RTX 50 系等）按显卡与 ComfyUI 支持选择；8–16GB VRAM 常需量化版。
 
 ---
 
@@ -373,7 +388,7 @@ KSampler → LatentUpscale (bilinear, 2x) → KSampler (denoise=0.4) → VAEDeco
 
 当需要查找最新模型时，使用以下搜索方式：
 1. CivitAI API：`https://civitai.com/api/v1/models?sort=Highest%20Rated&period=Month&types=Checkpoint`
-2. 搜索关键词：`site:civitai.com [style] [architecture] SDXL/FLUX 2025`
+2. 搜索关键词：`site:civitai.com [style] [architecture] 2026`（或 `2025` 作补充）
 3. HuggingFace：`https://huggingface.co/models?sort=trending&search=[architecture]`
 
 查询时重点关注：

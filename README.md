@@ -37,6 +37,7 @@
 │   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版与 GitHub Actions
 │   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
+│   ├── sci-journal-submission-expert/# [投稿] SCI 期刊全流程专家（预审、选刊、合规、审稿回复、APC）
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
 │   ├── ref-pubmed-linker/       # [文献] PubMed 引用链接查询与更新（参考实现）
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
@@ -61,6 +62,7 @@
 │   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版
 │   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
+│   ├── sci-journal-submission-expert/# [投稿] SCI 期刊全流程专家（预审、选刊、合规、审稿回复、APC）
 │   ├── pubmed-linker/           # [文献] PubMed 引用链接查询与更新
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
 │   ├── research-analyst-system/ # [金融分析] 多 Agent 分析师团队
@@ -83,6 +85,7 @@
 │   ├── nodejs-npm-auto-release/ # [工程] Node.js npm 自动发版
 │   ├── office-docs/             # [办公] PPTX/DOCX/XLSX 读取、编辑、创建与校验
 │   ├── paper-submission-manager/# [投稿管理] 论文投稿全流程管理与材料打包
+│   ├── sci-journal-submission-expert/# [投稿] SCI 期刊全流程专家（预审、选刊、合规、审稿回复、APC）
 │   ├── prd/                     # [需求文档] 结构化 PRD 生成
 │   ├── pubmed-linker/           # [文献] PubMed 引用链接查询与更新
 │   ├── ralph/                   # [迭代开发] 基于 PRD 的自主 Agent 循环
@@ -323,6 +326,7 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 | **Dr. Midas (dr-midas)** | `/midas` | `$dr-midas` | ✓ | 科研炼金术士，分析科研图表并结合 PubMed 文献生成深度科研叙事 |
 | **PubMed Linker** | `/update-pubmed-links` | `$pubmed-linker` | ✓ | 自动查询并更新参考文献的 PubMed 链接、PMID、DOI |
 | **论文投稿管理 (paper-submission-manager)** | `/paper-submission-manager` | `$paper-submission-manager` | ✓ | 论文投稿全流程管理：清单、QA、材料打包与提交追踪 |
+| **SCI 期刊投稿专家 (sci-journal-submission-expert)** | `/sci-journal-submission-expert` | `$sci-journal-submission-expert` | ✓ | SCI 投稿预审与风险分级、梯度选刊、作者指南格式核查、数据与开放科学合规、审稿逐点回复框架、伦理与 APC 流程指引 |
 | **单细胞细胞类型注释 (scrna-celltype-annotation)** | `/scrna-celltype-annotation` | `$scrna-celltype-annotation` | ✓ | 基于 Seurat 差异表达与文献 MCP 对单细胞亚群做 major/minor 注释并生成报告 |
 | **识典古籍采集 (shidianguji-fetcher)** | `/shidianguji-fetcher` | `$shidianguji-fetcher` | ✓ | 从识典古籍 (shidianguji.com) 批量下载古籍文本，清洗后整理为结构化 Markdown 文件 |
 

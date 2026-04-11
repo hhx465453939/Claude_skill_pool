@@ -146,13 +146,13 @@
 #### OpenAI Codex
 
 1. 在 `skills.codex/` 中找到需要的技能目录，例如 `skills.codex/code-debugger/`。
-2. 将目录下的 `SKILL.md`（及 `agents/`、`scripts/`、`references/`、`templates/` 等子目录）复制到目标项目的 `.codex/skills/[skill-name]/` 下。
+2. 将目录下的 `.codex/` 文件夹完整复制到目标项目根目录（若已有 `.codex/` 则合并 `skills/` 子目录）。
 3. 在 Codex 中使用 `$skill-name`（如 `$code-debugger`）激活。
 
 #### Gemini CLI
 
 1. 在 `skills.gemini/` 中找到需要的技能目录，例如 `skills.gemini/code-debugger/`。
-2. 将目录内容复制到目标项目的 `.gemini/skills/[skill-name]/` 目录（含 `SKILL.md` 及各子目录）。
+2. 将目录下的 `.gemini/` 文件夹完整复制到目标项目根目录（若已有 `.gemini/` 则合并 `skills/` 子目录）。
 3. Gemini CLI 会根据任务描述自动匹配并触发对应技能。
 
 ### 方式二：脚手架一键部署（推荐全栈项目使用）
@@ -248,25 +248,29 @@ skills.claude/[SkillName]/
 
 ```text
 skills.codex/[skill-name]/
-├── SKILL.md                      # 核心 Skill 定义（含 YAML frontmatter）
-├── agents/
-│   └── openai.yaml               # 接口配置（display_name / short_description / default_prompt）
-├── scripts/                      # (可选) 脚本工具
-├── references/                   # (可选) 参考资料
-└── templates/                    # (可选) 文档模板
+└── .codex/
+    └── skills/
+        └── [skill-name]/
+            ├── SKILL.md              # 核心 Skill 定义（含 YAML frontmatter）
+            ├── agents/
+            │   └── openai.yaml       # 接口配置（display_name / short_description / default_prompt）
+            ├── scripts/              # (可选) 脚本工具
+            ├── references/           # (可选) 参考资料
+            └── templates/            # (可选) 文档模板
 ```
 
 ### Gemini CLI 技能结构
 
 ```text
 skills.gemini/[skill-name]/
-├── SKILL.md                      # 核心 Skill 定义（含 YAML frontmatter）
-├── scripts/                      # (可选) 脚本工具
-├── references/                   # (可选) 参考资料
-└── templates/                    # (可选) 文档模板
+└── .gemini/
+    └── skills/
+        └── [skill-name]/
+            ├── SKILL.md              # 核心 Skill 定义（含 YAML frontmatter）
+            ├── scripts/              # (可选) 脚本工具
+            ├── references/           # (可选) 参考资料
+            └── templates/            # (可选) 文档模板
 ```
-
-部署时将整个技能目录复制到目标项目的 `.gemini/skills/[skill-name]/`。
 
 ### Skill 元数据规范（SKILL.md frontmatter）
 

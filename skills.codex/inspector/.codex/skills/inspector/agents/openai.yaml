@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspector"
+  short_description: "PDCO 全局监管系统，统一评估多 Agent 质量、预算、积分与风险"
+  default_prompt: "使用 $inspector 对当前任务或团队进行评估，输出等级、风险、改进动作与预算建议。"

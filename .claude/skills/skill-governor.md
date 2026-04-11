@@ -287,14 +287,19 @@ description: 精确说明 skill 的功能、适用场景，以及何时不应触
 
 ```
 skills.codex/<skill-name>/
-├── SKILL.md                    # 必需；name + description frontmatter + Workflow + Output Contract
-├── agents/
-│   └── openai.yaml             # 必需；display_name / short_description / default_prompt
-├── scripts/                    # 可选；.py / .ps1 / .sh 等可执行脚本
-└── references/                 # 可选；清单、补充资料
+└── .codex/
+    └── skills/
+        └── <skill-name>/
+            ├── SKILL.md            # 必需；name + description frontmatter + Workflow + Output Contract
+            ├── agents/
+            │   └── openai.yaml     # 必需；display_name / short_description / default_prompt
+            ├── scripts/            # 可选；.py / .ps1 / .sh 等可执行脚本
+            └── references/         # 可选；清单、补充资料
 ```
 
-> **部署路径**：将 `skills.codex/<skill-name>/` 整个目录放入 `.agents/skills/<skill-name>/`（CWD、仓库根或 `~/.agents/skills/`）即可被 Codex 发现。`.codex/skills/` 为已废弃旧路径，勿使用。
+> **本仓库存储规范（可拷贝包）**：每个 skill 目录必须从 `.codex/` 开始，支持直接复制到任意项目。
+>
+> **运行时部署路径（Codex 官方）**：从包内取出 `skills.codex/<skill-name>/.codex/skills/<skill-name>/` 目录内容，放入 `.agents/skills/<skill-name>/`（CWD、仓库根或 `~/.agents/skills/`）供 Codex 发现。`/.codex/skills/` 不作为 Codex 官方发现路径。
 
 ### Claude 技能镜像
 
@@ -318,12 +323,17 @@ skills.claude/<skill-name>/
 
 ```
 skills.gemini/<skill-name>/
-├── SKILL.md                    # 必需；name + description frontmatter + Workflow + Output Contract
-├── scripts/                    # 可选；Gemini 激活后可读取执行（与 Codex 共享脚本时注明来源）
-└── references/                 # 可选；静态文档
+└── .gemini/
+    └── skills/
+        └── <skill-name>/
+            ├── SKILL.md            # 必需；name + description frontmatter + Workflow + Output Contract
+            ├── scripts/            # 可选；Gemini 激活后可读取执行（与 Codex 共享脚本时注明来源）
+            └── references/         # 可选；静态文档
 ```
 
-> **部署路径**：将 `skills.gemini/<skill-name>/` 整个目录放入以下任一位置即可被 Gemini CLI 发现：
+> **本仓库存储规范（可拷贝包）**：每个 skill 目录必须从 `.gemini/` 开始，支持直接复制到任意项目。
+>
+> **运行时部署路径（Gemini 官方）**：从包内取出 `skills.gemini/<skill-name>/.gemini/skills/<skill-name>/` 目录内容，放入以下任一位置即可被 Gemini CLI 发现：
 > - 工作区：`.gemini/skills/<skill-name>/` 或 `.agents/skills/<skill-name>/`（别名，优先级更高）
 > - 用户全局：`~/.gemini/skills/<skill-name>/` 或 `~/.agents/skills/<skill-name>/`
 >
@@ -352,7 +362,7 @@ package/full-dev-脚手架-inspector/  # 同构，内容可微调
 
 ### 场景 A：新增一个全新 skill
 
-1. **定义 Codex 源**（`skills.codex/<skill-name>/`）
+1. **定义 Codex 源**（`skills.codex/<skill-name>/.codex/skills/<skill-name>/`）
    - 创建 `SKILL.md`：按 **0-E 正文规范** 书写，包含 Overview / Workflow / Output Contract / Resources
    - 如需脚本：放到 `scripts/`（.py / .ps1 / .sh）
    - 如需参考文档：放到 `references/`
@@ -362,10 +372,10 @@ package/full-dev-脚手架-inspector/  # 同构，内容可微调
    - 必填：`interface.display_name`、`interface.short_description`、`interface.default_prompt`
    - 如需禁止隐式调用：`policy.allow_implicit_invocation: false`
 
-3. **同步到 Gemini 镜像**（`skills.gemini/<skill-name>/SKILL.md`）
+3. **同步到 Gemini 镜像**（`skills.gemini/<skill-name>/.gemini/skills/<skill-name>/SKILL.md`）
    - frontmatter：`name` + `description`（与 Codex 源对齐）
    - 正文结构：Overview + Workflow + Output Contract + Resources（同 Codex 源）
-   - 若有脚本：在 `scripts/` 下放脚本或注明"脚本规范来源：`skills.codex/<skill-name>/scripts/`"
+   - 若有脚本：在 `scripts/` 下放脚本或注明"脚本规范来源：`skills.codex/<skill-name>/.codex/skills/<skill-name>/scripts/`"
 
 4. **同步到 Claude 技能**（`skills.claude/<skill-name>/.claude/skills/<skill-name>/SKILL.md`）
    - frontmatter：`name` + `description`（Claude 官方格式）
@@ -391,7 +401,7 @@ package/full-dev-脚手架-inspector/  # 同构，内容可微调
 
 ### 场景 B：优化 / 重构已有 skill
 
-1. **先锁定「真源」**：改 `skills.codex/<skill-name>/SKILL.md`，再向外同步
+1. **先锁定「真源」**：改 `skills.codex/<skill-name>/.codex/skills/<skill-name>/SKILL.md`，再向外同步
 2. **同步多模型镜像**：关键术语、核心步骤、输出结构保持一致
 3. **同步脚手架接入点**：若 Output Contract / 工作流变化，更新脚手架文档
 4. **校验 scripts 与 references**：确认调用路径正确，无死链
@@ -403,7 +413,7 @@ package/full-dev-脚手架-inspector/  # 同构，内容可微调
 
 当对整个项目进行 skill 格式扫描时，按以下 Checklist 逐一检查每个 skill：
 
-### 4-A. Codex 源检查（`skills.codex/<skill-name>/`）
+### 4-A. Codex 源检查（`skills.codex/<skill-name>/.codex/skills/<skill-name>/`）
 
 - [ ] `SKILL.md` 存在
 - [ ] `SKILL.md` frontmatter 包含 `name` 和 `description`
@@ -417,7 +427,7 @@ package/full-dev-脚手架-inspector/  # 同构，内容可微调
 - [ ] `references/` 下只放静态参考文档，不放脚本
 - [ ] `SKILL.md` 中引用的所有文件路径实际存在（无死链）
 
-### 4-B. Gemini 镜像检查（`skills.gemini/<skill-name>/`）
+### 4-B. Gemini 镜像检查（`skills.gemini/<skill-name>/.gemini/skills/<skill-name>/`）
 
 - [ ] `SKILL.md` 存在
 - [ ] `SKILL.md` frontmatter 包含 `name` 和 `description`
@@ -472,9 +482,9 @@ package/full-dev-脚手架-inspector/  # 同构，内容可微调
 
 ```markdown
 ## Skill Governor 自检
-- [ ] Codex 源（skills.codex）— SKILL.md + agents/openai.yaml + scripts/
+- [ ] Codex 源（skills.codex）— `.codex/skills/<skill-name>/SKILL.md` + agents/openai.yaml + scripts/
 - [ ] Claude 镜像（skills.claude）— SKILL.md（skill目录）+ commands/*.md
-- [ ] Gemini 镜像（skills.gemini）— SKILL.md
+- [ ] Gemini 镜像（skills.gemini）— `.gemini/skills/<skill-name>/SKILL.md`
 - [ ] full-dev-脚手架 接入
 - [ ] full-dev-脚手架-inspector 接入
 - [ ] 脚本/引用路径验证（无死链）

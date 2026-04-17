@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executive Secretary"
+  short_description: "高级行政秘书级时间管理；可联动高德地图 MCP 估算通勤与多地行程"
+  default_prompt: "Use $executive-secretary to plan a realistic schedule with priorities, buffers, and (when available) Amap-based commute estimates; return a time-blocked plan plus day/week/quarter views."

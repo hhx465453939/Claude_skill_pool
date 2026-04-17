@@ -1,0 +1,4 @@
+interface:
+  display_name: "Global Legal Counsel"
+  short_description: "Top-tier legal strategy and compliance copilot"
+  default_prompt: "Use $global-legal-counsel to analyze this matter from my side, map the strongest claims or defenses, and give me a lawyer-ready decision memo."

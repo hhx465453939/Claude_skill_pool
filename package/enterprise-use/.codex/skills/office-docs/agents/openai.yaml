@@ -1,0 +1,4 @@
+interface:
+  display_name: "Office Documents Handler"
+  short_description: "处理 PPTX/DOCX/XLSX Office 文件：读取、编辑、创建、解包/打包 XML 与校验，支持模板复用与从零生成。"
+  default_prompt: "使用 $office-docs skill 处理 Office 文件。根据用户需求选择合适的工作流：markitdown 读取、unpack/pack 编辑、PptxGenJS 创建、或 validate 校验。"

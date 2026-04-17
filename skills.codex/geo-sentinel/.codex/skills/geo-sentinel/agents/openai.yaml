@@ -1,0 +1,4 @@
+interface:
+  display_name: "Geo Sentinel"
+  short_description: "Task-container-first geopolitical & macro forecasting with F-G+ calibration"
+  default_prompt: "Use $geo-sentinel to forecast the trajectory of this event: bootstrap a task container, run multi-round intelligence, apply F(scenarios) + G(base-rate / decomposition / counter-evidence / prior recalibration), and deliver a calibrated forecast report."

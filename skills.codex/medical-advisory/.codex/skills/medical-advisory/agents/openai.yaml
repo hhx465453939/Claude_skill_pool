@@ -1,0 +1,4 @@
+interface:
+  display_name: "Medical Advisory"
+  short_description: "循证医学 + 中医整体观的首席私人医疗架构师"
+  default_prompt: "Use $medical-advisory to run evidence-based retrieval, blend TCM syndrome differentiation, and deliver a personalized health management plan with clear safety caveats and referral boundaries."

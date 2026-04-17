@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Reader"
+  short_description: "资深学术研究员级论文精读与批判性分析，输出结构化精读报告"
+  default_prompt: "Use $paper-reader to deeply read this paper: overview → section-by-section analysis → critical appraisal (novelty, method, reliability, significance), and deliver a structured reading report."

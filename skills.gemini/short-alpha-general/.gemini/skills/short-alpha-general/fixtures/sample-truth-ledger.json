@@ -1,0 +1,24 @@
+{
+  "symbols": [
+    {
+      "symbol": "PGR",
+      "truth_status": "VERIFIED"
+    },
+    {
+      "symbol": "RMD",
+      "truth_status": "VERIFIED"
+    },
+    {
+      "symbol": "AJG",
+      "truth_status": "PARTIAL"
+    },
+    {
+      "symbol": "XYZ",
+      "truth_status": "VERIFIED"
+    },
+    {
+      "symbol": "SAND",
+      "truth_status": "MISSING"
+    }
+  ]
+}

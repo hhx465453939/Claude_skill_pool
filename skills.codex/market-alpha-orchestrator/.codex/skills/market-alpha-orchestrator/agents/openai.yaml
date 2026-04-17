@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Market Alpha Orchestrator"
+  short_description: "多市场 long/short 研究编排（FinanceMCP + deep-research + 报告交付）"
+  default_prompt: "Use $market-alpha-orchestrator to orchestrate cross-market long/short research, keep executable quant artifacts in-task, and output an execution-ready trade report."

@@ -1,0 +1,5 @@
+{"ticker":"PGR","event_type":"earnings","headline":"Progressive Q1 earnings","event_at":"2026-04-15T12:00:00Z","impact_horizon":"w1-2"}
+{"ticker":"RMD","event_type":"earnings","headline":"ResMed Q3 FY2026 earnings","event_at":"2026-04-30T12:00:00Z","impact_horizon":"w2-4"}
+{"ticker":"AJG","event_type":"guidance","headline":"AJG Q1 2026 earnings window","event_at":"2026-05-05T12:00:00Z","impact_horizon":"w2-4"}
+{"ticker":"XYZ","event_type":"policy","headline":"Grid resilience award decision","event_at":"2026-04-11T12:00:00Z","impact_horizon":"d3-7"}
+{"ticker":"SAND","event_type":"conference","headline":"Low-signal industry conference","event_at":"2026-05-20T12:00:00Z","impact_horizon":"m1-3"}

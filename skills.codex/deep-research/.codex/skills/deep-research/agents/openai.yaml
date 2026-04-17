@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Deep Research"
+  short_description: "多 Agent 并行深度调研引擎（引用管理、量化验证、文件交付）"
+  default_prompt: "Use $deep-research to bootstrap a task session, run parallel research agents, verify evidence with citations and light quant checks, and deliver a stable final report."

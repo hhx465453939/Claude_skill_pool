@@ -1,0 +1,62 @@
+[
+  {
+    "ticker": "PGR",
+    "sector": "insurance",
+    "strategic_river": "boring-cashflow-compounders",
+    "market_cap_b": 115,
+    "avg_dollar_volume_m": 820,
+    "attention_level": 0.18,
+    "relative_strength": 0.42,
+    "attention_gap": 0.41,
+    "hidden_catalyst_score": 0.62,
+    "evidence_edge": 0.67
+  },
+  {
+    "ticker": "RMD",
+    "sector": "medtech",
+    "strategic_river": "earnings-repricing",
+    "market_cap_b": 33,
+    "avg_dollar_volume_m": 240,
+    "attention_level": 0.28,
+    "relative_strength": 0.46,
+    "attention_gap": 0.55,
+    "hidden_catalyst_score": 0.73,
+    "evidence_edge": 0.74
+  },
+  {
+    "ticker": "AJG",
+    "sector": "insurance-broker",
+    "strategic_river": "boring-cashflow-compounders",
+    "market_cap_b": 48,
+    "avg_dollar_volume_m": 175,
+    "attention_level": 0.16,
+    "relative_strength": 0.38,
+    "attention_gap": 0.33,
+    "hidden_catalyst_score": 0.57,
+    "evidence_edge": 0.60
+  },
+  {
+    "ticker": "XYZ",
+    "sector": "power-infra",
+    "strategic_river": "defense-adjacent",
+    "market_cap_b": 12,
+    "avg_dollar_volume_m": 140,
+    "attention_level": 0.22,
+    "relative_strength": 0.63,
+    "attention_gap": 0.61,
+    "hidden_catalyst_score": 0.78,
+    "evidence_edge": 0.81
+  },
+  {
+    "ticker": "SAND",
+    "sector": "misc",
+    "strategic_river": "macro-thesis-only",
+    "market_cap_b": 1.6,
+    "avg_dollar_volume_m": 12,
+    "attention_level": 0.05,
+    "relative_strength": 0.12,
+    "attention_gap": 0.14,
+    "hidden_catalyst_score": 0.10,
+    "evidence_edge": 0.20
+  }
+]

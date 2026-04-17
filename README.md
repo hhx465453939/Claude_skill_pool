@@ -97,13 +97,13 @@
 │   └── ux-experience-audit/     # [体验] 用户体验问题扫描与修复闭环
 │
 ├── package/                     # 预打包的脚手架（多技能一体化部署）
-│   ├── enterprise-use/          # 企业咨询工具箱（6个核心咨询/文档技能）
+│   ├── enterprise-use/          # 企业咨询工具箱（7个咨询/文档/深研技能）
 │   │   ├── CLAUDE.md            # Claude Code 初始化引导
 │   │   ├── AGENTS.md            # Codex 初始化引导
 │   │   ├── GEMINI.md            # Gemini CLI 初始化引导
-│   │   ├── .claude/             # Claude Code（6 commands + office-docs 脚本工具链）
-│   │   ├── .codex/              # Codex 技能包（6 skills）
-│   │   └── .gemini/             # Gemini CLI 技能包（6 skills）
+│   │   ├── .claude/             # Claude Code（7 commands + office-docs 脚本工具链 + deep-research 脚本/参考）
+│   │   ├── .codex/              # Codex 技能包（7 skills）
+│   │   └── .gemini/             # Gemini CLI 技能包（7 skills）
 │   ├── full-dev-脚手架/         # 全栈开发环境（仅开发技能，无 PDCA/Inspector）
 │   │   ├── CLAUDE.md            # Claude Code 初始化引导
 │   │   ├── AGENTS.md            # Codex 初始化引导
@@ -170,7 +170,7 @@
 
 | 脚手架 | 适用场景 | 区别摘要 |
 |--------|----------|----------|
-| **enterprise-use** | 企业咨询、管理决策、谈判推进、法务研判、Office/PDF 文档处理 | 业务咨询工具箱：executive-consultant、executive-secretary、external-negotiation-master、global-legal-counsel、office-docs、pdf-reader；不含 Cursor 规则与开发类技能 |
+| **enterprise-use** | 企业咨询、管理决策、谈判推进、法务研判、Office/PDF 文档处理、深度调研 | 业务咨询工具箱：executive-consultant、executive-secretary、external-negotiation-master、global-legal-counsel、office-docs、pdf-reader、deep-research；不含 Cursor 规则与开发类技能 |
 | **full-dev-脚手架** | 只要「需求→规范→开发→调试」全流程，不需要项目级 PDCA 与看板 | 仅开发技能：ai-spec、api-first、debug、debug-ui、prd、ralph 等，无 `/sam-init` |
 | **full-dev-脚手架-inspector** | 需要 PDCA 循环、任务看板、进度日志与 Inspector 入职/专家周期管理 | 在 full-dev 基础上增加 `/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt 等，可与 [docs/inspector/](docs/inspector/) 配合使用 |
 
@@ -353,7 +353,7 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 
 | 名称 | 包含工具 | Claude | Codex | Gemini | 描述 |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| **企业咨询工具箱脚手架 (enterprise-use)** | Claude + Codex + Gemini | 6 commands<br>6+ skills | 6 skills | 6 skills | 面向企业咨询与文档协同：高管咨询、行政秘书、对外谈判、法律顾问、Office 文档处理、PDF 提取阅读；适合咨询团队或商务运营团队 |
+| **企业咨询工具箱脚手架 (enterprise-use)** | Claude + Codex + Gemini | 7 commands<br>7+ skills | 7 skills | 7 skills | 面向企业咨询与文档协同：高管咨询、行政秘书、对外谈判、法律顾问、Office 文档处理、PDF 提取阅读、深度调研；适合咨询团队 / 商务运营团队 / 研究决策团队 |
 | **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 8 commands<br>9 skills | 7 skills | 9 skills | 仅开发能力：一键部署 ai-spec、api-first、debug、debug-ui、prd、ralph、ralph-yolo、ux-experience-audit、nodejs-npm-auto-release，**无** PDCA/Inspector |
 | **全栈开发 + Inspector 脚手架 (full-dev-inspector)** | Claude + Codex + Gemini + Cursor | 9 commands<br>10 skills | 7 skills | 9 skills | 在 full-dev 基础上增加 **PDCA 工作流**：`/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt；适合需要入职看板与专家周期管理的项目，详见 [docs/inspector/](docs/inspector/) |
 

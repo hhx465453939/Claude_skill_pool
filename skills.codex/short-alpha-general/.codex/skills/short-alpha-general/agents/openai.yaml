@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Short Alpha General"
+  short_description: "短周期战役型交易将军（OODA + 容量梯度策略池）"
+  default_prompt: "Use $short-alpha-general to run short-horizon battle planning (4h-20d), execute OODA cycle decisions, and produce a capacity-aware tactical playbook."

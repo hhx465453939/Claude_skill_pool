@@ -1,0 +1,4 @@
+interface:
+  display_name: "External Negotiation Master"
+  short_description: "Strategic negotiation and talk-track copilot"
+  default_prompt: "Use $external-negotiation-master to help me negotiate from my side, map leverage and concessions, and draft the exact message or talk track to send."

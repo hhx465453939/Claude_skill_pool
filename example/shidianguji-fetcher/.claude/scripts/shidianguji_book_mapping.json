@@ -1,0 +1,2810 @@
+[
+  {
+    "book_id": "7282969127763836969",
+    "title": "test1",
+    "author": "",
+    "url": "https://www.shidianguji.com/book/7282969127763836969"
+  },
+  {
+    "book_id": "SBCK001",
+    "title": "周易",
+    "author": "[{40000}] 佚名  {著}、[{40005-2}] 韩康伯  {著}、[{40008}] 邢璹  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK001"
+  },
+  {
+    "book_id": "SBCK002",
+    "title": "尚书",
+    "author": "[{40003-1}] 孔安国  {撰}、[{40008}] 陆德明  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK002"
+  },
+  {
+    "book_id": "SBCK003",
+    "title": "诗经",
+    "author": "[{40003-1}] 毛亨  {著}、[{40003-2}] 郑玄  {著}、[{40008}] 陆德明  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK003"
+  },
+  {
+    "book_id": "SBCK004",
+    "title": "周礼",
+    "author": "[{40003-2}] 郑玄  {注}、[{40008}] 陆德明  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK004"
+  },
+  {
+    "book_id": "SBCK005",
+    "title": "仪礼",
+    "author": "[{40003-2}] 郑玄  {注}、[{40008}] 陆德明  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK005"
+  },
+  {
+    "book_id": "SBCK006",
+    "title": "纂图互注礼记",
+    "author": "[{40003-2}] 郑玄  {注}、[{40008}] 陆德明  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK006"
+  },
+  {
+    "book_id": "SBCK007",
+    "title": "春秋经传集解",
+    "author": "[{40000}] 左丘明  {撰}、[{40005-1}] 杜预  {撰}、[{40008}] 陆德明  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK007"
+  },
+  {
+    "book_id": "SBCK008",
+    "title": "春秋公羊经传解诂",
+    "author": "[{40003-2}] 何休  {撰}、[{40008}] 陆德明  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK008"
+  },
+  {
+    "book_id": "SBCK009",
+    "title": "春秋榖梁传",
+    "author": "[{40005-2}] 范宁  {集解}、[{40008}] 陆德明  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK009"
+  },
+  {
+    "book_id": "SBCK010",
+    "title": "孝经",
+    "author": "[{40008}] 李隆基  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK010"
+  },
+  {
+    "book_id": "SBCK011",
+    "title": "论语",
+    "author": "[{40004}] 何晏  {集解}",
+    "url": "https://www.shidianguji.com/book/SBCK011"
+  },
+  {
+    "book_id": "SBCK012",
+    "title": "孟子",
+    "author": "[{40001}] 孟轲  {撰}、[{40003}] 赵岐  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK012"
+  },
+  {
+    "book_id": "SBCK013",
+    "title": "尔雅",
+    "author": "[{40005}] 郭璞  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK013"
+  },
+  {
+    "book_id": "SBCK014",
+    "title": "京氏易传",
+    "author": "[{40003-1}] 京房  {撰}、[{40003-2}] 陆绩  {注}、[{40014}] 范钦  {订}",
+    "url": "https://www.shidianguji.com/book/SBCK014"
+  },
+  {
+    "book_id": "SBCK015",
+    "title": "尚书大传",
+    "author": "[{40003-1}] 伏胜  {撰}、[{40003-2}] 郑玄  {注}、[{40015}] 陈寿祺  {辑校}",
+    "url": "https://www.shidianguji.com/book/SBCK015"
+  },
+  {
+    "book_id": "SBCK016",
+    "title": "韩诗外传",
+    "author": "[{40003-1}] 韩婴  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK016"
+  },
+  {
+    "book_id": "SBCK017",
+    "title": "大戴礼记",
+    "author": "[{40003-1}] 戴德  {撰}、[{40006-9}] 卢辩  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK017"
+  },
+  {
+    "book_id": "SBCK018",
+    "title": "春秋繁露",
+    "author": "[{40003}] 董仲舒  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK018"
+  },
+  {
+    "book_id": "SBCK019",
+    "title": "经典释文",
+    "author": "[{40008}] 陆德明  {撰}、[{40015}] 孙毓修  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK019"
+  },
+  {
+    "book_id": "SBCK020",
+    "title": "方言",
+    "author": "[{40003-1}] 扬雄  {撰}、[{40005}] 郭璞  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK020"
+  },
+  {
+    "book_id": "SBCK021",
+    "title": "释名",
+    "author": "[{40003-2}] 刘熙  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK021"
+  },
+  {
+    "book_id": "SBCK022",
+    "title": "说文解字",
+    "author": "[{40003-2}] 许慎  {撰}、[{40010-1}] 徐铉  {校定}",
+    "url": "https://www.shidianguji.com/book/SBCK022"
+  },
+  {
+    "book_id": "SBCK023",
+    "title": "说文解字系传",
+    "author": "[{40009}] 徐锴  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK023"
+  },
+  {
+    "book_id": "SBCK024",
+    "title": "玉篇",
+    "author": "[{40010-1}] 陈彭年  {重修}",
+    "url": "https://www.shidianguji.com/book/SBCK024"
+  },
+  {
+    "book_id": "SBCK025",
+    "title": "广韵",
+    "author": "[{40010-1}] 陈彭年  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK025"
+  },
+  {
+    "book_id": "SBCK026",
+    "title": "竹书纪年",
+    "author": "[{40006}] 沈约  {注}、[{40014}] 范钦  {订}",
+    "url": "https://www.shidianguji.com/book/SBCK026"
+  },
+  {
+    "book_id": "SBCK027",
+    "title": "前汉纪",
+    "author": "[{40003-2}] 荀悦  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK027"
+  },
+  {
+    "book_id": "SBCK028",
+    "title": "后汉纪",
+    "author": "[{40005-2}] 袁宏  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK028"
+  },
+  {
+    "book_id": "SBCK029",
+    "title": "资治通鉴",
+    "author": "[{40010-1}] 司马光  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK029"
+  },
+  {
+    "book_id": "SBCK030",
+    "title": "资治通鉴考异",
+    "author": "[{40010-1}] 司马光  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK030"
+  },
+  {
+    "book_id": "SBCK032",
+    "title": "司马温公稽古录",
+    "author": "[{40010-1}] 司马光  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK032"
+  },
+  {
+    "book_id": "SBCK033",
+    "title": "资治通鉴外纪",
+    "author": "[{40010-1}] 刘恕  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK033"
+  },
+  {
+    "book_id": "SBCK035",
+    "title": "资治通鉴释文",
+    "author": "[{40010-2}] 史炤  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK035"
+  },
+  {
+    "book_id": "SBCK036",
+    "title": "通鉴纪事本末",
+    "author": "[{40010-2}] 袁枢  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK036"
+  },
+  {
+    "book_id": "SBCK037",
+    "title": "汲冢周书",
+    "author": "[{40005-1}] 孔晁  {注}、[{40014}] 范钦  {订}",
+    "url": "https://www.shidianguji.com/book/SBCK037"
+  },
+  {
+    "book_id": "SBCK038",
+    "title": "国语",
+    "author": "[{40004-3}] 韦昭  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK038"
+  },
+  {
+    "book_id": "SBCK039",
+    "title": "战国策校注",
+    "author": "[{40010-2}] 鲍彪  {注}、[{40013}] 吴师道  {重校}",
+    "url": "https://www.shidianguji.com/book/SBCK039"
+  },
+  {
+    "book_id": "SBCK040",
+    "title": "晏子春秋",
+    "author": "[{40001}] 晏婴  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK040"
+  },
+  {
+    "book_id": "SBCK041",
+    "title": "刘向古列女传",
+    "author": "[{40003-1}] 刘向  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK041"
+  },
+  {
+    "book_id": "SBCK042",
+    "title": "五朝名臣言行录",
+    "author": "[{40010-2}] 朱熹  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK042"
+  },
+  {
+    "book_id": "SBCK043",
+    "title": "三朝名臣言行录",
+    "author": "[{40010-2}] 朱熹  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK043"
+  },
+  {
+    "book_id": "SBCK044",
+    "title": "吴越春秋",
+    "author": "[{40003-2}] 赵晔  {撰}、[{40010}] 徐天祜  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK044"
+  },
+  {
+    "book_id": "SBCK045",
+    "title": "越绝书",
+    "author": "[{40003-2}] 袁康  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK045"
+  },
+  {
+    "book_id": "SBCK046",
+    "title": "华阳国志",
+    "author": "[{40005-1}] 常璩  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK046"
+  },
+  {
+    "book_id": "SBCK047",
+    "title": "水经注",
+    "author": "[{40006-5}] 郦道元  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK047"
+  },
+  {
+    "book_id": "SBCK048",
+    "title": "大唐西域记",
+    "author": "[{40008}] 释玄奘  {译}、[{40008}] 释辩机  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK048"
+  },
+  {
+    "book_id": "SBCK049",
+    "title": "史通",
+    "author": "[{40008}] 刘知几  {撰}、[{40015}] 孙毓修  {辑}、[{40015}] 姜殿扬  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK049"
+  },
+  {
+    "book_id": "SBCK050",
+    "title": "孔子家语",
+    "author": "[{40004-1}] 王肃  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK050"
+  },
+  {
+    "book_id": "SBCK051",
+    "title": "荀子",
+    "author": "[{40001-2}] 荀况  {撰}、[{40008}] 杨倞  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK051"
+  },
+  {
+    "book_id": "SBCK052",
+    "title": "孔丛子",
+    "author": "[{40003-1}] 孔鲋  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK052"
+  },
+  {
+    "book_id": "SBCK053",
+    "title": "新语",
+    "author": "[{40003-1}] 陆贾  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK053"
+  },
+  {
+    "book_id": "SBCK054",
+    "title": "贾太傅新书",
+    "author": "[{40003-1}] 贾谊  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK054"
+  },
+  {
+    "book_id": "SBCK055",
+    "title": "盐铁论",
+    "author": "[{40003-1}] 桓宽  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK055"
+  },
+  {
+    "book_id": "SBCK056",
+    "title": "新序",
+    "author": "[{40003-1}] 刘向  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK056"
+  },
+  {
+    "book_id": "SBCK057",
+    "title": "说苑",
+    "author": "[{40003-1}] 刘向  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK057"
+  },
+  {
+    "book_id": "SBCK058",
+    "title": "扬子法言",
+    "author": "[{40003-1}] 扬雄  {撰}、[{40005}] 李轨  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK058"
+  },
+  {
+    "book_id": "SBCK059",
+    "title": "潜夫论",
+    "author": "[{40003-2}] 王符  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK059"
+  },
+  {
+    "book_id": "SBCK060",
+    "title": "申鉴",
+    "author": "[{40003-2}] 荀悦  {撰}、[{40014}] 黄省曾  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK060"
+  },
+  {
+    "book_id": "SBCK061",
+    "title": "徐干中论",
+    "author": "[{40003-2}] 徐干  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK061"
+  },
+  {
+    "book_id": "SBCK062",
+    "title": "文中子中说",
+    "author": "[{40007}] 王通  {撰}、[{40010-1}] 阮逸  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK062"
+  },
+  {
+    "book_id": "SBCK063",
+    "title": "孙子兵法",
+    "author": "[{40001-1}] 孙武  {著}、[{40010-2}] 吉天保  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK063"
+  },
+  {
+    "book_id": "SBCK064",
+    "title": "六韬",
+    "author": "[{40000}] 吕望  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK064"
+  },
+  {
+    "book_id": "SBCK065",
+    "title": "吴子",
+    "author": "[{40001-2}] 吴起  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK065"
+  },
+  {
+    "book_id": "SBCK066",
+    "title": "司马法",
+    "author": "[{40001-1}] 司马穰苴  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK066"
+  },
+  {
+    "book_id": "SBCK067",
+    "title": "管子",
+    "author": "[{40001-1}] 管仲  {撰}、[{40008}] 房玄龄  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK067"
+  },
+  {
+    "book_id": "SBCK068",
+    "title": "邓析子",
+    "author": "[{40001-1}] 邓析  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK068"
+  },
+  {
+    "book_id": "SBCK069",
+    "title": "商子",
+    "author": "[{40001-1}] 商鞅  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK069"
+  },
+  {
+    "book_id": "SBCK070",
+    "title": "韩非子",
+    "author": "[{40001-2}] 韩非  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK070"
+  },
+  {
+    "book_id": "SBCK071",
+    "title": "齐民要术",
+    "author": "[{40006}] 贾思勰  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK071"
+  },
+  {
+    "book_id": "SBCK072",
+    "title": "黄帝内经",
+    "author": "[{40008}] 王冰  {著}、[{40010-1}] 林亿  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK072"
+  },
+  {
+    "book_id": "SBCK073",
+    "title": "黄帝素问灵枢经",
+    "author": "[{40008}] 王冰  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK073"
+  },
+  {
+    "book_id": "SBCK074",
+    "title": "难经集注",
+    "author": "[{40014}] 王九思  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK074"
+  },
+  {
+    "book_id": "SBCK075",
+    "title": "金匮要略",
+    "author": "[{40003-2}] 张仲景  {撰}、[{40005}] 王叔和  {集}、[{40010-1}] 林亿  {诠次}",
+    "url": "https://www.shidianguji.com/book/SBCK075"
+  },
+  {
+    "book_id": "SBCK076",
+    "title": "注解伤寒论",
+    "author": "[{40003-2}] 张机  {撰}、[{40005}] 王叔和  {编}、[{40012}] 成无己  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK076"
+  },
+  {
+    "book_id": "SBCK077",
+    "title": "王氏脉经",
+    "author": "[{40005}] 王叔和  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK077"
+  },
+  {
+    "book_id": "SBCK078",
+    "title": "证类本草",
+    "author": "[{40010-1}] 唐慎微  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK078"
+  },
+  {
+    "book_id": "SBCK079",
+    "title": "周髀算经",
+    "author": "[{40003-2}] 赵爽  {注}、[{40006-9}] 甄鸾  {重述}、[{40008}] 李淳风  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK079"
+  },
+  {
+    "book_id": "SBCK080",
+    "title": "九章算术",
+    "author": "[{40005}] 刘徽  {注}、[{40008}] 李淳风  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK080"
+  },
+  {
+    "book_id": "SBCK081",
+    "title": "太玄经",
+    "author": "[{40003}] 扬雄  {撰}、[{40005}] 范望  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK081"
+  },
+  {
+    "book_id": "SBCK082",
+    "title": "焦氏易林",
+    "author": "[{40003-1}] 焦赣  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK082"
+  },
+  {
+    "book_id": "SBCK083",
+    "title": "墨子",
+    "author": "[{40001-2}] 墨翟  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK083"
+  },
+  {
+    "book_id": "SBCK084",
+    "title": "尹文子",
+    "author": "[{40001-2}] 尹文  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK084"
+  },
+  {
+    "book_id": "SBCK085",
+    "title": "慎子",
+    "author": "[{40001-2}] 慎到  {撰}、[{40014}] 慎懋赏  {校}",
+    "url": "https://www.shidianguji.com/book/SBCK085"
+  },
+  {
+    "book_id": "SBCK086",
+    "title": "鹖冠子",
+    "author": "[{40001-2}] 鹖冠子  {撰}、[{40001-1}] 陆佃  {解}",
+    "url": "https://www.shidianguji.com/book/SBCK086"
+  },
+  {
+    "book_id": "SBCK087",
+    "title": "鬼谷子",
+    "author": "[{40001-2}] 鬼谷子  {撰}、[{40006-3}] 陶弘景  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK087"
+  },
+  {
+    "book_id": "SBCK088",
+    "title": "吕氏春秋",
+    "author": "[{40001-2}] 吕不韦  {撰}、[{40003-2}] 高诱  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK088"
+  },
+  {
+    "book_id": "SBCK089",
+    "title": "淮南子",
+    "author": "[{40003-1}] 刘安  {撰}、[{40003-2}] 许慎  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK089"
+  },
+  {
+    "book_id": "SBCK090",
+    "title": "人物志",
+    "author": "[{40004-1}] 刘邵  {撰}、[{40006-3}] 刘昞  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK090"
+  },
+  {
+    "book_id": "SBCK091",
+    "title": "颜氏家训",
+    "author": "[{40006-8}] 颜之推  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK091"
+  },
+  {
+    "book_id": "SBCK092",
+    "title": "白虎通德论",
+    "author": "[{40003-2}] 班固  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK092"
+  },
+  {
+    "book_id": "SBCK093",
+    "title": "论衡",
+    "author": "[{40003-2}] 王充  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK093"
+  },
+  {
+    "book_id": "SBCK094",
+    "title": "风俗通义",
+    "author": "[{40003-2}] 应劭  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK094"
+  },
+  {
+    "book_id": "SBCK095",
+    "title": "群书治要",
+    "author": "[{40008}] 魏征  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK095"
+  },
+  {
+    "book_id": "SBCK096",
+    "title": "意林",
+    "author": "[{40008}] 马总  {编}、[{40015}] 周广业  {编逸文}、[{40015}] 李遇孙  {录补}",
+    "url": "https://www.shidianguji.com/book/SBCK096"
+  },
+  {
+    "book_id": "SBCK097",
+    "title": "西京杂记",
+    "author": "[{40003}] 刘歆  {撰}、[{40005-2}] 葛洪  {录}",
+    "url": "https://www.shidianguji.com/book/SBCK097"
+  },
+  {
+    "book_id": "SBCK098",
+    "title": "世说新语",
+    "author": "[{40006-1}] 刘义庆  {撰}、[{40006-3}] 刘峻  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK098"
+  },
+  {
+    "book_id": "SBCK099",
+    "title": "山海经",
+    "author": "[{40005}] 郭璞  {注}、[{40015}] 黄丕烈  {校勘}",
+    "url": "https://www.shidianguji.com/book/SBCK099"
+  },
+  {
+    "book_id": "SBCK100",
+    "title": "穆天子传",
+    "author": "[{40005-2}] 郭璞  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK100"
+  },
+  {
+    "book_id": "SBCK101",
+    "title": "酉阳杂俎",
+    "author": "[{40008}] 段成式  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK101"
+  },
+  {
+    "book_id": "SBCK102",
+    "title": "弘明集",
+    "author": "[{40006-3}] 释僧祐  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK102"
+  },
+  {
+    "book_id": "SBCK103",
+    "title": "广弘明集",
+    "author": "[{40008}] 释道宣  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK103"
+  },
+  {
+    "book_id": "SBCK104",
+    "title": "法苑珠林",
+    "author": "[{40008}] 释道世  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK104"
+  },
+  {
+    "book_id": "SBCK105",
+    "title": "翻译名义集",
+    "author": "[{40010}] 释法云  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK105"
+  },
+  {
+    "book_id": "SBCK106",
+    "title": "老子道德经",
+    "author": "[{40003}] 河上公  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK106"
+  },
+  {
+    "book_id": "SBCK107",
+    "title": "冲虚至德真经",
+    "author": "[{40001-2}] 列御寇  {撰}、[{40005-2}] 张湛  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK107"
+  },
+  {
+    "book_id": "SBCK108",
+    "title": "庄子",
+    "author": "[{40005-1}] 郭象  {著}、[{40008}] 陆德明  {著}、[{40015}] 孙毓修  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK108"
+  },
+  {
+    "book_id": "SBCK109",
+    "title": "抱朴子",
+    "author": "[{40005-2}] 葛洪  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK109"
+  },
+  {
+    "book_id": "SBCK110",
+    "title": "云笈七签",
+    "author": "[{40010-1}] 张君房  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK110"
+  },
+  {
+    "book_id": "SBCK111",
+    "title": "楚辞",
+    "author": "[{40001-2}] 屈原  {撰}、[{40003-2}] 王逸  {章句}、[{40010}] 洪兴祖  {补注}",
+    "url": "https://www.shidianguji.com/book/SBCK111"
+  },
+  {
+    "book_id": "SBCK112",
+    "title": "蔡中郎文集",
+    "author": "[{40003-2}] 蔡邕  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK112"
+  },
+  {
+    "book_id": "SBCK113",
+    "title": "曹子建集",
+    "author": "[{40004-1}] 曹植  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK113"
+  },
+  {
+    "book_id": "SBCK114",
+    "title": "嵇中散集",
+    "author": "[{40004-1}] 嵇康  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK114"
+  },
+  {
+    "book_id": "SBCK115",
+    "title": "陆士衡文集",
+    "author": "[{40005-1}] 陆机  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK115"
+  },
+  {
+    "book_id": "SBCK116",
+    "title": "陆士龙文集",
+    "author": "[{40005-1}] 陆机  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK116"
+  },
+  {
+    "book_id": "SBCK117",
+    "title": "笺注陶渊明集",
+    "author": "[{40005-1}] 陶潜  {撰}、[{40010}] 李公焕  {笺注}",
+    "url": "https://www.shidianguji.com/book/SBCK117"
+  },
+  {
+    "book_id": "SBCK118",
+    "title": "鲍氏集",
+    "author": "[{40006}] 鲍照  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK118"
+  },
+  {
+    "book_id": "SBCK119",
+    "title": "谢宣城诗集",
+    "author": "[{40006}] 谢朓  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK119"
+  },
+  {
+    "book_id": "SBCK120",
+    "title": "梁昭明太子文集",
+    "author": "[{40006-3}] 萧统  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK120"
+  },
+  {
+    "book_id": "SBCK121",
+    "title": "梁江文通文集",
+    "author": "[{40006-3}] 江淹  {撰校补}、[{40015}] 叶树廉  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK121"
+  },
+  {
+    "book_id": "SBCK122",
+    "title": "徐孝穆集",
+    "author": "[{40006-4}] 徐陵  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK122"
+  },
+  {
+    "book_id": "SBCK123",
+    "title": "庾子山集",
+    "author": "[{40006-3}] 庾信  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK123"
+  },
+  {
+    "book_id": "SBCK124",
+    "title": "寒山子诗集",
+    "author": "[{40008}] 释寒山  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK124"
+  },
+  {
+    "book_id": "SBCK125",
+    "title": "王子安集",
+    "author": "[{40008}] 王勃  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK125"
+  },
+  {
+    "book_id": "SBCK126",
+    "title": "杨盈川集",
+    "author": "[{40008}] 杨炯  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK126"
+  },
+  {
+    "book_id": "SBCK127",
+    "title": "幽忧子集",
+    "author": "[{40008}] 卢照邻  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK127"
+  },
+  {
+    "book_id": "SBCK128",
+    "title": "骆宾王文集",
+    "author": "[{40008}] 骆宾王  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK128"
+  },
+  {
+    "book_id": "SBCK129",
+    "title": "陈伯玉文集",
+    "author": "[{40008}] 陈子昂  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK129"
+  },
+  {
+    "book_id": "SBCK130",
+    "title": "张说之文集",
+    "author": "[{40008}] 张说  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK130"
+  },
+  {
+    "book_id": "SBCK131",
+    "title": "曲江集",
+    "author": "[{40008}] 张九龄  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK131"
+  },
+  {
+    "book_id": "SBCK132",
+    "title": "李白集",
+    "author": "[{40008}] 李白  {著}、[{40010-2}] 杨齐贤  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK132"
+  },
+  {
+    "book_id": "SBCK133",
+    "title": "杜甫集",
+    "author": "[{40008}] 杜甫  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK133"
+  },
+  {
+    "book_id": "SBCK134",
+    "title": "王维集",
+    "author": "[{40008}] 王维  {著}、[{40009}] 刘辰翁  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK134"
+  },
+  {
+    "book_id": "SBCK135",
+    "title": "高适集",
+    "author": "[{40008}] 高适  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK135"
+  },
+  {
+    "book_id": "SBCK136",
+    "title": "孟浩然集",
+    "author": "[{40008}] 孟浩然  {撰}、[{40008}] 王士源  {编}",
+    "url": "https://www.shidianguji.com/book/SBCK136"
+  },
+  {
+    "book_id": "SBCK137",
+    "title": "唐元次山文集",
+    "author": "[{40008}] 元结  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK137"
+  },
+  {
+    "book_id": "SBCK138",
+    "title": "颜鲁公文集",
+    "author": "[{40008}] 颜真卿  {撰}、[{40010-2}] 留元刚  {撰年谱}",
+    "url": "https://www.shidianguji.com/book/SBCK138"
+  },
+  {
+    "book_id": "SBCK139",
+    "title": "岑参集",
+    "author": "[{40008}] 岑参  {著}、[{40008}] 杜确  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK139"
+  },
+  {
+    "book_id": "SBCK140",
+    "title": "皎然集",
+    "author": "[{40008}] 释皎然  {撰}、[{40008}] 于𬱖  {编}",
+    "url": "https://www.shidianguji.com/book/SBCK140"
+  },
+  {
+    "book_id": "SBCK141",
+    "title": "刘随州文集",
+    "author": "[{40008}] 刘长卿  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK141"
+  },
+  {
+    "book_id": "SBCK142",
+    "title": "韦刺史诗集",
+    "author": "[{40008}] 韦应物  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK142"
+  },
+  {
+    "book_id": "SBCK143",
+    "title": "毗陵集",
+    "author": "[{40008}] 独孤及  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK143"
+  },
+  {
+    "book_id": "SBCK144",
+    "title": "钱考功集",
+    "author": "[{40008}] 钱起  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK144"
+  },
+  {
+    "book_id": "SBCK145",
+    "title": "唐陆宣公翰苑集",
+    "author": "[{40008}] 陆贽  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK145"
+  },
+  {
+    "book_id": "SBCK146",
+    "title": "权载之文集",
+    "author": "[{40008}] 权德舆  {撰}、[{40016}] 姜殿扬  {校补}",
+    "url": "https://www.shidianguji.com/book/SBCK146"
+  },
+  {
+    "book_id": "SBCK147",
+    "title": "韩愈集",
+    "author": "[{40008}] 韩愈  {著}、[{40010-2}] 朱熹  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK147"
+  },
+  {
+    "book_id": "SBCK148",
+    "title": "柳宗元集",
+    "author": "[{40008}] 柳宗元  {著}、[{40008}] 童宗说  {著}、[{40010-2}] 张敦颐  {著}、[{40010-2}] 潘纬  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK148"
+  },
+  {
+    "book_id": "SBCK149",
+    "title": "刘梦得文集",
+    "author": "[{40008}] 刘禹锡  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK149"
+  },
+  {
+    "book_id": "SBCK150",
+    "title": "吕和叔文集",
+    "author": "[{40008}] 吕温  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK150"
+  },
+  {
+    "book_id": "SBCK151",
+    "title": "唐张司业诗集",
+    "author": "[{40008}] 张籍  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK151"
+  },
+  {
+    "book_id": "SBCK152",
+    "title": "皇甫持正文集",
+    "author": "[{40008}] 皇甫湜  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK152"
+  },
+  {
+    "book_id": "SBCK153",
+    "title": "唐李文公集",
+    "author": "[{40008}] 李翱  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK153"
+  },
+  {
+    "book_id": "SBCK154",
+    "title": "欧阳行周文集",
+    "author": "[{40008}] 欧阳詹  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK154"
+  },
+  {
+    "book_id": "SBCK155",
+    "title": "孟东野诗集",
+    "author": "[{40008}] 孟郊  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK155"
+  },
+  {
+    "book_id": "SBCK156",
+    "title": "唐贾浪仙长江集",
+    "author": "[{40008}] 贾岛  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK156"
+  },
+  {
+    "book_id": "SBCK157",
+    "title": "李贺歌诗编",
+    "author": "[{40008}] 李贺  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK157"
+  },
+  {
+    "book_id": "SBCK158",
+    "title": "沈下贤文集",
+    "author": "[{40008}] 沈亚之  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK158"
+  },
+  {
+    "book_id": "SBCK159",
+    "title": "李文饶文集",
+    "author": "[{40008}] 李德裕  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK159"
+  },
+  {
+    "book_id": "SBCK160",
+    "title": "元氏长庆集",
+    "author": "[{40008}] 元稹  {撰}、[{40015}] 张元济  {校}",
+    "url": "https://www.shidianguji.com/book/SBCK160"
+  },
+  {
+    "book_id": "SBCK161",
+    "title": "白居易集",
+    "author": "[{40008}] 白居易  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK161"
+  },
+  {
+    "book_id": "SBCK162",
+    "title": "杜牧集",
+    "author": "[{40008}] 杜牧  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK162"
+  },
+  {
+    "book_id": "SBCK163",
+    "title": "姚少监诗集",
+    "author": "[{40008}] 姚合  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK163"
+  },
+  {
+    "book_id": "SBCK164",
+    "title": "李义山诗集",
+    "author": "[{40008}] 李商隐  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK164"
+  },
+  {
+    "book_id": "SBCK165",
+    "title": "李义山文集",
+    "author": "[{40008}] 李商隐  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK165"
+  },
+  {
+    "book_id": "SBCK166",
+    "title": "温庭筠诗集",
+    "author": "[{40008}] 温庭筠  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK166"
+  },
+  {
+    "book_id": "SBCK167",
+    "title": "丁卯集",
+    "author": "[{40008}] 许浑  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK167"
+  },
+  {
+    "book_id": "SBCK168",
+    "title": "唐刘蜕集",
+    "author": "[{40008}] 刘蜕  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK168"
+  },
+  {
+    "book_id": "SBCK169",
+    "title": "唐孙樵集",
+    "author": "[{40008}] 孙樵  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK169"
+  },
+  {
+    "book_id": "SBCK170",
+    "title": "李群玉诗集",
+    "author": "[{40008}] 李群玉  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK170"
+  },
+  {
+    "book_id": "SBCK171",
+    "title": "碧云集",
+    "author": "[{40008}] 李中  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK171"
+  },
+  {
+    "book_id": "SBCK172",
+    "title": "唐李推官披沙集",
+    "author": "[{40008}] 李咸用  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK172"
+  },
+  {
+    "book_id": "SBCK173",
+    "title": "皮子文薮",
+    "author": "[{40008}] 皮日休  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK173"
+  },
+  {
+    "book_id": "SBCK174",
+    "title": "唐甫里先生文集",
+    "author": "[{40008}] 陆龟蒙  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK174"
+  },
+  {
+    "book_id": "SBCK175",
+    "title": "玉川子诗集",
+    "author": "[{40008}] 卢仝  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK175"
+  },
+  {
+    "book_id": "SBCK176",
+    "title": "司空表圣文集",
+    "author": "[{40008}] 司空图  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK176"
+  },
+  {
+    "book_id": "SBCK177",
+    "title": "司空表圣诗集",
+    "author": "[{40008}] 司空图  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK177"
+  },
+  {
+    "book_id": "SBCK178",
+    "title": "玉山樵人集",
+    "author": "[{40008}] 韩偓  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK178"
+  },
+  {
+    "book_id": "SBCK179",
+    "title": "桂苑笔耕集",
+    "author": "[{40008}] 崔致远  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK179"
+  },
+  {
+    "book_id": "SBCK180",
+    "title": "唐黄御史公集",
+    "author": "[{40008}] 黄滔  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK180"
+  },
+  {
+    "book_id": "SBCK181",
+    "title": "甲乙集",
+    "author": "[{40008}] 罗隐  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK181"
+  },
+  {
+    "book_id": "SBCK182",
+    "title": "白莲集",
+    "author": "[{40008}] 释齐己  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK182"
+  },
+  {
+    "book_id": "SBCK183",
+    "title": "禅月集",
+    "author": "[{40008}] 释贯休  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK183"
+  },
+  {
+    "book_id": "SBCK184",
+    "title": "浣花集",
+    "author": "[{40009}] 韦庄  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK184"
+  },
+  {
+    "book_id": "SBCK185",
+    "title": "广成集",
+    "author": "[{40009}] 杜光庭  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK185"
+  },
+  {
+    "book_id": "SBCK186",
+    "title": "徐公文集",
+    "author": "[{40010-1}] 徐铉  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK186"
+  },
+  {
+    "book_id": "SBCK187",
+    "title": "河东先生集",
+    "author": "[{40010-1}] 柳开  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK187"
+  },
+  {
+    "book_id": "SBCK188",
+    "title": "小畜外集",
+    "author": "[{40010-1}] 王禹称  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK188"
+  },
+  {
+    "book_id": "SBCK189",
+    "title": "王黄州小畜集",
+    "author": "[{40010-1}] 王禹称  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK189"
+  },
+  {
+    "book_id": "SBCK190",
+    "title": "林和靖先生诗集",
+    "author": "[{40010-1}] 林逋  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK190"
+  },
+  {
+    "book_id": "SBCK191",
+    "title": "河南穆公集",
+    "author": "[{40010-1}] 穆修  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK191"
+  },
+  {
+    "book_id": "SBCK192",
+    "title": "范文正公集",
+    "author": "[{40010-1}] 范仲淹  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK192"
+  },
+  {
+    "book_id": "SBCK193",
+    "title": "河南先生文集",
+    "author": "[{40010-1}] 尹洙  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK193"
+  },
+  {
+    "book_id": "SBCK194",
+    "title": "苏学士文集",
+    "author": "[{40010-1}] 苏舜钦  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK194"
+  },
+  {
+    "book_id": "SBCK195",
+    "title": "温国文正公文集",
+    "author": "[{40010-1}] 司马光  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK195"
+  },
+  {
+    "book_id": "SBCK196",
+    "title": "直讲李先生文集",
+    "author": "[{40010-1}] 李觏  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK196"
+  },
+  {
+    "book_id": "SBCK197",
+    "title": "陈眉公先生订正丹渊集",
+    "author": "[{40010-1}] 文同  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK197"
+  },
+  {
+    "book_id": "SBCK198",
+    "title": "元丰类稿",
+    "author": "[{40010-1}] 曾巩  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK198"
+  },
+  {
+    "book_id": "SBCK199",
+    "title": "宛陵先生文集",
+    "author": "[{40010-1}] 梅尧臣  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK199"
+  },
+  {
+    "book_id": "SBCK200",
+    "title": "伊川击壤集",
+    "author": "[{40010-1}] 邵雍  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK200"
+  },
+  {
+    "book_id": "SBCK201",
+    "title": "欧阳文忠公集",
+    "author": "[{40010-1}] 欧阳修  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK201"
+  },
+  {
+    "book_id": "SBCK202",
+    "title": "嘉祐集",
+    "author": "[{40010-1}] 苏洵  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK202"
+  },
+  {
+    "book_id": "SBCK203",
+    "title": "临川先生文集",
+    "author": "[{40010-1}] 王安石  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK203"
+  },
+  {
+    "book_id": "SBCK204",
+    "title": "苏轼诗集",
+    "author": "[{40010-1}] 苏轼  {著}、[{40010-2}] 王十朋  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK204"
+  },
+  {
+    "book_id": "SBCK205",
+    "title": "经进东坡文集事略",
+    "author": "[{40010-1}] 苏轼  {撰}、[{40010-2}] 郎晔  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK205"
+  },
+  {
+    "book_id": "SBCK206",
+    "title": "栾城集",
+    "author": "[{40010-1}] 苏辙  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK206"
+  },
+  {
+    "book_id": "SBCK207",
+    "title": "栾城应诏集",
+    "author": "[{40010-1}] 苏辙  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK207"
+  },
+  {
+    "book_id": "SBCK208",
+    "title": "豫章黄先生文集",
+    "author": "[{40010-1}] 黄庭坚  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK208"
+  },
+  {
+    "book_id": "SBCK209",
+    "title": "后山诗注",
+    "author": "[{40010-1}] 陈师道  {撰}、[{40010-1}] 任渊  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK209"
+  },
+  {
+    "book_id": "SBCK210",
+    "title": "张右史文集",
+    "author": "[{40010-1}] 张耒  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK210"
+  },
+  {
+    "book_id": "SBCK211",
+    "title": "淮海集",
+    "author": "[{40010-1}] 秦观  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK211"
+  },
+  {
+    "book_id": "SBCK212",
+    "title": "石门文字禅",
+    "author": "[{40010-1}] 释惠洪  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK212"
+  },
+  {
+    "book_id": "SBCK213",
+    "title": "济北晁先生鸡肋集",
+    "author": "[{40010-1}] 晁补之  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK213"
+  },
+  {
+    "book_id": "SBCK214",
+    "title": "浮溪集",
+    "author": "[{40010}] 汪藻  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK214"
+  },
+  {
+    "book_id": "SBCK215",
+    "title": "陈与义诗集",
+    "author": "[{40006-1}] 陈与义  {著}、[{40010-2}] 胡稚  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK215"
+  },
+  {
+    "book_id": "SBCK216",
+    "title": "简斋诗外集",
+    "author": "[{40010}] 陈与义  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK216"
+  },
+  {
+    "book_id": "SBCK217",
+    "title": "于湖居士文集",
+    "author": "[{40010-2}] 张孝祥  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK217"
+  },
+  {
+    "book_id": "SBCK218",
+    "title": "朱熹文集",
+    "author": "[{40010-2}] 朱熹  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK218"
+  },
+  {
+    "book_id": "SBCK219",
+    "title": "止斋先生文集",
+    "author": "[{40010-2}] 陈傅良  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK219"
+  },
+  {
+    "book_id": "SBCK220",
+    "title": "梅溪先生廷试策奏议",
+    "author": "[{40010-2}] 王十朋  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK220"
+  },
+  {
+    "book_id": "SBCK221",
+    "title": "攻媿集",
+    "author": "[{40010-2}] 楼钥  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK221"
+  },
+  {
+    "book_id": "SBCK222",
+    "title": "象山先生全集",
+    "author": "[{40010-2}] 陆九渊  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK222"
+  },
+  {
+    "book_id": "SBCK223",
+    "title": "盘洲文集",
+    "author": "[{40010-2}] 洪适  {撰}、[{40015}] 张元济  {札记}",
+    "url": "https://www.shidianguji.com/book/SBCK223"
+  },
+  {
+    "book_id": "SBCK224",
+    "title": "石湖居士诗集",
+    "author": "[{40010-2}] 范成大  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK224"
+  },
+  {
+    "book_id": "SBCK225",
+    "title": "诚斋集",
+    "author": "[{40010-2}] 杨万里  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK225"
+  },
+  {
+    "book_id": "SBCK226",
+    "title": "渭南文集",
+    "author": "[{40010-2}] 陆游  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK226"
+  },
+  {
+    "book_id": "SBCK227",
+    "title": "涧谷精选陆放翁诗集前集",
+    "author": "[{40010-2}] 陆游  {撰}、[{40010-2}] 罗椅  {选}",
+    "url": "https://www.shidianguji.com/book/SBCK227"
+  },
+  {
+    "book_id": "SBCK228",
+    "title": "水心先生文集",
+    "author": "[{40010-2}] 叶适  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK228"
+  },
+  {
+    "book_id": "SBCK229",
+    "title": "重校鹤山先生大全文集",
+    "author": "[{40010-2}] 魏了翁  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK229"
+  },
+  {
+    "book_id": "SBCK230",
+    "title": "西山先生真文忠公文集",
+    "author": "[{40010-2}] 真德秀  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK230"
+  },
+  {
+    "book_id": "SBCK231",
+    "title": "白石道人诗集",
+    "author": "[{40010-2}] 姜夔  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK231"
+  },
+  {
+    "book_id": "SBCK232",
+    "title": "后村先生大全集",
+    "author": "[{40010-2}] 刘克庄  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK232"
+  },
+  {
+    "book_id": "SBCK233",
+    "title": "文山先生全集",
+    "author": "[{40010-2}] 文天祥  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK233"
+  },
+  {
+    "book_id": "SBCK234",
+    "title": "闲闲老人滏水文集",
+    "author": "[{40012}] 赵秉文  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK234"
+  },
+  {
+    "book_id": "SBCK235",
+    "title": "滹南遗老集",
+    "author": "[{40012}] 王若虚  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK235"
+  },
+  {
+    "book_id": "SBCK236",
+    "title": "遗山先生文集",
+    "author": "[{40012}] 元好问  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK236"
+  },
+  {
+    "book_id": "SBCK237",
+    "title": "湛然居士文集",
+    "author": "[{40013}] 耶律楚材  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK237"
+  },
+  {
+    "book_id": "SBCK238",
+    "title": "秋涧先生大全集",
+    "author": "[{40013}] 王恽  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK238"
+  },
+  {
+    "book_id": "SBCK239",
+    "title": "剡源戴先生文集",
+    "author": "[{40013}] 戴表元  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK239"
+  },
+  {
+    "book_id": "SBCK240",
+    "title": "松雪斋文集",
+    "author": "[{40013}] 赵孟𫖯  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK240"
+  },
+  {
+    "book_id": "SBCK241",
+    "title": "静修先生文集",
+    "author": "[{40013}] 静修先生文集  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK241"
+  },
+  {
+    "book_id": "SBCK242",
+    "title": "清容居士集",
+    "author": "[{40013}] 袁桷  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK242"
+  },
+  {
+    "book_id": "SBCK243",
+    "title": "牧庵集",
+    "author": "[{40013}] 姚燧  {撰年谱}、[{40013}] 刘致  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK243"
+  },
+  {
+    "book_id": "SBCK244",
+    "title": "道园学古录",
+    "author": "[{40013}] 虞集  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK244"
+  },
+  {
+    "book_id": "SBCK245",
+    "title": "翰林杨仲弘诗集",
+    "author": "[{40013}] 杨载  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK245"
+  },
+  {
+    "book_id": "SBCK246",
+    "title": "揭文安公全集",
+    "author": "[{40013}] 揭傒斯  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK246"
+  },
+  {
+    "book_id": "SBCK247",
+    "title": "范德机诗集",
+    "author": "[{40013}] 范椁  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK247"
+  },
+  {
+    "book_id": "SBCK248",
+    "title": "渊颖吴先生集",
+    "author": "[{40013}] 吴莱  {撰}、[{40015}] 林志烜  {札记}",
+    "url": "https://www.shidianguji.com/book/SBCK248"
+  },
+  {
+    "book_id": "SBCK249",
+    "title": "金华黄先生文集",
+    "author": "[{40013}] 黄溍  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK249"
+  },
+  {
+    "book_id": "SBCK250",
+    "title": "圭斋文集",
+    "author": "[{40013}] 欧阳玄  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK250"
+  },
+  {
+    "book_id": "SBCK251",
+    "title": "柳待制集",
+    "author": "[{40013}] 柳贯  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK251"
+  },
+  {
+    "book_id": "SBCK252",
+    "title": "萨天锡诗集",
+    "author": "[{40013}] 萨都剌  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK252"
+  },
+  {
+    "book_id": "SBCK253",
+    "title": "张雨集",
+    "author": "[{40013}] 张雨  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK253"
+  },
+  {
+    "book_id": "SBCK254",
+    "title": "九灵山房集",
+    "author": "[{40013}] 戴良  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK254"
+  },
+  {
+    "book_id": "SBCK255",
+    "title": "倪云林先生诗集",
+    "author": "[{40013}] 倪瓒  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK255"
+  },
+  {
+    "book_id": "SBCK256",
+    "title": "东维子文集",
+    "author": "[{40013}] 杨维桢  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK256"
+  },
+  {
+    "book_id": "SBCK257",
+    "title": "铁崖先生古乐府",
+    "author": "[{40013}] 杨维桢  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK257"
+  },
+  {
+    "book_id": "SBCK258",
+    "title": "宋学士文集",
+    "author": "[{40014}] 宋濂  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK258"
+  },
+  {
+    "book_id": "SBCK259",
+    "title": "太师诚意伯刘文成公集",
+    "author": "[{40014}] 刘基  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK259"
+  },
+  {
+    "book_id": "SBCK260",
+    "title": "清江贝先生文集",
+    "author": "[{40014}] 贝琼  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK260"
+  },
+  {
+    "book_id": "SBCK261",
+    "title": "苏平仲文集",
+    "author": "[{40014}] 苏伯衡  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK261"
+  },
+  {
+    "book_id": "SBCK262",
+    "title": "高太史大全集",
+    "author": "[{40014}] 高启  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK262"
+  },
+  {
+    "book_id": "SBCK263",
+    "title": "高太史凫藻集",
+    "author": "[{40014}] 高启  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK263"
+  },
+  {
+    "book_id": "SBCK264",
+    "title": "逊志斋集",
+    "author": "[{40014}] 方孝孺  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK264"
+  },
+  {
+    "book_id": "SBCK265",
+    "title": "家藏集",
+    "author": "[{40014}] 吴宽  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK265"
+  },
+  {
+    "book_id": "SBCK266",
+    "title": "阳明先生集要",
+    "author": "[{40014}] 王守仁  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK266"
+  },
+  {
+    "book_id": "SBCK267",
+    "title": "重刊荆川先生文集",
+    "author": "[{40014}] 唐顺之  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK267"
+  },
+  {
+    "book_id": "SBCK268",
+    "title": "震川先生集",
+    "author": "[{40014}] 归有光  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK268"
+  },
+  {
+    "book_id": "SBCK269",
+    "title": "亭林诗集",
+    "author": "[{40015}] 顾炎武  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK269"
+  },
+  {
+    "book_id": "SBCK270",
+    "title": "亭林余集",
+    "author": "[{40015}] 顾炎武  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK270"
+  },
+  {
+    "book_id": "SBCK271",
+    "title": "南雷集",
+    "author": "[{40015}] 黄宗羲  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK271"
+  },
+  {
+    "book_id": "SBCK272",
+    "title": "姜斋诗文集",
+    "author": "[{40015}] 王夫之  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK272"
+  },
+  {
+    "book_id": "SBCK273",
+    "title": "牧斋初学集",
+    "author": "[{40015}] 钱谦益  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK273"
+  },
+  {
+    "book_id": "SBCK274",
+    "title": "牧斋有学集",
+    "author": "[{40015}] 钱谦益  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK274"
+  },
+  {
+    "book_id": "SBCK275",
+    "title": "梅村家藏槁",
+    "author": "[{40015}] 吴伟业  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK275"
+  },
+  {
+    "book_id": "SBCK276",
+    "title": "渔洋山人精华录",
+    "author": "[{40015}] 王士祯  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK276"
+  },
+  {
+    "book_id": "SBCK277",
+    "title": "尧峰文钞",
+    "author": "[{40015}] 汪琬  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK277"
+  },
+  {
+    "book_id": "SBCK278",
+    "title": "曝书亭集",
+    "author": "[{40015}] 朱彝尊  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK278"
+  },
+  {
+    "book_id": "SBCK279",
+    "title": "陈迦陵文集",
+    "author": "[{40015}] 陈维崧  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK279"
+  },
+  {
+    "book_id": "SBCK280",
+    "title": "敬业堂诗集",
+    "author": "[{40015}] 查慎行  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK280"
+  },
+  {
+    "book_id": "SBCK281",
+    "title": "方望溪先生全集",
+    "author": "[{40015}] 方苞  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK281"
+  },
+  {
+    "book_id": "SBCK282",
+    "title": "樊榭山房集",
+    "author": "[{40015}] 厉鹗  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK282"
+  },
+  {
+    "book_id": "SBCK283",
+    "title": "惜抱轩诗文集",
+    "author": "[{40015}] 姚鼐  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK283"
+  },
+  {
+    "book_id": "SBCK284",
+    "title": "戴东原集",
+    "author": "[{40015}] 戴震  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK284"
+  },
+  {
+    "book_id": "SBCK285",
+    "title": "鲒埼亭集",
+    "author": "[{40015}] 全祖望  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK285"
+  },
+  {
+    "book_id": "SBCK286",
+    "title": "鲒埼亭诗集",
+    "author": "[{40015}] 全祖望  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK286"
+  },
+  {
+    "book_id": "SBCK287",
+    "title": "洪北江诗文集",
+    "author": "[{40015}] 洪亮吉  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK287"
+  },
+  {
+    "book_id": "SBCK288",
+    "title": "孙渊如诗文集",
+    "author": "[{40015}] 孙星衍  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK288"
+  },
+  {
+    "book_id": "SBCK289",
+    "title": "抱经堂文集",
+    "author": "[{40015}] 卢文弨  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK289"
+  },
+  {
+    "book_id": "SBCK290",
+    "title": "潜研堂文集",
+    "author": "[{40015}] 钱大昕  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK290"
+  },
+  {
+    "book_id": "SBCK291",
+    "title": "述学",
+    "author": "[{40015}] 汪中  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK291"
+  },
+  {
+    "book_id": "SBCK292",
+    "title": "容甫先生遗诗",
+    "author": "[{40015}] 汪中  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK292"
+  },
+  {
+    "book_id": "SBCK293",
+    "title": "研经室一集",
+    "author": "[{40015}] 阮元  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK293"
+  },
+  {
+    "book_id": "SBCK294",
+    "title": "大云山房文稿初集",
+    "author": "[{40015}] 恽敬  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK294"
+  },
+  {
+    "book_id": "SBCK295",
+    "title": "定盦文集",
+    "author": "[{40015}] 龚自珍  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK295"
+  },
+  {
+    "book_id": "SBCK296",
+    "title": "定盦文集补编",
+    "author": "[{40015}] 龚自珍  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK296"
+  },
+  {
+    "book_id": "SBCK297",
+    "title": "茗柯文",
+    "author": "[{40015}] 张惠言  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK297"
+  },
+  {
+    "book_id": "SBCK298",
+    "title": "茗柯文补编外编",
+    "author": "[{40015}] 张惠言  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK298"
+  },
+  {
+    "book_id": "SBCK299",
+    "title": "曾国藩诗集",
+    "author": "[{40015}] 曾国藩  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK299"
+  },
+  {
+    "book_id": "SBCK300",
+    "title": "六臣注文选",
+    "author": "[{40006-3}] 萧统  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK300"
+  },
+  {
+    "book_id": "SBCK301",
+    "title": "玉台新咏集",
+    "author": "[{40006}] 徐陵  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK301"
+  },
+  {
+    "book_id": "SBCK302",
+    "title": "中兴闲气集",
+    "author": "[{40008}] 高仲武  {辑}、[{40015}] 何焯  {校}",
+    "url": "https://www.shidianguji.com/book/SBCK302"
+  },
+  {
+    "book_id": "SBCK303",
+    "title": "河岳英灵集",
+    "author": "[{40008}] 殷璠  {辑}、[{40015}] 孙毓修  {校}",
+    "url": "https://www.shidianguji.com/book/SBCK303"
+  },
+  {
+    "book_id": "SBCK304",
+    "title": "国秀集",
+    "author": "[{40008}] 芮挺章  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK304"
+  },
+  {
+    "book_id": "SBCK305",
+    "title": "才调集",
+    "author": "[{40008}] 韦觳  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK305"
+  },
+  {
+    "book_id": "SBCK306",
+    "title": "古文苑",
+    "author": "[{40010-2}] 章樵  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK306"
+  },
+  {
+    "book_id": "SBCK307",
+    "title": "唐文粹",
+    "author": "[{40010-1}] 姚铉  {纂}、[{40015}] 林志烜  {校}",
+    "url": "https://www.shidianguji.com/book/SBCK307"
+  },
+  {
+    "book_id": "SBCK308",
+    "title": "西昆酬唱集",
+    "author": "[{40010-1}] 杨亿  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK308"
+  },
+  {
+    "book_id": "SBCK309",
+    "title": "乐府诗集",
+    "author": "[{40010-1}] 郭茂倩  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK309"
+  },
+  {
+    "book_id": "SBCK310",
+    "title": "皇朝文鉴",
+    "author": "[{40010-2}] 吕祖谦  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK310"
+  },
+  {
+    "book_id": "SBCK311",
+    "title": "中州集",
+    "author": "[{40012}] 元好问  {辑并撰}",
+    "url": "https://www.shidianguji.com/book/SBCK311"
+  },
+  {
+    "book_id": "SBCK312",
+    "title": "谷音",
+    "author": "[{40013}] 杜本  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK312"
+  },
+  {
+    "book_id": "SBCK313",
+    "title": "河汾诸老诗集",
+    "author": "[{40013}] 房祺  {辑}、[{40015}] 孙毓修  {校}",
+    "url": "https://www.shidianguji.com/book/SBCK313"
+  },
+  {
+    "book_id": "SBCK314",
+    "title": "元文类",
+    "author": "[{40013}] 苏天爵  {编}",
+    "url": "https://www.shidianguji.com/book/SBCK314"
+  },
+  {
+    "book_id": "SBCK315",
+    "title": "皇元风雅",
+    "author": "[{40013}] 传习  {辑}、[{40013}] 孙存吾  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK315"
+  },
+  {
+    "book_id": "SBCK316",
+    "title": "皇明文衡",
+    "author": "[{40014}] 程敏政  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK316"
+  },
+  {
+    "book_id": "SBCK317",
+    "title": "文心雕龙",
+    "author": "[{40006}] 刘勰  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK317"
+  },
+  {
+    "book_id": "SBCK318",
+    "title": "唐诗纪事",
+    "author": "[{40010-1}] 计有功  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK318"
+  },
+  {
+    "book_id": "SBCK319",
+    "title": "增修诗话总龟",
+    "author": "[{40010-1}] 阮阅  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK319"
+  },
+  {
+    "book_id": "SBCK320",
+    "title": "花间集",
+    "author": "[{40009}] 赵崇祚  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK320"
+  },
+  {
+    "book_id": "SBCK321",
+    "title": "乐府雅词",
+    "author": "[{40010}] 曾慥  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK321"
+  },
+  {
+    "book_id": "SBCK322",
+    "title": "唐宋诸贤绝妙词选",
+    "author": "[{40010}] 黄晟  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK322"
+  },
+  {
+    "book_id": "SBCK323",
+    "title": "中兴以来绝妙词选",
+    "author": "[{40010}] 黄晟  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK323"
+  },
+  {
+    "book_id": "SBCK324",
+    "title": "增修笺注妙选草堂诗余",
+    "author": "[{40010-2}] 何士信  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK324"
+  },
+  {
+    "book_id": "SBCK325",
+    "title": "朝野新声太平乐府",
+    "author": "[{40013}] 杨朝英  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK325"
+  },
+  {
+    "book_id": "SBCK326",
+    "title": "仪礼疏",
+    "author": "[{40008}] 贾公彦  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK326"
+  },
+  {
+    "book_id": "SBCK327",
+    "title": "春秋正义",
+    "author": "[{40006-2}] 孔颖达  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK327"
+  },
+  {
+    "book_id": "SBCK328",
+    "title": "尔雅疏",
+    "author": "[{40010-1}] 邢炳  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK328"
+  },
+  {
+    "book_id": "SBCK329",
+    "title": "汉上易传",
+    "author": "[{40010-2}] 朱震  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK329"
+  },
+  {
+    "book_id": "SBCK330",
+    "title": "周易要义",
+    "author": "[{40010-2}] 魏了翁  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK330"
+  },
+  {
+    "book_id": "SBCK331",
+    "title": "礼记要义",
+    "author": "[{40010-2}] 吕祖谦  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK331"
+  },
+  {
+    "book_id": "SBCK332",
+    "title": "礼记要义",
+    "author": "[{40010-2}] 魏了翁  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK332"
+  },
+  {
+    "book_id": "SBCK333",
+    "title": "孔氏祖庭广记",
+    "author": "[{40010-1}] 胡安国  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK333"
+  },
+  {
+    "book_id": "SBCK334",
+    "title": "东莱吕太史春秋左传类编",
+    "author": "[{40010-2}] 吕祖谦  {撰}、[{40016}] 胡文楷  {校勘}",
+    "url": "https://www.shidianguji.com/book/SBCK334"
+  },
+  {
+    "book_id": "SBCK335",
+    "title": "七经小传",
+    "author": "[{40010-1}] 刘敞  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK335"
+  },
+  {
+    "book_id": "SBCK336",
+    "title": "读四书丛说",
+    "author": "[{40013}] 许谦  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK336"
+  },
+  {
+    "book_id": "SBCK337",
+    "title": "群经音辨",
+    "author": "[{40010-1}] 贾昌朝  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK337"
+  },
+  {
+    "book_id": "SBCK338",
+    "title": "急就篇",
+    "author": "[{40003}] 史游  {撰}、[{40008}] 颜师古  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK338"
+  },
+  {
+    "book_id": "SBCK339",
+    "title": "汗简",
+    "author": "[{40006-9}] 郭忠恕  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK339"
+  },
+  {
+    "book_id": "SBCK340",
+    "title": "龙龛手鉴",
+    "author": "[{40011}] 释行均  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK340"
+  },
+  {
+    "book_id": "SBCK341",
+    "title": "切韵指掌图",
+    "author": "[{40010-1}] 司马光  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK341"
+  },
+  {
+    "book_id": "SBCK342",
+    "title": "附释文互注礼部韵略",
+    "author": "[{40010-2}] 佚名  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK342"
+  },
+  {
+    "book_id": "SBCK343",
+    "title": "贞观政要",
+    "author": "[{40008}] 吴兢  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK343"
+  },
+  {
+    "book_id": "SBCK344",
+    "title": "元城先生尽言集",
+    "author": "[{40010-1}] 刘安世  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK344"
+  },
+  {
+    "book_id": "SBCK345",
+    "title": "孔氏祖庭广记",
+    "author": "[{40012}] 孔元措  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK345"
+  },
+  {
+    "book_id": "SBCK346",
+    "title": "诸葛武侯传",
+    "author": "[{40010-2}] 张栻  {撰}、[{40016}] 张元济  {校勘}",
+    "url": "https://www.shidianguji.com/book/SBCK346"
+  },
+  {
+    "book_id": "SBCK347",
+    "title": "马氏南唐书",
+    "author": "[{40010}] 马令  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK347"
+  },
+  {
+    "book_id": "SBCK348",
+    "title": "陆氏南唐书",
+    "author": "[{40010-2}] 陆游  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK348"
+  },
+  {
+    "book_id": "SBCK349",
+    "title": "吴越备史",
+    "author": "[{40015}] 范坰  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK349"
+  },
+  {
+    "book_id": "SBCK352",
+    "title": "麟台故事",
+    "author": "[{40010-1}] 程俱  {撰}、[{40015}] 张元济  {撰校勘记}",
+    "url": "https://www.shidianguji.com/book/SBCK352"
+  },
+  {
+    "book_id": "SBCK353",
+    "title": "作邑自箴",
+    "author": "[{40010-1}] 李元弼  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK353"
+  },
+  {
+    "book_id": "SBCK354",
+    "title": "金石录",
+    "author": "[{40010-1}] 赵明诚  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK354"
+  },
+  {
+    "book_id": "SBCK355",
+    "title": "张子语录",
+    "author": "[{40010-1}] 张载  {撰}、[{40015}] 张元济  {撰校勘记}",
+    "url": "https://www.shidianguji.com/book/SBCK355"
+  },
+  {
+    "book_id": "SBCK356",
+    "title": "龟山先生语录",
+    "author": "[{40010-1}] 杨时  {撰}、[{40015}] 张元济  {撰校勘记}",
+    "url": "https://www.shidianguji.com/book/SBCK356"
+  },
+  {
+    "book_id": "SBCK357",
+    "title": "程氏家塾读书分年日程",
+    "author": "[{40013}] 程端礼  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK357"
+  },
+  {
+    "book_id": "SBCK358",
+    "title": "棠阴比事",
+    "author": "[{40010-2}] 桂万荣  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK358"
+  },
+  {
+    "book_id": "SBCK359",
+    "title": "图书见闻志",
+    "author": "[{40010-1}] 郭若虚  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK359"
+  },
+  {
+    "book_id": "SBCK360",
+    "title": "法书考",
+    "author": "[{40013}] 盛熙明  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK360"
+  },
+  {
+    "book_id": "SBCK361",
+    "title": "啸堂集古录",
+    "author": "[{40010-2}] 王俅  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK361"
+  },
+  {
+    "book_id": "SBCK362",
+    "title": "饮膳正要",
+    "author": "[{40013}] 忽思慧  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK362"
+  },
+  {
+    "book_id": "SBCK363",
+    "title": "容斋随笔",
+    "author": "[{40010-2}] 洪迈  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK363"
+  },
+  {
+    "book_id": "SBCK364",
+    "title": "梦溪笔谈",
+    "author": "[{40010-1}] 沈括  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK364"
+  },
+  {
+    "book_id": "SBCK365",
+    "title": "愧郯录",
+    "author": "[{40010-2}] 岳珂  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK365"
+  },
+  {
+    "book_id": "SBCK366",
+    "title": "云溪友议",
+    "author": "[{40008}] 范摅  {撰}、[{40015}] 张元济  {撰校勘记}",
+    "url": "https://www.shidianguji.com/book/SBCK366"
+  },
+  {
+    "book_id": "SBCK367",
+    "title": "云仙杂记",
+    "author": "[{40008}] 冯贽  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK367"
+  },
+  {
+    "book_id": "SBCK368",
+    "title": "挥尘前录",
+    "author": "[{40010-2}] 王明清  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK368"
+  },
+  {
+    "book_id": "SBCK369",
+    "title": "清波杂志",
+    "author": "[{40010-2}] 周𪸩  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK369"
+  },
+  {
+    "book_id": "SBCK370",
+    "title": "楹史",
+    "author": "[{40010-2}] 岳珂  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK370"
+  },
+  {
+    "book_id": "SBCK371",
+    "title": "续幽怪录",
+    "author": "[{40008}] 李复言  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK371"
+  },
+  {
+    "book_id": "SBCK372",
+    "title": "括异志",
+    "author": "[{40010-1}] 张师正  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK372"
+  },
+  {
+    "book_id": "SBCK373",
+    "title": "东皋子集",
+    "author": "[{40008}] 王绩  {撰}、[{40015}] 张元济  {撰校勘记}",
+    "url": "https://www.shidianguji.com/book/SBCK373"
+  },
+  {
+    "book_id": "SBCK374",
+    "title": "宋之问集",
+    "author": "[{40008}] 宋之问  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK374"
+  },
+  {
+    "book_id": "SBCK375",
+    "title": "郑守愚文集",
+    "author": "[{40008}] 郑谷  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK375"
+  },
+  {
+    "book_id": "SBCK376",
+    "title": "朱庆余诗集",
+    "author": "[{40008}] 朱庆余  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK376"
+  },
+  {
+    "book_id": "SBCK377",
+    "title": "周贺诗集",
+    "author": "[{40008}] 周贺  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK377"
+  },
+  {
+    "book_id": "SBCK378",
+    "title": "李丞相诗集",
+    "author": "[{40008}] 李建勋  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK378"
+  },
+  {
+    "book_id": "SBCK379",
+    "title": "雪窦显和尚明觉大师颂古集",
+    "author": "[{40010}] 释重显  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK379"
+  },
+  {
+    "book_id": "SBCK380",
+    "title": "山谷外集诗注",
+    "author": "[{40010-1}] 黄庭坚  {撰}、[{40010-1}] 史容  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK380"
+  },
+  {
+    "book_id": "SBCK381",
+    "title": "嵩山文集",
+    "author": "[{40010-1}] 晁说之  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK381"
+  },
+  {
+    "book_id": "SBCK382",
+    "title": "北山小集",
+    "author": "[{40010-1}] 程俱  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK382"
+  },
+  {
+    "book_id": "SBCK383",
+    "title": "沈忠敏公龟溪集",
+    "author": "[{40010-2}] 沈与求  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK383"
+  },
+  {
+    "book_id": "SBCK384",
+    "title": "韦斋集",
+    "author": "[{40010-2}] 朱松  {撰}、[{40010-2}] 朱槔  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK384"
+  },
+  {
+    "book_id": "SBCK385",
+    "title": "东莱先生诗集",
+    "author": "[{40010-2}] 吕本中  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK385"
+  },
+  {
+    "book_id": "SBCK386",
+    "title": "范香溪先生文集",
+    "author": "[{40010-2}] 范浚  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK386"
+  },
+  {
+    "book_id": "SBCK387",
+    "title": "石屏诗集",
+    "author": "[{40010-2}] 戴复古  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK387"
+  },
+  {
+    "book_id": "SBCK388",
+    "title": "平斋文集",
+    "author": "[{40010-2}] 洪咨夔  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK388"
+  },
+  {
+    "book_id": "SBCK389",
+    "title": "四六标准",
+    "author": "[{40010-2}] 李刘  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK389"
+  },
+  {
+    "book_id": "SBCK390",
+    "title": "郑思肖集",
+    "author": "[{40010-2}] 郑起  {著}、[{40010-2}] 郑思肖  {著}、[{40013}] 仇远  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK390"
+  },
+  {
+    "book_id": "SBCK391",
+    "title": "先天集",
+    "author": "[{40010-2}] 许月卿  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK391"
+  },
+  {
+    "book_id": "SBCK392",
+    "title": "叠山集",
+    "author": "[{40010-2}] 谢枋得  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK392"
+  },
+  {
+    "book_id": "SBCK393",
+    "title": "萧冰崖诗集拾遗",
+    "author": "[{40010-2}] 萧立之  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK393"
+  },
+  {
+    "book_id": "SBCK394",
+    "title": "许白云先生文集",
+    "author": "[{40013}] 许谦  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK394"
+  },
+  {
+    "book_id": "SBCK395",
+    "title": "存复斋文集",
+    "author": "[{40013}] 朱德润  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK395"
+  },
+  {
+    "book_id": "SBCK396",
+    "title": "青阳先生文集",
+    "author": "[{40013}] 余阙  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK396"
+  },
+  {
+    "book_id": "SBCK397",
+    "title": "蜕庵诗",
+    "author": "[{40013}] 张翥  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK397"
+  },
+  {
+    "book_id": "SBCK398",
+    "title": "张光弼诗集",
+    "author": "[{40013}] 张昱  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK398"
+  },
+  {
+    "book_id": "SBCK399",
+    "title": "茗斋集",
+    "author": "[{40015}] 彭孙贻  {撰并辑}",
+    "url": "https://www.shidianguji.com/book/SBCK399"
+  },
+  {
+    "book_id": "SBCK400",
+    "title": "雍熙乐府",
+    "author": "[{40014}] 郭勋  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK400"
+  },
+  {
+    "book_id": "SBCK401",
+    "title": "白雪斋选订乐府吴骚合编",
+    "author": "[{40014}] 张楚叔  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK401"
+  },
+  {
+    "book_id": "SBCK402",
+    "title": "尚书正义",
+    "author": "[{40008}] 孔颖达  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK402"
+  },
+  {
+    "book_id": "SBCK403",
+    "title": "礼记正义",
+    "author": "[{40008}] 孔颖达  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK403"
+  },
+  {
+    "book_id": "SBCK404",
+    "title": "周易郑康成注",
+    "author": "[{40003-2}] 郑玄  {撰}、[{40010-2}] 王应麟  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK404"
+  },
+  {
+    "book_id": "SBCK405",
+    "title": "诗本义",
+    "author": "[{40010-1}] 欧阳修  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK405"
+  },
+  {
+    "book_id": "SBCK406",
+    "title": "诗集传",
+    "author": "[{40010-2}] 朱熹  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK406"
+  },
+  {
+    "book_id": "SBCK407",
+    "title": "析城郑氏家塾重校新定三礼图",
+    "author": "[{40009}] 聂崇义  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK407"
+  },
+  {
+    "book_id": "SBCK408",
+    "title": "中庸说",
+    "author": "[{40010-2}] 张九成  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK408"
+  },
+  {
+    "book_id": "SBCK409",
+    "title": "张状元孟子传",
+    "author": "[{40010-2}] 张九成  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK409"
+  },
+  {
+    "book_id": "SBCK410",
+    "title": "复古编",
+    "author": "[{40010-1}] 张有  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK410"
+  },
+  {
+    "book_id": "SBCK411",
+    "title": "班马字类",
+    "author": "[{40010-2}] 娄机  {撰}、[{40010-2}] 李曾伯  {补遗}",
+    "url": "https://www.shidianguji.com/book/SBCK411"
+  },
+  {
+    "book_id": "SBCK412",
+    "title": "新唐书纠谬",
+    "author": "[{40010-1}] 吴缜  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK412"
+  },
+  {
+    "book_id": "SBCK413",
+    "title": "编年通载",
+    "author": "[{40010-1}] 章衡  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK413"
+  },
+  {
+    "book_id": "SBCK414",
+    "title": "太宗皇帝实录",
+    "author": "[{40010-1}] 钱若水  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK414"
+  },
+  {
+    "book_id": "SBCK415",
+    "title": "元朝秘史",
+    "author": "[{40013}] 佚名  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK415"
+  },
+  {
+    "book_id": "SBCK416",
+    "title": "明史钞略",
+    "author": "[{40015}] 庄廷砻  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK416"
+  },
+  {
+    "book_id": "SBCK417",
+    "title": "罪惟录",
+    "author": "[{40015}] 查继佐  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK417"
+  },
+  {
+    "book_id": "SBCK418",
+    "title": "东山国语",
+    "author": "[{40015}] 查继佐  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK418"
+  },
+  {
+    "book_id": "SBCK419",
+    "title": "吊伐录",
+    "author": "[{40012}] 佚名  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK419"
+  },
+  {
+    "book_id": "SBCK420",
+    "title": "三辅黄图",
+    "author": "[{40003}] 佚名  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK420"
+  },
+  {
+    "book_id": "SBCK421",
+    "title": "天下郡国利病书",
+    "author": "[{40015}] 顾炎武  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK421"
+  },
+  {
+    "book_id": "SBCK422",
+    "title": "洛阳伽蓝记",
+    "author": "[{40004-1}] 杨衒之  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK422"
+  },
+  {
+    "book_id": "SBCK423",
+    "title": "三事忠告",
+    "author": "[{40013}] 张养浩  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK423"
+  },
+  {
+    "book_id": "SBCK424",
+    "title": "故唐律疏议",
+    "author": "[{40010-2}] 长孙无忌  {撰}、[{40010-1}] 孙奭  {音义}",
+    "url": "https://www.shidianguji.com/book/SBCK424"
+  },
+  {
+    "book_id": "SBCK425",
+    "title": "昭德先生郡斋读书志",
+    "author": "[{40010-2}] 晁公武  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK425"
+  },
+  {
+    "book_id": "SBCK426",
+    "title": "隶释",
+    "author": "[{40010-2}] 洪适  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK426"
+  },
+  {
+    "book_id": "SBCK427",
+    "title": "淳化秘阁法帖考正",
+    "author": "[{40015}] 王澍  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK427"
+  },
+  {
+    "book_id": "SBCK428",
+    "title": "潜虚",
+    "author": "[{40010-1}] 司马光  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK428"
+  },
+  {
+    "book_id": "SBCK429",
+    "title": "野菜博录",
+    "author": "[{40014}] 鲍山  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK429"
+  },
+  {
+    "book_id": "SBCK430",
+    "title": "图画考",
+    "author": "[{40013}] 盛熙明  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK430"
+  },
+  {
+    "book_id": "SBCK431",
+    "title": "独断",
+    "author": "[{40003-2}] 蔡邕  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK431"
+  },
+  {
+    "book_id": "SBCK432",
+    "title": "古今注",
+    "author": "[{40005}] 崔豹  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK432"
+  },
+  {
+    "book_id": "SBCK433",
+    "title": "困学纪闻",
+    "author": "[{40010-2}] 王应麟  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK433"
+  },
+  {
+    "book_id": "SBCK434",
+    "title": "墨庄漫录",
+    "author": "[{40010-1}] 张邦基  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK434"
+  },
+  {
+    "book_id": "SBCK436",
+    "title": "小字录",
+    "author": "[{40010-2}] 陈思  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK436"
+  },
+  {
+    "book_id": "SBCK437",
+    "title": "丞相魏公谭训",
+    "author": "[{40010-1}] 苏象先  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK437"
+  },
+  {
+    "book_id": "SBCK438",
+    "title": "南村辍耕录",
+    "author": "[{40013}] 陶宗义  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK438"
+  },
+  {
+    "book_id": "SBCK439",
+    "title": "景德传灯录",
+    "author": "[{40010-1}] 释道原  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK439"
+  },
+  {
+    "book_id": "SBCK440",
+    "title": "文始真经",
+    "author": "[{40000}] 尹喜  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK440"
+  },
+  {
+    "book_id": "SBCK441",
+    "title": "通玄真经注",
+    "author": "[{40008}] 徐灵府  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK441"
+  },
+  {
+    "book_id": "SBCK442",
+    "title": "新雕洞灵真经",
+    "author": "[{40008}] 王士元  {撰}、[{40010}] 何粲  {注}",
+    "url": "https://www.shidianguji.com/book/SBCK442"
+  },
+  {
+    "book_id": "SBCK443",
+    "title": "皇甫冉诗集",
+    "author": "[{40008}] 皇甫冉  {撰}、[{40008}] 皇甫曾  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK443"
+  },
+  {
+    "book_id": "SBCK444",
+    "title": "梨岳诗集",
+    "author": "[{40008}] 李频  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK444"
+  },
+  {
+    "book_id": "SBCK445",
+    "title": "新雕注胡曾咏史诗",
+    "author": "[{40008}] 胡曾  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK445"
+  },
+  {
+    "book_id": "SBCK446",
+    "title": "徐寅集",
+    "author": "[{40008}] 徐寅  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK446"
+  },
+  {
+    "book_id": "SBCK447",
+    "title": "忠愍公诗集",
+    "author": "[{40010-1}] 寇准  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK447"
+  },
+  {
+    "book_id": "SBCK448",
+    "title": "镡津集",
+    "author": "[{40010-1}] 释契嵩  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK448"
+  },
+  {
+    "book_id": "SBCK449",
+    "title": "参寥子诗集",
+    "author": "[{40010-1}] 释道潜  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK449"
+  },
+  {
+    "book_id": "SBCK450",
+    "title": "沈氏三先生文集",
+    "author": "[{40010-1}] 沈遘  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK450"
+  },
+  {
+    "book_id": "SBCK451",
+    "title": "眉山唐先生集",
+    "author": "[{40010-1}] 唐庚  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK451"
+  },
+  {
+    "book_id": "SBCK452",
+    "title": "华阳集",
+    "author": "[{40010}] 张纲  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK452"
+  },
+  {
+    "book_id": "SBCK453",
+    "title": "颐堂先生文集",
+    "author": "[{40010-2}] 王灼  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK453"
+  },
+  {
+    "book_id": "SBCK454",
+    "title": "默堂先生文集",
+    "author": "[{40010-2}] 陈渊  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK454"
+  },
+  {
+    "book_id": "SBCK455",
+    "title": "翠微南征录",
+    "author": "[{40010-2}] 华岳  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK455"
+  },
+  {
+    "book_id": "SBCK456",
+    "title": "黄仲元集",
+    "author": "[{40010-2}] 黄仲元  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK456"
+  },
+  {
+    "book_id": "SBCK457",
+    "title": "吾汶稿",
+    "author": "[{40010-2}] 王炎午  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK457"
+  },
+  {
+    "book_id": "SBCK458",
+    "title": "龟巢稿",
+    "author": "[{40013}] 谢应芳  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK458"
+  },
+  {
+    "book_id": "SBCK459",
+    "title": "夷白斋稿",
+    "author": "[{40013}] 陈基  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK459"
+  },
+  {
+    "book_id": "SBCK460",
+    "title": "蚁术诗选",
+    "author": "[{40013}] 邵亨贞  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK460"
+  },
+  {
+    "book_id": "SBCK461",
+    "title": "蚁术词选",
+    "author": "[{40013}] 邵亨贞  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK461"
+  },
+  {
+    "book_id": "SBCK462",
+    "title": "密庵诗稿",
+    "author": "[{40014}] 谢肃  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK462"
+  },
+  {
+    "book_id": "SBCK463",
+    "title": "眉庵集",
+    "author": "[{40014}] 杨基  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK463"
+  },
+  {
+    "book_id": "SBCK464",
+    "title": "静居集",
+    "author": "[{40014}] 张羽  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK464"
+  },
+  {
+    "book_id": "SBCK465",
+    "title": "北郭集",
+    "author": "[{40014}] 徐贲  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK465"
+  },
+  {
+    "book_id": "SBCK466",
+    "title": "蚓窍集",
+    "author": "[{40014}] 管时敏  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK466"
+  },
+  {
+    "book_id": "SBCK467",
+    "title": "白沙子",
+    "author": "[{40014}] 陈献章  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK467"
+  },
+  {
+    "book_id": "SBCK468",
+    "title": "居易堂集",
+    "author": "[{40015}] 徐枋  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK468"
+  },
+  {
+    "book_id": "SBCK469",
+    "title": "窦氏联珠集",
+    "author": "[{40008}] 窦常  {撰}、[{40008}] 褚藏言  {辑}",
+    "url": "https://www.shidianguji.com/book/SBCK469"
+  },
+  {
+    "book_id": "SBCK470",
+    "title": "山谷琴趣外篇",
+    "author": "[{40010-1}] 黄庭坚  {著}、[{40015}] 张元济  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK470"
+  },
+  {
+    "book_id": "SBCK471",
+    "title": "虚斋乐府",
+    "author": "[{40010-2}] 赵以夫  {著}",
+    "url": "https://www.shidianguji.com/book/SBCK471"
+  },
+  {
+    "book_id": "SBCK472",
+    "title": "梨园按试乐府新声",
+    "author": "[{40013}] 卢前  {撰}",
+    "url": "https://www.shidianguji.com/book/SBCK472"
+  }
+]

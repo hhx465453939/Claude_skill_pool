@@ -1,0 +1,4 @@
+interface:
+  display_name: "Executive Consultant"
+  short_description: "高管咨询与参谋长增强；覆盖组织、人事、变革、谈判与政商协同"
+  default_prompt: "Use $executive-consultant to diagnose my management situation, route to the right module, and return a decision-ready advisory memo with 24h/7d actions, risk view, and talk tracks."

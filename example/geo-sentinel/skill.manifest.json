@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "id": "geo-sentinel",
+  "display_name": "Geo Sentinel",
+  "summary": "Task-container-first news/geopolitical forecasting with F-G+ base-rate and prior-aware calibration",
+  "trigger_summary": "Predict or forecast future developments of geopolitical events, wars, elections, policy, market-moving news",
+  "scope": "workspace_custom",
+  "entrypoint": {
+    "kind": "skill",
+    "path": "skills/geo-sentinel/SKILL.md",
+    "runtime": "dual"
+  },
+  "delegates_to": [],
+  "state_source": "tasks/<task>/TASK_ORCHESTRATION.md",
+  "completion_artifacts": [
+    "tasks/<task>/input/normalized/intel-packet.json",
+    "tasks/<task>/results/forecast-engine.json",
+    "tasks/<task>/reports/<task-slug>-forecast.md",
+    "tasks/<task>/handoff/delivery.txt"
+  ],
+  "information_profile": {
+    "enabled": true,
+    "diet": "herbivore",
+    "domains": ["geopolitical", "policy", "finance", "general"],
+    "primary_lanes": ["open-websearch"],
+    "escalation_lanes": ["zhipu", "metaso", "tavily", "brave"],
+    "local_corpora": ["tasks/<task>/sources"],
+    "notes": "Load SEARCH_RUNTIME.md before any search step. Follow SEARCH_RUNTIME.md and shared wrapper-first routing. For generic/geopolitical search the first executable lane should normally be open-websearch, with escalation decided by runtime policy. Basic tasks require 3-5 related search rounds; major tasks require 5-10 rounds. Raw captures and digests must stay task-local."
+  },
+  "framework_profile": {
+    "enabled": true,
+    "frameworks": ["generic_research"],
+    "prefer_local_sources": true,
+    "allow_historical_analogues": true,
+    "notes": "Use F-G+: reference class first, driver decomposition, counter-evidence pass, prior-aware recalibration, and lightweight tail discipline."
+  },
+  "work_product_profile": {
+    "enabled": true,
+    "deliverable_kind": "forecast_report",
+    "required_sections": [
+      "Executive Summary",
+      "Scenario Tree",
+      "Key Drivers & Counter-Drivers",
+      "Watch Indicators",
+      "Calibration Notes",
+      "Search Coverage & Gaps",
+      "Feishu Delivery"
+    ],
+    "required_artifacts": [
+      "task-local intel packet",
+      "task-local forecast engine output",
+      "task-local forecast report",
+      "task-local delivery note"
+    ],
+    "handoff_rules": ["output:FILEPATH", "output:TASK_PATH"],
+    "notes": "All intelligence, scripts, structured outputs, and reports stay inside the active task container until final delivery."
+  }
+}

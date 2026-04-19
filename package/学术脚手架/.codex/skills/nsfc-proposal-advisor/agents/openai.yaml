@@ -1,0 +1,4 @@
+interface:
+  display_name: "NSFC Proposal Advisor"
+  short_description: "国自然基金资深评审 + 申报辅导顾问：破题、立项依据、研究方案、预算"
+  default_prompt: "Use $nsfc-proposal-advisor to audit my NSFC proposal like a strict reviewer: sharpen the key scientific question, restructure the rationale, stress-test feasibility and innovation, and output actionable rewrite suggestions."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Reader"
+  short_description: "pdfplumber 本地 PDF → Markdown 快速提取与阅读前处理"
+  default_prompt: "Use $pdf-reader to extract the text layer of a local PDF into Markdown with per-page sections, then read the Markdown instead of the raw PDF for downstream analysis."

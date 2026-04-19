@@ -104,6 +104,13 @@
 │   │   ├── .claude/             # Claude Code（7 commands + office-docs 脚本工具链 + deep-research 脚本/参考）
 │   │   ├── .codex/              # Codex 技能包（7 skills）
 │   │   └── .gemini/             # Gemini CLI 技能包（7 skills）
+│   ├── 学术脚手架/              # 学术科研工具箱（论文/基金/学位/文献/生信/古籍等 13 技能）
+│   │   ├── CLAUDE.md
+│   │   ├── AGENTS.md
+│   │   ├── GEMINI.md
+│   │   ├── .claude/             # Claude Code（13 commands + 各技能 skills/scripts）
+│   │   ├── .codex/              # Codex 技能包（13 skills）
+│   │   └── .gemini/             # Gemini CLI 技能包（13 skills）
 │   ├── full-dev-脚手架/         # 全栈开发环境（仅开发技能，无 PDCA/Inspector）
 │   │   ├── CLAUDE.md            # Claude Code 初始化引导
 │   │   ├── AGENTS.md            # Codex 初始化引导
@@ -164,13 +171,14 @@
 
 ### 方式二：脚手架一键部署（推荐多技能项目使用）
 
-适合需要多技能一次打包部署的项目。可按场景选择全栈开发、企业咨询、或 Inspector 增强版本。
+适合需要多技能一次打包部署的项目。可按场景选择全栈开发、企业咨询、学术科研、或 Inspector 增强版本。
 
-**三种脚手架如何选：**
+**脚手架如何选：**
 
 | 脚手架 | 适用场景 | 区别摘要 |
 |--------|----------|----------|
 | **enterprise-use** | 企业咨询、管理决策、谈判推进、法务研判、Office/PDF 文档处理、深度调研 | 业务咨询工具箱：executive-consultant、executive-secretary、external-negotiation-master、global-legal-counsel、office-docs、pdf-reader、deep-research；不含 Cursor 规则与开发类技能 |
+| **学术脚手架** | 论文精读、期刊投稿、国自然/学位论文、文献与深研、PDF 预处理、PubMed、生信、医学循证、古籍采集 | 科研与写作工具箱：paper-reader、paper-submission-manager、sci-journal-submission-expert、nsfc-proposal-advisor、thesis-writing-mentor、pubmed-linker、extract、dr-midas、scrna-celltype-annotation、pdf-reader、deep-research、shidianguji-fetcher、medical-advisory；不含 Cursor 规则 |
 | **full-dev-脚手架** | 只要「需求→规范→开发→调试」全流程，不需要项目级 PDCA 与看板 | 仅开发技能：ai-spec、api-first、debug、debug-ui、prd、ralph 等，无 `/sam-init` |
 | **full-dev-脚手架-inspector** | 需要 PDCA 循环、任务看板、进度日志与 Inspector 入职/专家周期管理 | 在 full-dev 基础上增加 `/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt 等，可与 [docs/inspector/](docs/inspector/) 配合使用 |
 
@@ -354,6 +362,7 @@ description: 基于深度上下文的智能代码调试与增量开发。用于 
 | 名称 | 包含工具 | Claude | Codex | Gemini | 描述 |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **企业咨询工具箱脚手架 (enterprise-use)** | Claude + Codex + Gemini | 7 commands<br>7+ skills | 7 skills | 7 skills | 面向企业咨询与文档协同：高管咨询、行政秘书、对外谈判、法律顾问、Office 文档处理、PDF 提取阅读、深度调研；适合咨询团队 / 商务运营团队 / 研究决策团队 |
+| **学术科研脚手架 (学术脚手架)** | Claude + Codex + Gemini | 13 commands<br>多 skills | 13 skills | 13 skills | 论文/基金/学位/投稿、文献与深研、PDF、PubMed、生信、医学循证、古籍采集；适合课题组、医学与生命科学团队、人文文献项目 |
 | **全栈开发脚手架 (full-dev)** | Claude + Codex + Gemini + Cursor | 8 commands<br>9 skills | 7 skills | 9 skills | 仅开发能力：一键部署 ai-spec、api-first、debug、debug-ui、prd、ralph、ralph-yolo、ux-experience-audit、nodejs-npm-auto-release，**无** PDCA/Inspector |
 | **全栈开发 + Inspector 脚手架 (full-dev-inspector)** | Claude + Codex + Gemini + Cursor | 9 commands<br>10 skills | 7 skills | 9 skills | 在 full-dev 基础上增加 **PDCA 工作流**：`/sam-init`、sam-dev-cc-init、PROGRESS-LOG、tasks、self.opt；适合需要入职看板与专家周期管理的项目，详见 [docs/inspector/](docs/inspector/) |
 

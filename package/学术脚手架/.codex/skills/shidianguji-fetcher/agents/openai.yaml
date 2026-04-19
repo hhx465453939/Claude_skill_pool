@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shidianguji Fetcher"
+  short_description: "从识典古籍（shidianguji.com）批量下载章节并合并为 Markdown / ZIP"
+  default_prompt: "Use $shidianguji-fetcher to download an ancient book from shidianguji.com: locate any chapter URL (via external search if needed), then run the CLI to crawl every chapter and export a single Markdown or a ZIP bundle."

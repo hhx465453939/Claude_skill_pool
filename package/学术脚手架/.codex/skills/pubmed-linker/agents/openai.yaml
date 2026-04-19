@@ -1,0 +1,4 @@
+interface:
+  display_name: "PubMed Linker"
+  short_description: "批量查询并更新参考文献的 PubMed 链接、PMID、DOI 和全文状态"
+  default_prompt: "使用 $pubmed-linker 查询参考文献列表中每篇文献的 PubMed 链接并更新文档。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thesis Writing Mentor"
+  short_description: "学位论文写作顾问 + 盲审模拟；支持 RAG 风格模仿与去 AI 化"
+  default_prompt: "Use $thesis-writing-mentor to turn my English papers/data into a Chinese thesis chapter: enforce thesis-style rewriting, learn my provided non-AI writing samples via RAG, and run a blind-review simulation before final output."

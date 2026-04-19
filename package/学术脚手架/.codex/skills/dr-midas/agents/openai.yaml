@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dr. Midas"
+  short_description: "科研炼金术士：分析科研图表，结合 PubMed 文献，生成顶刊级 Result、图注和 Discussion"
+  default_prompt: "使用 $dr-midas 分析上传的科研图表，结合 PubMed 文献生成深度科研叙事。"

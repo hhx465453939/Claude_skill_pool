@@ -15,6 +15,7 @@
 - scrna-celltype-annotation
 - medical-advisory
 - shidianguji-fetcher
+- office-docs
 
 技能根路径：`.gemini/skills/<name>/`。
 

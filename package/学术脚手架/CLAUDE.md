@@ -17,5 +17,6 @@
 - `/medical-advisory` — 循证 + 中医顾问
 - `/shidianguji-fetcher` — 识典古籍采集
 - `/update-pubmed-links` — PubMed 链接 / PMID / DOI 批量更新（配套 `skills/pubmed-linker/`）
+- `/office-docs` — PPTX / DOCX / XLSX 读取、编辑、创建与校验（学位论文排版、答辩稿、投稿 Word 等）
 
 详细说明与部署见 `README.md`。

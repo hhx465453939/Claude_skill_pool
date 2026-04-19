@@ -15,6 +15,7 @@
 - `$scrna-celltype-annotation`
 - `$medical-advisory`
 - `$shidianguji-fetcher`
+- `$office-docs`
 
 每个技能目录位于 `.codex/skills/<name>/`，内含 `SKILL.md` 与 `agents/openai.yaml`（如标准库所定义）。
 
